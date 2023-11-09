@@ -1,5 +1,6 @@
 "use client";
 
+import GallerySection from "@/sections/About/Gallery";
 import AboutIntroSection from "@/sections/About/Intro";
 import WhoAmISection from "@/sections/About/WhoAmI";
 import HeaderSection from "@/sections/Header";
@@ -13,6 +14,8 @@ const AboutPage = () => {
       <AboutIntroSection />
 
       <WhoAmISection />
+
+      <GallerySection />
     </Fragment>
   );
 };
