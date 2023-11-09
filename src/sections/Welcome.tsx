@@ -17,8 +17,7 @@ const WelcomeSection = () => {
       <Row
         style={{
           minHeight: "100vh",
-          background:
-            "black url('/images/BG.jpg') no-repeat fixed center cover",
+          background: "black url('/images/BG.jpg') no-repeat fixed center",
           backgroundSize: "cover",
         }}
         className="justify-content-center"
