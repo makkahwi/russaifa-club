@@ -1,5 +1,6 @@
 "use client";
 
+import BlogSection from "@/sections/About/Blog";
 import GallerySection from "@/sections/About/Gallery";
 import AboutIntroSection from "@/sections/About/Intro";
 import TestimonialsSection from "@/sections/About/Testimonials";
@@ -22,6 +23,8 @@ const AboutPage = () => {
       <TrustedBySection />
 
       <TestimonialsSection />
+
+      <BlogSection />
     </Fragment>
   );
 };
