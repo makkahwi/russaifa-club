@@ -109,3 +109,7 @@ a {
     color-scheme: dark;
   }
 }
+
+.bg-light {
+  background-color: rgb(205, 205, 205) !important;
+}
