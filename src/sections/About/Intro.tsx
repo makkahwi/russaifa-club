@@ -1,3 +1,4 @@
+import PageSection from "@/components/PageSection";
 import Image from "next/image";
 import { Fragment } from "react";
 import { Col, Row } from "reactstrap";
@@ -10,40 +11,33 @@ const AboutIntroSection = () => {
   ];
 
   return (
-    <Fragment>
-      <Row
-        style={{
-          minHeight: "90vh",
-        }}
-        className="justify-content-center py-auto px-5"
-      >
-        <Col md={6} className="my-auto">
-          <Image
-            src="/images/VideoPlaceholder.jpg"
-            alt="Noor Photo"
-            width={855 * 0.75}
-            height={482 * 0.75}
-            priority
-          />
-        </Col>
+    <PageSection>
+      <Col md={6} className="my-auto">
+        <Image
+          src="/images/VideoPlaceholder.jpg"
+          alt="Noor Photo"
+          width={855 * 0.75}
+          height={482 * 0.75}
+          priority
+        />
+      </Col>
 
-        <Col md={6} className="my-auto">
-          <h4 className="text-justify">
-            Where Style Meets Substance. Embrace the Power of Confidence and
-            Influence. Elevate Your Presence, Own the Room.
-          </h4>
+      <Col md={6} className="my-auto">
+        <h4 className="text-justify">
+          Where Style Meets Substance. Embrace the Power of Confidence and
+          Influence. Elevate Your Presence, Own the Room.
+        </h4>
 
-          <Row className="justify-content-center py-auto px-5">
-            {stats.map(({ title, count }, i) => (
-              <Col md={6} className="my-auto text-center mt-4" key={i}>
-                <h1 className="mt-4">{count}</h1>
-                <h5 className="mt-2">{title}</h5>
-              </Col>
-            ))}
-          </Row>
-        </Col>
-      </Row>
-    </Fragment>
+        <Row className="justify-content-center py-auto px-5">
+          {stats.map(({ title, count }, i) => (
+            <Col md={6} className="my-auto text-center mt-4" key={i}>
+              <h1 className="mt-4">{count}</h1>
+              <h5 className="mt-2">{title}</h5>
+            </Col>
+          ))}
+        </Row>
+      </Col>
+    </PageSection>
   );
 };
 
