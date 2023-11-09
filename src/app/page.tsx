@@ -3,7 +3,7 @@
 import WelcomeSection from "@/sections/Welcome";
 import { Fragment } from "react";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <Fragment>
       <WelcomeSection />
@@ -11,4 +11,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
