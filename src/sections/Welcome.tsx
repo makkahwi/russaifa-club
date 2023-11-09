@@ -3,14 +3,14 @@ import { useRouter } from "next/navigation";
 import { Fragment } from "react";
 import { Row, Col, Button, ButtonGroup } from "reactstrap";
 
+export const links = [
+  { title: "About Noor", link: "/about" },
+  { title: "Business Facilitation", link: "/business" },
+  { title: "Entrepreneur Coach", link: "/coaching" },
+];
+
 const WelcomeSection = () => {
   const router = useRouter();
-
-  const buttons = [
-    { title: "About Noor", link: "/about" },
-    { title: "Business Facilitation", link: "/business" },
-    { title: "Entrepreneur Coach", link: "/coaching" },
-  ];
 
   return (
     <Fragment>
@@ -27,7 +27,7 @@ const WelcomeSection = () => {
           <h4>Unlocks Your Potential</h4>
 
           <ButtonGroup vertical className="w-100 mt-4">
-            {buttons.map(({ title, link }, i) => (
+            {links.map(({ title, link }, i) => (
               <Button
                 color="light"
                 className="my-2 text-start py-3"

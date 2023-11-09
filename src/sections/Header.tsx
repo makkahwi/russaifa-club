@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Fragment } from "react";
 import { Col, Row } from "reactstrap";
+import Navbar from "./Navbar";
 
 const HeaderSection = () => {
   return (
@@ -31,6 +32,8 @@ const HeaderSection = () => {
           />
         </Col>
       </Row>
+
+      <Navbar />
     </Fragment>
   );
 };
