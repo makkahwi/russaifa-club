@@ -2,6 +2,7 @@
 
 import GallerySection from "@/sections/About/Gallery";
 import AboutIntroSection from "@/sections/About/Intro";
+import TestimonialsSection from "@/sections/About/Testimonials";
 import TrustedBySection from "@/sections/About/TrustedBy";
 import WhoAmISection from "@/sections/About/WhoAmI";
 import HeaderSection from "@/sections/Header";
@@ -19,6 +20,8 @@ const AboutPage = () => {
       <GallerySection />
 
       <TrustedBySection />
+
+      <TestimonialsSection />
     </Fragment>
   );
 };
