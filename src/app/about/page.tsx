@@ -6,6 +6,7 @@ import AboutIntroSection from "@/sections/About/Intro";
 import TestimonialsSection from "@/sections/About/Testimonials";
 import TrustedBySection from "@/sections/About/TrustedBy";
 import WhoAmISection from "@/sections/About/WhoAmI";
+import ContactSection from "@/sections/Blog";
 import HeaderSection from "@/sections/Header";
 import { Fragment } from "react";
 
@@ -25,6 +26,8 @@ const AboutPage = () => {
       <TestimonialsSection />
 
       <BlogSection />
+
+      <ContactSection />
     </Fragment>
   );
 };
