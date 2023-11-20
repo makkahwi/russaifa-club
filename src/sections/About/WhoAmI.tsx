@@ -25,10 +25,9 @@ const WhoAmISection = () => {
 
       <Col md={12}>
         <h4 className="text-justify">
-          I proudly hold many certifications & recognition. Those are not just
-          qualifications; they are tools I wield with unwavering zeal to ignite
-          growth, innovation, and meaningful change. Let's embark on this
-          incredible journey together!
+          {
+            "I proudly hold many certifications & recognition. Those are not just qualifications; they are tools I wield with unwavering zeal to ignite growth, innovation, and meaningful change. Let's embark on this incredible journey together!"
+          }
         </h4>
       </Col>
 
