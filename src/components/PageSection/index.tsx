@@ -1,4 +1,4 @@
-import { Row } from "reactstrap";
+import { Col, Row } from "reactstrap";
 
 interface props {
   children: React.ReactNode;
@@ -18,18 +18,20 @@ const PageSection = ({
       style={
         noMinHeight
           ? {
-              paddingRight: "10vw",
-              paddingLeft: "10vw",
+              padding: "10vh 10vw",
             }
           : {
-              paddingRight: "10vw",
-              paddingLeft: "10vw",
+              padding: "10vh 10vw",
               minHeight: "90vh",
             }
       }
-      className={`bg-${color} pt-3 pb-5`}
+      className={`bg-${color}`}
     >
-      {title && <h1 className="my-5 pt-5 text-center text-primary">{title}</h1>}
+      {title && (
+        <Col xs={12}>
+          <h1 className="mb-5 pb-5 text-center text-primary">{title}</h1>
+        </Col>
+      )}
 
       {children}
     </Row>
