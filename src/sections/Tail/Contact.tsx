@@ -125,7 +125,6 @@ const ContactSection = () => {
                   id={name}
                   name={name}
                   placeholder={title}
-                  type={type}
                   className="py-3"
                 />
               </FormGroup>
