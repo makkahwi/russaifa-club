@@ -93,7 +93,7 @@ const inputs = [
 
 const ContactSection = () => {
   return (
-    <PageSection title="Contact Me" color="light">
+    <PageSection title="Contact Me" color="light" id="contact">
       <Col md={12} className="text-center p-0 m-0">
         <ButtonGroup>
           {socialLinksList.map(({ name, icon, link, label, color }, i) => (

@@ -1,26 +1,38 @@
 import Image from "next/image";
 import { useState } from "react";
-import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from "reactstrap";
+import {
+  Collapse,
+  Nav,
+  Navbar,
+  NavbarBrand,
+  NavbarToggler,
+  NavItem,
+  NavLink,
+} from "reactstrap";
+import { Link } from "react-scroll";
+
+export const links = [
+  { title: "About Me", link: "about" },
+  { title: "Coaching", link: "coaching" },
+  { title: "Business Facilitation", link: "business" },
+  { title: "Testimonials", link: "testimonials" },
+  { title: "Blog", link: "blog" },
+  { title: "Contact Me", link: "contact" },
+];
 
 const NavbarComp = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
-  const links = [
-    { title: "About Noor", link: "/about" },
-    { title: "Business Facilitation", link: "/business" },
-    { title: "Entrepreneur Coach", link: "/coaching" },
-  ];
-
   const NavComp = ({ navbar = false }) => (
     <Nav className="me-auto" navbar={navbar}>
       {links.map(({ title, link }, i) => (
-        <NavItem key={i}>
-          <NavLink href={link} className="text-white">
-            {title}
-          </NavLink>
-        </NavItem>
+        <Link to={link} key={i} role="button">
+          <NavItem>
+            <NavLink className="text-white">{title}</NavLink>
+          </NavItem>
+        </Link>
       ))}
     </Nav>
   );

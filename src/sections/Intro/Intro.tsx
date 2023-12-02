@@ -1,6 +1,5 @@
 import PageSection from "@/components/PageSection";
 import Image from "next/image";
-import { Fragment } from "react";
 import { Col, Row } from "reactstrap";
 
 const AboutIntroSection = () => {
@@ -11,7 +10,7 @@ const AboutIntroSection = () => {
   ];
 
   return (
-    <PageSection>
+    <PageSection id="about">
       <Col md={6} className="my-auto">
         <Image
           src="/images/VideoPlaceholder.jpg"

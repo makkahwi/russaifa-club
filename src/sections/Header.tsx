@@ -15,11 +15,11 @@ const HeaderSection = () => {
         className="justify-content-center"
       >
         <Col lg={5} md={6} className="my-auto px-5 text-white">
-          <h3>
-            Elevating Leaders, Empowering Businesses: Together, We Thrive!
+          <h3 className="text-light">
+            This is the Start of your Success Journey
           </h3>
-          <h1 className="mt-4">NOOR KAYYALI</h1>
-          <h5 className="mt-4">Is here To Help You</h5>
+          <h1 className="mt-4 display-1 fw-bold">NOOR KAYYALI</h1>
+          <h4 className="mt-4">is here to help you</h4>
         </Col>
 
         <Col lg={4} md={6} className="position-relative">

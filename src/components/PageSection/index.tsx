@@ -5,6 +5,7 @@ interface props {
   color?: string;
   title?: string;
   noMinHeight?: boolean;
+  id?: string;
 }
 
 const PageSection = ({
@@ -12,6 +13,7 @@ const PageSection = ({
   color = "white",
   title,
   noMinHeight,
+  id,
 }: props) => {
   return (
     <Row
@@ -26,6 +28,7 @@ const PageSection = ({
             }
       }
       className={`bg-${color}`}
+      id={id}
     >
       {title && (
         <Col xs={12}>

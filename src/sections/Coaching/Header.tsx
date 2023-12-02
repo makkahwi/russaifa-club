@@ -3,7 +3,7 @@ import { Col } from "reactstrap";
 
 const CoachingHeaderSection = () => {
   return (
-    <PageSection title="Welcome to Coaching!" color="secondary">
+    <PageSection title="Welcome to Coaching!" color="secondary" id="coaching">
       <Col md={6}>
         <img src="/images/gallery/2.jpg" width="100%" />
       </Col>

@@ -11,17 +11,13 @@ import {
   Row,
 } from "reactstrap";
 import { socialLinksList } from "./Tail/Contact";
+import { links } from "./Navbar";
+import { Link } from "react-scroll";
 
 const FooterSection = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
-
-  const links = [
-    { title: "About Noor", link: "/about" },
-    { title: "Business Facilitation", link: "/business" },
-    { title: "Entrepreneur Coach", link: "/coaching" },
-  ];
 
   return (
     <Fragment>
@@ -39,11 +35,11 @@ const FooterSection = () => {
         <Col xs={12} className="text-center">
           <Nav className="mx-auto" horizontal="center">
             {links.map(({ title, link }, i) => (
-              <NavItem key={i}>
-                <NavLink href={link} className="text-white">
-                  {title}
-                </NavLink>
-              </NavItem>
+              <Link to={link} role="button" key={i}>
+                <NavItem>
+                  <NavLink className="text-white">{title}</NavLink>
+                </NavItem>
+              </Link>
             ))}
           </Nav>
         </Col>
@@ -66,18 +62,18 @@ const FooterSection = () => {
       </Row>
 
       <Row className="py-5">
-        <h5 className="text-center">
+        <h6 className="text-center">
           All Rights Reserved For{" "}
           <span className="text-primary">NOOR KAYYALI</span> ©{" "}
           {new Date().getFullYear()}
-        </h5>
+        </h6>
 
         <a
           href="https://www.alembicsoft.com/"
           target="_blank"
           className="text-center"
         >
-          Built By Arromi Creatives
+          <small>Built By AlembicSoft</small>
         </a>
       </Row>
     </Fragment>

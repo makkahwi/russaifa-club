@@ -6,6 +6,7 @@ const BusinessFacilitationHeaderSection = () => {
     <PageSection
       title="Why Choose My Executive Development Programs?"
       color="secondary"
+      id="business"
     >
       <Col md={6}>
         <img src="/images/gallery/2.jpg" width="100%" />

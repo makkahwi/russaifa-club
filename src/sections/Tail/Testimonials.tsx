@@ -8,7 +8,7 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <PageSection title="Testimonials" color="light">
+    <PageSection title="Testimonials" color="light" id="testimonials">
       <Col md={12}></Col>
     </PageSection>
   );

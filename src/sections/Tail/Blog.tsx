@@ -17,7 +17,7 @@ const BlogSection = () => {
   );
 
   return (
-    <PageSection title="Blog">
+    <PageSection title="Blog" id="blog">
       <Col md={12} className="text-center p-0 m-0">
         <ButtonGroup>
           <Button
