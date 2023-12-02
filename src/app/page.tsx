@@ -9,6 +9,7 @@ import WhoAmISection from "@/sections/WhoAmI";
 import ContactSection from "@/sections/Blog";
 import HeaderSection from "@/sections/Header";
 import { Fragment } from "react";
+import CoachingSections from "@/sections/Coaching";
 
 const HomePage = () => {
   return (
@@ -20,6 +21,8 @@ const HomePage = () => {
       <WhoAmISection />
 
       <GallerySection />
+
+      <CoachingSections />
 
       <TrustedBySection />
 
