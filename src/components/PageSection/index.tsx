@@ -29,7 +29,7 @@ const PageSection = ({
       }
       className={`bg-${color} pt-3 pb-5`}
     >
-      {title && <h1 className="my-5 pt-5 text-center">{title}</h1>}
+      {title && <h1 className="my-5 pt-5 text-center text-primary">{title}</h1>}
 
       {children}
     </Row>

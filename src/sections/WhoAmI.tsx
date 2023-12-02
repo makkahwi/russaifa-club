@@ -12,7 +12,7 @@ const WhoAmISection = () => {
   ];
 
   return (
-    <PageSection title="Who Am I?" color="light">
+    <PageSection title="In-Depth Look" color="light">
       <Col md={12}>
         <h4 className="text-justify">
           I am a vibrant, high-energy Leadership Facilitator and Executive Coach
