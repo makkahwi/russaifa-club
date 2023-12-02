@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import CoachingHeaderSection from "./Header";
 import TextSection from "./TextSection";
+import AchievementsSection from "./Achievements";
 
 const CoachingSections = () => {
   return (
@@ -8,6 +9,8 @@ const CoachingSections = () => {
       <CoachingHeaderSection />
 
       <TextSection />
+
+      <AchievementsSection />
     </Fragment>
   );
 };
