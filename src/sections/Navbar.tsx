@@ -1,20 +1,17 @@
 import Image from "next/image";
 import { useState } from "react";
-import {
-  Collapse,
-  Nav,
-  NavItem,
-  NavLink,
-  Navbar,
-  NavbarBrand,
-  NavbarToggler,
-} from "reactstrap";
-import { links } from "./Welcome";
+import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from "reactstrap";
 
 const NavbarComp = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+
+  const links = [
+    { title: "About Noor", link: "/about" },
+    { title: "Business Facilitation", link: "/business" },
+    { title: "Entrepreneur Coach", link: "/coaching" },
+  ];
 
   const NavComp = ({ navbar = false }) => (
     <Nav className="me-auto" navbar={navbar}>

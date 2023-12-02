@@ -2,46 +2,38 @@ import PageSection from "@/components/PageSection";
 import { useState } from "react";
 import { Button, ButtonGroup, Col } from "reactstrap";
 
-const ContactSection = () => {
-  const contacts = [
-    {
-      link: "https://web.facebook.com/Noorcoach/?ref=bookmarks",
-      icon: "facebook",
-      color: "#1877F2",
-    },
-    {
-      link: "https://www.instagram.com/noorkayyali303/",
-      icon: "instagram",
-      color: "#E4405F",
-    },
-    {
-      link: "https://twitter.com/Noorkayyali303?lang=en",
-      icon: "twitter",
-      color: "#14171A",
-    },
-    {
-      link: "https://www.linkedin.com/in/noor-kayyali-a4668811/",
-      icon: "linkedin",
-      color: "#0A66C2",
-    },
-    {
-      link: "https://www.youtube.com/channel/UCdCODCOiHkQXfCGHGDQel4Q/featured",
-      icon: "youtube",
-      color: "#FF0000",
-    },
+const BlogSection = () => {
+  const [pickedCategory, setPickedCategory] = useState("");
+
+  const posts = [
+    { date: "7 Oct 2023", title: "Do This n That", category: "Articles" },
+    { date: "7 Oct 2023", title: "Do This n That", category: "Researches" },
   ];
 
+  const categories = posts.reduce(
+    (final: string[], { category }) =>
+      final.includes(category) ? final : [...final, category],
+    []
+  );
+
   return (
-    <PageSection title="Contact Me">
+    <PageSection title="Blog">
       <Col md={12} className="text-center p-0 m-0">
-        <ButtonGroup vertical>
-          {contacts.map(({ icon, color }, i) => (
+        <ButtonGroup>
+          <Button
+            onClick={() => setPickedCategory("")}
+            color={pickedCategory === "" ? "primary" : "secondary"}
+          >
+            All
+          </Button>
+
+          {categories.map((category, i) => (
             <Button
-              color="secondary"
-              style={{ backgroundColor: color }}
+              onClick={() => setPickedCategory(category)}
               key={i}
+              color={pickedCategory === category ? "primary" : "secondary"}
             >
-              {icon}
+              {category}
             </Button>
           ))}
         </ButtonGroup>
@@ -52,4 +44,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;
+export default BlogSection;
