@@ -17,12 +17,17 @@ const PageSection = ({
     <Row
       style={
         noMinHeight
-          ? {}
+          ? {
+              paddingRight: "10vw",
+              paddingLeft: "10vw",
+            }
           : {
+              paddingRight: "10vw",
+              paddingLeft: "10vw",
               minHeight: "90vh",
             }
       }
-      className={`bg-${color} px-5 pt-3 pb-5`}
+      className={`bg-${color} pt-3 pb-5`}
     >
       {title && <h1 className="my-5 pt-5 text-center">{title}</h1>}
 
