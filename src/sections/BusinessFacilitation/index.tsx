@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import BusinessFacilitationHeaderSection from "./Header";
 import TextSection from "./TextSection";
+import JoinMeSection from "./JoinMe";
 
 const BusinessFacilitationSections = () => {
   return (
@@ -8,6 +9,8 @@ const BusinessFacilitationSections = () => {
       <BusinessFacilitationHeaderSection />
 
       <TextSection />
+
+      <JoinMeSection />
     </Fragment>
   );
 };
