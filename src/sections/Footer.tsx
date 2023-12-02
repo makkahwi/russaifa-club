@@ -5,12 +5,9 @@ import {
   Button,
   ButtonGroup,
   Col,
-  Collapse,
   Nav,
   NavItem,
   NavLink,
-  Navbar,
-  NavbarToggler,
   Row,
 } from "reactstrap";
 import { socialLinksList } from "./Tail/Contact";
@@ -26,22 +23,10 @@ const FooterSection = () => {
     { title: "Entrepreneur Coach", link: "/coaching" },
   ];
 
-  const NavComp = ({ navbar = false }) => (
-    <Nav className="me-auto" navbar={navbar}>
-      {links.map(({ title, link }, i) => (
-        <NavItem key={i}>
-          <NavLink href={link} className="text-white">
-            {title}
-          </NavLink>
-        </NavItem>
-      ))}
-    </Nav>
-  );
-
   return (
     <Fragment>
-      <Row className="bg-dark">
-        <Col xs={12} className="text-center p-5">
+      <Row className="bg-dark py-5">
+        <Col xs={12} className="text-center pb-5">
           <Image
             src="/images/Logo-White.png"
             alt="Logo"
@@ -52,22 +37,18 @@ const FooterSection = () => {
         </Col>
 
         <Col xs={12} className="text-center">
-          <Navbar
-            style={{ minHeight: "10vh" }}
-            className="px-5 m-0 poisition-fixed"
-            color="dark"
-          >
-            <NavComp />
-
-            <NavbarToggler onClick={toggle} />
-
-            <Collapse isOpen={isOpen} navbar>
-              <NavComp navbar />
-            </Collapse>
-          </Navbar>
+          <Nav className="mx-auto" horizontal="center">
+            {links.map(({ title, link }, i) => (
+              <NavItem key={i}>
+                <NavLink href={link} className="text-white">
+                  {title}
+                </NavLink>
+              </NavItem>
+            ))}
+          </Nav>
         </Col>
 
-        <Col xs={12} className="text-center">
+        {/* <Col xs={12} className="text-center">
           <ButtonGroup>
             {socialLinksList.map(({ name, icon, link, label, color }, i) => (
               <Button
@@ -75,15 +56,13 @@ const FooterSection = () => {
                 color="transparent"
                 key={i}
               >
-                <h2>
-                  <a href={link} target="_blank">
-                    <FontAwesomeIcon icon={icon} />
-                  </a>
-                </h2>
+                <a href={link} target="_blank">
+                  <FontAwesomeIcon icon={icon} />
+                </a>
               </Button>
             ))}
           </ButtonGroup>
-        </Col>
+        </Col> */}
       </Row>
 
       <Row className="py-5">

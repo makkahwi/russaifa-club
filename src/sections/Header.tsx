@@ -19,6 +19,7 @@ const HeaderSection = () => {
             Elevating Leaders, Empowering Businesses: Together, We Thrive!
           </h3>
           <h1 className="mt-4">NOOR KAYYALI</h1>
+          <h5 className="mt-4">Is here To Help You</h5>
         </Col>
 
         <Col lg={4} md={6} className="position-relative">

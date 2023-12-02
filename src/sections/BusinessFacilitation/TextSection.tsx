@@ -4,7 +4,7 @@ import { Col } from "reactstrap";
 const TextSection = () => {
   return (
     <PageSection>
-      <Col md={12}>
+      <Col md={12} className="my-auto">
         <h4 className="text-justify">
           {
             "As an experienced executive development facilitator with a super energetic, dynamic and engaging style, I bring a wealth of knowledge and expertise to your program. I've successfully delivered executive development programs for a diverse range of organizations, including multinational corporations and governmental institutions, consistently delivering improved leadership skills, increased productivity, and enhanced strategic thinking."
