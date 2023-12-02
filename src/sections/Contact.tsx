@@ -10,7 +10,15 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, ButtonGroup, Col } from "reactstrap";
+import {
+  Button,
+  ButtonGroup,
+  Col,
+  FormGroup,
+  Input,
+  Label,
+  Row,
+} from "reactstrap";
 
 export const socialLinksList = [
   {
@@ -71,6 +79,18 @@ export const socialLinksList = [
   },
 ];
 
+const inputs = [
+  { name: "name", title: "Name", type: "text", required: true },
+  { name: "subject", title: "Subject", type: "text", required: false },
+  {
+    name: "message",
+    title: "Message",
+    type: "textarea",
+    required: true,
+    fullWidth: true,
+  },
+];
+
 const ContactSection = () => {
   return (
     <PageSection title="Contact Me" color="light">
@@ -92,7 +112,27 @@ const ContactSection = () => {
         </ButtonGroup>
       </Col>
 
-      <Col md={12}></Col>
+      <Col md={12}>
+        <Row>
+          {inputs.map(({ name, title, required, type, fullWidth }, i) => (
+            <Col md={fullWidth ? 12 : 6} key={i}>
+              <FormGroup>
+                <Label for={name}>
+                  {title}
+                  {required ? <span className="text-danger">{" *"}</span> : ""}
+                </Label>
+                <Input
+                  id={name}
+                  name={name}
+                  placeholder={title}
+                  type={type}
+                  className="py-3"
+                />
+              </FormGroup>
+            </Col>
+          ))}
+        </Row>
+      </Col>
     </PageSection>
   );
 };
