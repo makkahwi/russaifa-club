@@ -5,10 +5,13 @@ import ContactSection from "@/sections/Tail/Contact";
 import TestimonialsSection from "@/sections/Tail/Testimonials";
 import TrustedBySection from "@/sections/Tail/TrustedBy";
 import { Fragment } from "react";
+import VlogSection from "./Vlog";
 
 const TailSections = () => {
   return (
     <Fragment>
+      <VlogSection />
+
       <TrustedBySection />
 
       <TestimonialsSection />
