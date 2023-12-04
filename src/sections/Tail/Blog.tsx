@@ -212,6 +212,8 @@ const BlogSection = () => {
     []
   );
 
+  const [pickedPost, setPickedPost] = useState({ title: "" });
+
   return (
     <PageSection title="Blog" id="blog">
       <Col md={12} className="text-center p-0 m-0">
@@ -235,27 +237,36 @@ const BlogSection = () => {
         </ButtonGroup>
       </Col>
 
-      {posts.map(({ date, title, img, category }, i) => (
-        <Col md={3} key={i}>
-          <Card>
-            <div
-              style={{
-                height: "30vh",
-                backgroundImage: `url('/images/articles/${img}')`,
-                backgroundPositionX: "center",
-                backgroundPositionY: "center",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-              className="w-100 p-0 m-0"
-            />
+      {posts.map((post, i) => {
+        const { date, title, img, category } = post;
 
-            <CardBody>
-              <CardTitle className="text-justify">{title}</CardTitle>
-            </CardBody>
-          </Card>
-        </Col>
-      ))}
+        return (
+          <Col md={3} key={i}>
+            <Card role="button" onClick={() => setPickedPost(post)}>
+              <div
+                style={{
+                  height: "30vh",
+                  backgroundImage: `url('/images/articles/${img}')`,
+                  backgroundPositionX: "center",
+                  backgroundPositionY: "center",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+                className="w-100 p-0 m-0"
+              >
+                <Button className="m-3 p-2" color="primary">
+                  {category}
+                </Button>
+              </div>
+
+              <CardBody>
+                <small>{date}</small>
+                <CardTitle className="text-justify">{title}</CardTitle>
+              </CardBody>
+            </Card>
+          </Col>
+        );
+      })}
     </PageSection>
   );
 };
