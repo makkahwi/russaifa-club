@@ -5,19 +5,19 @@ import { Col, Row } from "reactstrap";
 const GallerySection = () => {
   const images = [
     {
-      src: "1.jpg",
-      width: 3,
-    },
-    {
-      src: "2.jpg",
+      src: "IMG_8701.jpg",
       width: 9,
     },
     {
-      src: "3.jpg",
+      src: "IMG_3683.jpg",
+      width: 3,
+    },
+    {
+      src: "IMG_6843.jpg",
       width: 5,
     },
     {
-      src: "4.jpg",
+      src: "IMG_5538.jpg",
       width: 7,
     },
   ];

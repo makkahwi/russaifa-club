@@ -12,12 +12,16 @@ const AboutIntroSection = () => {
   return (
     <PageSection id="about">
       <Col md={6} className="my-auto">
-        <Image
-          src="/images/VideoPlaceholder.jpg"
-          alt="Noor Photo"
-          width={855 * 0.75}
-          height={482 * 0.75}
-          priority
+        <div
+          style={{
+            height: "60vh",
+            backgroundImage: `url("/images/gallery/IMG-20231128-WA0017.jpg")`,
+            backgroundPositionX: "center",
+            backgroundPositionY: "top",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+          className="w-100 p-0 m-0"
         />
       </Col>
 

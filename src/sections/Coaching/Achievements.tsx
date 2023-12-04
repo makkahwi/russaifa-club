@@ -3,9 +3,9 @@ import { Col, Row } from "reactstrap";
 
 const AchievementsSection = () => {
   const photos = [
-    { width: 3, photo: "2.jpg" },
-    { width: 5, photo: "3.jpg" },
-    { width: 4, photo: "4.jpg" },
+    { width: 3, photo: "IMG_5633.jpg" },
+    { width: 5, photo: "IMG_7004.jpg" },
+    { width: 4, photo: "48bfc81d-a0e9-4626-ad98-8b1a5ff09efd.jpg" },
   ];
 
   const achievements = [
@@ -29,7 +29,7 @@ const AchievementsSection = () => {
         <Col md={width} key={i}>
           <div
             style={{
-              height: "20vh",
+              height: "25vh",
               backgroundImage: `url('/images/gallery/${photo}')`,
               backgroundPositionX: "center",
               backgroundPositionY: "center",

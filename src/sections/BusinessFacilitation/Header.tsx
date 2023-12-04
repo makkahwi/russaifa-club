@@ -9,7 +9,7 @@ const BusinessFacilitationHeaderSection = () => {
       id="business"
     >
       <Col md={6}>
-        <img src="/images/gallery/2.jpg" width="100%" />
+        <img src="/images/gallery/IMG-20231128-WA0021.jpg" width="100%" />
       </Col>
 
       <Col md={6}>

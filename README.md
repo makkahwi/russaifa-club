@@ -10,7 +10,6 @@ Next.js & Typescript Based Landing Page
 - Build Testimonials slider
 - Build Blog Slider
 - Do Unique Programs symbols
-- Pick photos
 - Update bootstrap colors
 - Get enhanced logo
 - Fix mobile views

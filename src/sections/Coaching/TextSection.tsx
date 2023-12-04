@@ -13,7 +13,17 @@ const TextSection = () => {
       </Col>
 
       <Col md={6} className="my-auto">
-        <img src="/images/gallery/4.jpg" width="100%" />
+        <div
+          style={{
+            height: "55vh",
+            backgroundImage: `url('/images/gallery/a.jpg')`,
+            backgroundPositionX: "center",
+            backgroundPositionY: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+          className="w-100 p-0 m-0"
+        />
       </Col>
     </PageSection>
   );
