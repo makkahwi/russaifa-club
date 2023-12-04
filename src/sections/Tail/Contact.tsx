@@ -3,78 +3,70 @@ import {
   faFacebook,
   faInstagram,
   faLinkedinIn,
-  faTelegram,
   faWhatsapp,
   faXTwitter,
+  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  Button,
-  ButtonGroup,
-  Col,
-  FormGroup,
-  Input,
-  Label,
-  Row,
-} from "reactstrap";
+import { Button, Col, FormGroup, Input, Label, Row } from "reactstrap";
 
 export const socialLinksList = [
   {
     name: "LinkedIn",
     icon: faLinkedinIn,
-    link: "https://linkedin.com/in/makkahwi/",
+    link: "https://www.linkedin.com/in/noor-kayyali-a4668811/",
     label: "Connect and Empower",
     color: "#0A66C2",
   },
   {
     name: "WhatsApp",
     icon: faWhatsapp,
-    link: "https://wasap.my/962788424973",
+    link: "https://wasap.my/962797030228",
     label: "Text Me Anytime",
     color: "#25D366",
   },
   {
-    name: "Telegram",
-    icon: faTelegram,
-    link: "https://t.me/makkahwi",
-    label: "Let's Tele-chat",
-    color: "#0088CC",
-  },
-  {
     name: "Phone",
     icon: faPhone,
-    link: "tel:+962788424973",
-    label: "Call IF NECESSARY",
+    link: "tel:+962797030228",
+    label: "Call Me Maybe",
     color: "#001F3F",
   },
   {
     name: "Email",
     icon: faEnvelope,
-    link: "mailto:SuhaibAhmadAi@hotmail.com",
+    link: "mailto:ask@noorkayyali.com",
     label: "Inbox Awaits You",
     color: "#006400",
   },
   {
     name: "Facebook",
     icon: faFacebook,
-    link: "https://facebook.com/makkahwi",
+    link: "https://facebook.com/Noorcoach",
     label: "Let's Chat Forever",
     color: "#1877F2",
   },
   {
     name: "Instagram",
     icon: faInstagram,
-    link: "https://instagram.com/makkahwi",
+    link: "https://www.instagram.com/noorkayyali303/",
     label: "Capture Life Together",
     color: "#E4405F",
   },
   {
     name: "X",
     icon: faXTwitter,
-    link: "https://twitter.com/makkahwi",
-    label: "Capture Life Together",
+    link: "https://twitter.com/Noorkayyali303",
+    label: "Join My Conversations",
     color: "#181717",
+  },
+  {
+    name: "Youtube",
+    icon: faYoutube,
+    link: "https://www.youtube.com/channel/UCdCODCOiHkQXfCGHGDQel4Q",
+    label: "Subscribe, Watch, Like",
+    color: "#FF0000",
   },
 ];
 
@@ -94,24 +86,25 @@ const ContactSection = () => {
   return (
     <PageSection title="Contact Me" id="contact">
       <Col md={12} className="text-center p-0 m-0">
-        <ButtonGroup>
+        <Row>
           {socialLinksList.map(({ name, icon, link, label, color }, i) => (
-            <Button
-              style={{ backgroundColor: color }}
-              className="w-100 p-3 my-3"
-              key={i}
-            >
+            <Col sm={6} md={3} key={i}>
               <a href={link} target="_blank">
-                <h5 className="text-center">
-                  <FontAwesomeIcon icon={icon} /> {label}
-                </h5>
+                <Button
+                  style={{ backgroundColor: color }}
+                  className="p-3 m-3 w-100"
+                >
+                  <h5 className="text-center p-0 m-0">
+                    <FontAwesomeIcon icon={icon} /> {label}
+                  </h5>
+                </Button>
               </a>
-            </Button>
+            </Col>
           ))}
-        </ButtonGroup>
+        </Row>
       </Col>
 
-      <Col md={12}>
+      <Col md={12} className="mt-5">
         <Row>
           {inputs.map(({ name, title, required, type, fullWidth }, i) => (
             <Col md={fullWidth ? 12 : 6} key={i}>
