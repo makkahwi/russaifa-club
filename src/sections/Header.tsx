@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Fragment } from "react";
 import { Col, Row } from "reactstrap";
+
 import Navbar from "./Navbar";
 
 const HeaderSection = () => {
@@ -15,11 +16,8 @@ const HeaderSection = () => {
         className="justify-content-center"
       >
         <Col lg={5} md={6} className="my-auto px-5 text-white">
-          <h3 className="text-light">
-            This is the Start of your Success Journey
-          </h3>
+          <h3 className="text-light">Lead with Impact</h3>
           <h1 className="mt-4 display-1 fw-bold">NOOR KAYYALI</h1>
-          <h4 className="mt-4">is here to help you</h4>
         </Col>
 
         <Col lg={4} md={6} className="position-relative">

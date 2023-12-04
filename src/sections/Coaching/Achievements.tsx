@@ -11,15 +11,18 @@ const AchievementsSection = () => {
   const achievements = [
     {
       title: "A",
-      content: "a",
+      content:
+        "My recent achievements include Empowered more than 100 business leaders to achieve remarkable growth by providing actionable insights and strategies during coaching sessions, resulting in the development of strong, high-performing teams.",
     },
     {
       title: "B",
-      content: "b",
+      content:
+        "Coached entrepreneurs to navigate complex challenges within our dynamic world, ensuring their success.",
     },
     {
       title: "C",
-      content: "c",
+      content:
+        "Elevated the confidence and communication skills of business professionals, resulting in more successful negotiations, partnerships, and career advancements.",
     },
   ];
 

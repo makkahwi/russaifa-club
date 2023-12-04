@@ -15,7 +15,7 @@ const BusinessFacilitationHeaderSection = () => {
       <Col md={6}>
         <h4 className="text-justify">
           {
-            "At Coaching, my passion lies in touching hearts before touching minds and inspiring transformative change. I create a safe and supportive environment where individuals can thrive. In our one-on-one sessions, you'll discover a unique blend of professionalism and enjoyable engagement."
+            "My executive development programs are tailored for excellence, designed to meet the unique needs and objectives of your organization. I understand that one size does not fit all, and I work closely with you to create a program that aligns perfectly with your leadership development goals. "
           }
         </h4>
       </Col>
