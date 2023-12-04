@@ -1,14 +1,13 @@
 import PageSection from "@/components/PageSection";
 import {
   faFacebook,
-  faGithub,
   faInstagram,
   faLinkedinIn,
   faTelegram,
   faWhatsapp,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faPhone, faX } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   Button,
@@ -93,7 +92,7 @@ const inputs = [
 
 const ContactSection = () => {
   return (
-    <PageSection title="Contact Me" color="light" id="contact">
+    <PageSection title="Contact Me" id="contact">
       <Col md={12} className="text-center p-0 m-0">
         <ButtonGroup>
           {socialLinksList.map(({ name, icon, link, label, color }, i) => (
