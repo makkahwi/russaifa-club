@@ -3,12 +3,52 @@ import { Col, Row } from "reactstrap";
 
 const WhoAmISection = () => {
   const certs = [
-    { title: "Organization Served", date: 2022, source: "Dubai" },
-    { title: "Organization Served", date: 2022, source: "Dubai" },
-    { title: "Organization Served", date: 2022, source: "Dubai" },
-    { title: "Organization Served", date: 2022, source: "Dubai" },
-    { title: "Organization Served", date: 2022, source: "Dubai" },
-    { title: "Organization Served", date: 2022, source: "Dubai" },
+    {
+      title: "Level 2 Certified AQ Coach",
+      date: 2022,
+      source: "LEGO® SERIOUS PLAY®",
+    },
+    {
+      title: "CERTIFIED LEVEL 2 CONVERSATIONAL INTELLIGENCE COACH",
+      date: 2023,
+      source: "WEINSTITUTE",
+    },
+    {
+      title: "SOLUTION FOCUSED COACH LEVEL 2 (ONGOING)",
+      date: 2023,
+      source: "طلوزة",
+    },
+    {
+      title:
+        "CERTIFIED LEADERSHIP, GOVERNANCE AND STRATEGIC THINKING FACILITATOR",
+      date: 2022,
+      source: "WHO",
+    },
+    {
+      title: "CERTIFIED PROFESSIONAL IN DESIGN THINKING (CPDT)",
+      date: 2022,
+      source: "SkillFront",
+    },
+    {
+      title: "CERTIFIED FACILITATOR IN LEGO® SERIOUS PLAY® (LSP) METHODOLOGY",
+      date: 2022,
+      source: "INTHRFACE, DENMARK",
+    },
+    {
+      title: "CERTIFIED MBTI PRACTIONER FROM HEART TO HEART CONSULTANCY",
+      date: 2022,
+      source: "طلوزة",
+    },
+    {
+      title: "CERTIFIED AQAI ASSESSMENT COACH AND PRACTITIONER",
+      date: 2021,
+      source: "UK",
+    },
+    {
+      title: "CERTIFIED TRAINER – SPEARHEAD TRAINING INSTITUTENSULTANCY",
+      date: 2012,
+      source: "طلوزة",
+    },
   ];
 
   return (
