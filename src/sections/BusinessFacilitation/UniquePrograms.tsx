@@ -71,8 +71,8 @@ const UniqueProgramsSection = () => {
         <Row className="justify-content-center">
           {programGroups.map(({ icon, programs }, i) => (
             <Col
-              md={3}
-              className="border border-primary border-5 rounded-4 p-5 my-3 mx-2"
+              md={4}
+              className="border border-primary border-5 rounded-4 p-5 my-3"
               key={i}
             >
               <h1 className="text-center mb-4 text-primary">

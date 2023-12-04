@@ -29,6 +29,23 @@ interface post {
 const BlogSection = () => {
   const [pickedCategory, setPickedCategory] = useState("");
 
+  const defaultPost = {
+    date: "",
+    title: "",
+    category: "",
+    img: "",
+    contents: [
+      {
+        type: "",
+        content: "",
+      },
+    ],
+  };
+
+  const [pickedPost, setPickedPost] = useState<post>(defaultPost);
+
+  const closeModal = () => setPickedPost(defaultPost);
+
   const posts = [
     {
       date: "7 Oct 2023",
@@ -138,7 +155,7 @@ const BlogSection = () => {
       date: "7 Oct 2023",
       title:
         "The Science of Adaptability: How to Evolve and Thrive in a Shifting World",
-      category: "Researches",
+      category: "Articles",
       img: "1.jpg",
       contents: [
         {
@@ -229,23 +246,6 @@ const BlogSection = () => {
     []
   );
 
-  const defaultPost = {
-    date: "",
-    title: "",
-    category: "",
-    img: "",
-    contents: [
-      {
-        type: "",
-        content: "",
-      },
-    ],
-  };
-
-  const [pickedPost, setPickedPost] = useState<post>(defaultPost);
-
-  const closeModal = () => setPickedPost(defaultPost);
-
   return (
     <PageSection title="Blog" id="blog">
       <Col md={12} className="text-center p-0 m-0">
@@ -269,36 +269,40 @@ const BlogSection = () => {
         </ButtonGroup>
       </Col>
 
-      {posts.map((post, i) => {
-        const { date, title, img, category } = post;
+      {posts
+        .filter(({ category }) =>
+          pickedCategory ? category == pickedCategory : true
+        )
+        .map((post, i) => {
+          const { date, title, img, category } = post;
 
-        return (
-          <Col md={3} key={i}>
-            <Card role="button" onClick={() => setPickedPost(post)}>
-              <div
-                style={{
-                  height: "30vh",
-                  backgroundImage: `url('/images/articles/${img}')`,
-                  backgroundPositionX: "center",
-                  backgroundPositionY: "center",
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "cover",
-                }}
-                className="w-100 p-0 m-0"
-              >
-                <Button className="m-3 p-2" color="primary">
-                  {category}
-                </Button>
-              </div>
+          return (
+            <Col md={3} key={i}>
+              <Card role="button" onClick={() => setPickedPost(post)}>
+                <div
+                  style={{
+                    height: "30vh",
+                    backgroundImage: `url('/images/articles/${img}')`,
+                    backgroundPositionX: "center",
+                    backgroundPositionY: "center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                  }}
+                  className="w-100 p-0 m-0"
+                >
+                  <Button className="m-3 p-2" color="primary">
+                    {category}
+                  </Button>
+                </div>
 
-              <CardBody>
-                <small>{date}</small>
-                <CardTitle className="text-justify">{title}</CardTitle>
-              </CardBody>
-            </Card>
-          </Col>
-        );
-      })}
+                <CardBody>
+                  <small>{date}</small>
+                  <CardTitle className="text-justify">{title}</CardTitle>
+                </CardBody>
+              </Card>
+            </Col>
+          );
+        })}
 
       <Modal isOpen={!!pickedPost.title} toggle={closeModal} size="xl">
         <ModalHeader toggle={closeModal} />
