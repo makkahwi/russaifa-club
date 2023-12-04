@@ -20,7 +20,7 @@ const TrustedBySection = () => {
   ];
 
   return (
-    <PageSection title="Trusted By" noMinHeight>
+    <PageSection title="Trusted By" noMinHeight color="secondary">
       {partners.map(({ logo, link }, i) => (
         <Col md={3} className="p-5" key={i}>
           <img src={`/images/partners/${logo}`} width="100%" />

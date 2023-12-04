@@ -32,7 +32,13 @@ const PageSection = ({
     >
       {title && (
         <Col xs={12}>
-          <h1 className="mb-5 pb-5 text-center text-primary">{title}</h1>
+          <h1
+            className={`mb-5 pb-5 text-center text-${
+              color === "secondary" ? "white" : "primary"
+            }`}
+          >
+            {title}
+          </h1>
         </Col>
       )}
 
