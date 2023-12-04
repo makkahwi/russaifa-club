@@ -9,7 +9,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 import {
+  Alert,
   Button,
   Card,
   CardBody,
@@ -82,27 +84,44 @@ export const socialLinksList = [
   },
 ];
 
-const inputs = [
-  { name: "name", title: "Name", type: "text", required: true },
-  { name: "subject", title: "Subject", type: "text", required: false },
-  {
-    name: "message",
-    title: "Message",
-    type: "textarea",
-    required: true,
-    fullWidth: true,
-  },
-];
-
-const whatYouWillGet = [
-  "45 - 60 minute",
-  "Targeted assessments, as appropriate",
-  "Guidance and support via text or email",
-  "Free 30 minute consultation for new clients",
-  "Customized packages",
-];
-
 const ContactSection = () => {
+  const [showMsg, setShowMsg] = useState(false);
+
+  const inputs = [
+    { name: "name", title: "Name", type: "text", required: true },
+    { name: "subject", title: "Subject", type: "text", required: false },
+    {
+      name: "message",
+      title: "Message",
+      type: "textarea",
+      required: true,
+      fullWidth: true,
+    },
+  ];
+
+  const whatYouWillGet = [
+    "45 - 60 minute",
+    "Targeted assessments, as appropriate",
+    "Guidance and support via text or email",
+    "Free 30 minute consultation for new clients",
+    "Customized packages",
+  ];
+
+  const onSubmit = (e: any) => {
+    e.preventDefault();
+    setShowMsg(true);
+
+    const values = inputs.reduce(
+      (final, current) => ({
+        ...final,
+        [current.name]: e.target[current.name].value,
+      }),
+      {}
+    );
+
+    console.log({ values });
+  };
+
   return (
     <PageSection title="Contact Me" id="contact" color="light">
       <Col md={12} className="text-center">
@@ -143,24 +162,49 @@ const ContactSection = () => {
       </Col>
 
       <Col md={12}>
-        <Row>
-          {inputs.map(({ name, title, required, type, fullWidth }, i) => (
-            <Col md={fullWidth ? 12 : 6} key={i}>
-              <FormGroup>
-                <Label for={name}>
-                  {title}
-                  {required ? <span className="text-danger">{" *"}</span> : ""}
-                </Label>
-                <Input
-                  id={name}
-                  name={name}
-                  placeholder={title}
-                  className="py-3"
-                />
-              </FormGroup>
+        <form onSubmit={onSubmit}>
+          <Row>
+            {inputs.map(({ name, title, required, type, fullWidth }, i) => (
+              <Col md={fullWidth ? 12 : 6} key={i}>
+                <FormGroup>
+                  <Label for={name}>
+                    {title}
+                    {required ? (
+                      <span className="text-danger">{" *"}</span>
+                    ) : (
+                      ""
+                    )}
+                  </Label>
+                  <Input
+                    id={name}
+                    name={name}
+                    placeholder={title}
+                    className="py-3"
+                    required={required}
+                  />
+                </FormGroup>
+              </Col>
+            ))}
+
+            <Col md={9} lg={10}>
+              {showMsg && (
+                <Alert className="my-3">
+                  {"You're message has been sent. TQ :)"}
+                </Alert>
+              )}
             </Col>
-          ))}
-        </Row>
+
+            <Col md={3} lg={2}>
+              <Button
+                color="primary"
+                className="p-3 my-3 float-end"
+                type="submit"
+              >
+                <h5 className="text-center p-0 m-0">Reach Me Now</h5>
+              </Button>
+            </Col>
+          </Row>
+        </form>
       </Col>
     </PageSection>
   );
