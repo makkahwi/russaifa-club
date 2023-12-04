@@ -108,8 +108,8 @@ const ContactSection = () => {
   ];
 
   const onSubmit = (e: any) => {
+    setShowMsg(false);
     e.preventDefault();
-    setShowMsg(true);
 
     const values = inputs.reduce(
       (final, current) => ({
@@ -120,11 +120,12 @@ const ContactSection = () => {
     );
 
     console.log({ values });
+    setShowMsg(true);
   };
 
   return (
     <PageSection title="Contact Me" id="contact" color="light">
-      <Col md={12} className="text-center">
+      <Col md={12} className="text-center p-0 m-0">
         <h4 className="mb-5">
           We can have a discovery session now, in which you will get...
         </h4>
@@ -149,7 +150,7 @@ const ContactSection = () => {
               <a href={link} target="_blank">
                 <Button
                   style={{ backgroundColor: color }}
-                  className="p-3 m-3 w-100"
+                  className="p-3 my-3 w-100"
                 >
                   <h5 className="text-center p-0 m-0">
                     <FontAwesomeIcon icon={icon} /> {label}
@@ -161,7 +162,7 @@ const ContactSection = () => {
         </Row>
       </Col>
 
-      <Col md={12}>
+      <Col md={12} className="p-0 m-0">
         <form onSubmit={onSubmit}>
           <Row>
             {inputs.map(({ name, title, required, type, fullWidth }, i) => (
