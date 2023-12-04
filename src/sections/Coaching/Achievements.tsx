@@ -10,17 +10,14 @@ const AchievementsSection = () => {
 
   const achievements = [
     {
-      title: "A",
       content:
         "My recent achievements include Empowered more than 100 business leaders to achieve remarkable growth by providing actionable insights and strategies during coaching sessions, resulting in the development of strong, high-performing teams.",
     },
     {
-      title: "B",
       content:
         "Coached entrepreneurs to navigate complex challenges within our dynamic world, ensuring their success.",
     },
     {
-      title: "C",
       content:
         "Elevated the confidence and communication skills of business professionals, resulting in more successful negotiations, partnerships, and career advancements.",
     },
@@ -44,16 +41,14 @@ const AchievementsSection = () => {
         </Col>
       ))}
 
-      <Col xs={12}>
-        <Row className="justify-content-between">
-          {achievements.map(({ title, content }, i) => (
+      <Col xs={12} className="mt-5">
+        <Row className="justify-content-center">
+          {achievements.map(({ content }, i) => (
             <Col
-              md={3}
+              md={4}
               className="border border-dark border-5 rounded-4 p-5"
               key={i}
             >
-              <h4 className="text-center">{title}</h4>
-
               <h5 className="text-justify">{content}</h5>
             </Col>
           ))}

@@ -34,7 +34,8 @@ const JoinMeSection = () => {
             "Whether you're a seasoned executive or an emerging leader, I have a program that's perfect for you. If you're looking to elevate your leadership skills, drive organizational success, and unlock your full potential, my executive development programs are your gateway to excellence."
           }
         </h4>
-
+        <br />
+        <br />
         <h4 className="text-justify text-primary">
           {
             "Contact me today to learn more about my executive development programs and how we can collaborate to meet your specific leadership development needs. Your peoples’ journey to becoming an exceptional leader starts here."

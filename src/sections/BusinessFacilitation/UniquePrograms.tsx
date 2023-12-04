@@ -1,57 +1,84 @@
 import PageSection from "@/components/PageSection";
+import { faChartBar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Col, Row } from "reactstrap";
 
 const UniqueProgramsSection = () => {
   const programGroups = [
-    [
-      "Leadership and Executive Development",
+    {
+      icon: faChartBar,
+      programs: [
+        "Leadership and Executive Development",
 
-      "Emotional Intelligence for Leaders",
+        "Emotional Intelligence for Leaders",
 
-      "Leadership Communication Skills",
+        "Leadership Communication Skills",
 
-      "Building high performance teams",
-    ],
-    [
-      "Strategic Thinking for Leaders",
+        "Building high performance teams",
+      ],
+    },
+    {
+      icon: faChartBar,
+      programs: [
+        "Strategic Thinking for Leaders",
 
-      "Leading change",
+        "Leading change",
 
-      "Problem solving and Decision making",
-    ],
-    [
-      "Personal branding for Leaders",
+        "Problem solving and Decision making",
+      ],
+    },
+    {
+      icon: faChartBar,
+      programs: [
+        "Personal branding for Leaders",
 
-      "Master Speaker and Storyteller",
+        "Master Speaker and Storyteller",
 
-      "Productivity and Time Management",
-    ],
-    [
-      "Negotiation skills",
+        "Productivity and Time Management",
+      ],
+    },
+    {
+      icon: faChartBar,
+      programs: [
+        "Negotiation skills",
 
-      "Selling and Negotiating Techniques",
+        "Selling and Negotiating Techniques",
 
-      "Customer service",
-    ],
-    ["Train the Trainer", "Coaching skills for Leaders"],
-    [
-      "Innovation and Creative Leadership",
+        "Customer service",
+      ],
+    },
+    {
+      icon: faChartBar,
+      programs: ["Train the Trainer", "Coaching skills for Leaders"],
+    },
+    {
+      icon: faChartBar,
+      programs: [
+        "Innovation and Creative Leadership",
 
-      "Facilitation using Lego Serious Play methodology",
-    ],
-    ["Employability skills "],
+        "Facilitation using Lego Serious Play methodology",
+      ],
+    },
+    {
+      icon: faChartBar,
+      programs: ["Employability skills "],
+    },
   ];
 
   return (
     <PageSection title="Unique Programs">
       <Col xs={12}>
         <Row className="justify-content-center">
-          {programGroups.map((programs, i) => (
+          {programGroups.map(({ icon, programs }, i) => (
             <Col
               md={3}
               className="border border-primary border-5 rounded-4 p-5 my-3 mx-2"
               key={i}
             >
+              <h1 className="text-center mb-4 text-primary">
+                <FontAwesomeIcon icon={icon} />
+              </h1>
+
               {programs.map((program, y) => (
                 <h4 className="text-center" key={y}>
                   {program}

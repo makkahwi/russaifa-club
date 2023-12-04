@@ -104,7 +104,7 @@ const whatYouWillGet = [
 
 const ContactSection = () => {
   return (
-    <PageSection title="Contact Me" id="contact">
+    <PageSection title="Contact Me" id="contact" color="light">
       <Col md={12} className="text-center">
         <h4 className="mb-5">
           We can have a discovery session now, in which you will get...

@@ -29,8 +29,8 @@ const AboutIntroSection = () => {
 
         <Row className="justify-content-center py-auto px-5">
           {stats.map(({ title, count }, i) => (
-            <Col md={6} className="my-auto text-center my-5" key={i}>
-              <h1 className="mt-4">{count}</h1>
+            <Col md={3} className="my-auto text-center my-5 mx-4" key={i}>
+              <h1 className="mt-4 text-primary">{count}</h1>
               <h5 className="mt-2">{title}</h5>
             </Col>
           ))}
