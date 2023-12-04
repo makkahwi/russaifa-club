@@ -14,6 +14,18 @@ import {
   Row,
 } from "reactstrap";
 
+interface post {
+  date: string;
+  title: string;
+  category: string;
+  img: string;
+  contents: {
+    type: string;
+    contents?: string[];
+    content?: string;
+  }[];
+}
+
 const BlogSection = () => {
   const [pickedCategory, setPickedCategory] = useState("");
 
@@ -32,7 +44,7 @@ const BlogSection = () => {
         {
           type: "text",
           content:
-            "﻿Solution-Focused Coaching has become the cornerstone of my practice, enabling me to empower individuals and teams to identify their strengths, harness their potential, and navigate challenges with resilience and confidence. This powerful coaching approach emphasizes collaboration, future-focused thinking, and the belief that every individual possesses the inherent resources and abilities to create meaningful change in their lives and careers.",
+            "Solution-Focused Coaching has become the cornerstone of my practice, enabling me to empower individuals and teams to identify their strengths, harness their potential, and navigate challenges with resilience and confidence. This powerful coaching approach emphasizes collaboration, future-focused thinking, and the belief that every individual possesses the inherent resources and abilities to create meaningful change in their lives and careers.",
         },
         {
           type: "text",
@@ -146,7 +158,7 @@ const BlogSection = () => {
         },
         {
           type: "ol",
-          content: [
+          contents: [
             "Let fear get the better of me, fall behind, and fail.",
             "Embrace the change and make it work",
           ],
@@ -217,9 +229,22 @@ const BlogSection = () => {
     []
   );
 
-  const [pickedPost, setPickedPost] = useState({ title: "" });
+  const defaultPost = {
+    date: "",
+    title: "",
+    category: "",
+    img: "",
+    contents: [
+      {
+        type: "",
+        content: "",
+      },
+    ],
+  };
 
-  const closeModal = () => setPickedPost({ title: "" });
+  const [pickedPost, setPickedPost] = useState<post>(defaultPost);
+
+  const closeModal = () => setPickedPost(defaultPost);
 
   return (
     <PageSection title="Blog" id="blog">
@@ -290,13 +315,13 @@ const BlogSection = () => {
             </Col>
 
             <Col md={12} className="my-3">
-              {pickedPost.contents?.map(({ type, content }, i) => (
+              {pickedPost.contents?.map(({ type, content, contents }, i) => (
                 <Fragment key={i}>
                   {type === "title" ? (
                     <h5 className="text-block fw-bold">{content}</h5>
                   ) : type === "ol" ? (
                     <ol>
-                      {content.map((point, y) => (
+                      {contents?.map((point, y) => (
                         <li key={y}>{point}</li>
                       ))}
                     </ol>
@@ -305,7 +330,7 @@ const BlogSection = () => {
                       <h6>Resources:</h6>
 
                       <ul>
-                        {content.map((resource, y) => (
+                        {contents?.map((resource, y) => (
                           <li key={y}>{resource}</li>
                         ))}
                       </ul>
