@@ -9,7 +9,19 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, Col, FormGroup, Input, Label, Row } from "reactstrap";
+import {
+  Button,
+  Card,
+  CardBody,
+  CardTitle,
+  Col,
+  FormGroup,
+  Input,
+  Label,
+  List,
+  ListInlineItem,
+  Row,
+} from "reactstrap";
 
 export const socialLinksList = [
   {
@@ -82,10 +94,36 @@ const inputs = [
   },
 ];
 
+const whatYouWillGet = [
+  "45 - 60 minute",
+  "Targeted assessments, as appropriate",
+  "Guidance and support via text or email",
+  "Free 30 minute consultation for new clients",
+  "Customized packages",
+];
+
 const ContactSection = () => {
   return (
     <PageSection title="Contact Me" id="contact">
-      <Col md={12} className="text-center p-0 m-0">
+      <Col md={12} className="text-center">
+        <h4 className="mb-5">
+          We can have a discovery session now, in which you will get...
+        </h4>
+
+        <Row className="justify-content-center">
+          {whatYouWillGet.map((point, i) => (
+            <Col md={2} key={i}>
+              <Card className="border border-primary">
+                <CardBody>
+                  <CardTitle tag="h5">{point}</CardTitle>
+                </CardBody>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Col>
+
+      <Col md={12} className="text-center p-0 m-0 my-5">
         <Row>
           {socialLinksList.map(({ name, icon, link, label, color }, i) => (
             <Col sm={6} md={3} key={i}>
@@ -104,7 +142,7 @@ const ContactSection = () => {
         </Row>
       </Col>
 
-      <Col md={12} className="mt-5">
+      <Col md={12}>
         <Row>
           {inputs.map(({ name, title, required, type, fullWidth }, i) => (
             <Col md={fullWidth ? 12 : 6} key={i}>
