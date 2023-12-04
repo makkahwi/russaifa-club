@@ -18,7 +18,7 @@ const TestimonialsSection = () => {
   return (
     <PageSection title="Testimonials" id="testimonials" color="light">
       {testimonials.map((testimonial, i) => (
-        <Col md={4} className="texts-justify my-4" key={i}>
+        <Col md={4} className="text-justify my-4" key={i}>
           {testimonial}
         </Col>
       ))}

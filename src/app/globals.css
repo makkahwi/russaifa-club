@@ -85,9 +85,13 @@ body {
   overflow-x: hidden;
 }
 
-.text-justify {
+.text-block {
   text-align: justify;
   line-height: 3rem;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 body {

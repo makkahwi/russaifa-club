@@ -49,7 +49,7 @@ const AchievementsSection = () => {
               className="border border-dark border-5 rounded-4 p-5"
               key={i}
             >
-              <h5 className="text-justify">{content}</h5>
+              <h5 className="text-block">{content}</h5>
             </Col>
           ))}
         </Row>

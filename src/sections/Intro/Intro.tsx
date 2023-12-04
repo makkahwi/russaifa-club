@@ -22,7 +22,7 @@ const AboutIntroSection = () => {
       </Col>
 
       <Col md={6} className="my-auto">
-        <h4 className="text-justify">
+        <h4 className="text-block">
           Where Style Meets Substance. Embrace the Power of Confidence and
           Influence. Elevate Your Presence, Own the Room.
         </h4>
