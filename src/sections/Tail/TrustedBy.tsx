@@ -3,26 +3,26 @@ import { Col } from "reactstrap";
 
 const TrustedBySection = () => {
   const partners = [
-    { logo: "1.jpg", link: "Dubai" },
-    { logo: "2.jpg", link: "Dubai" },
-    { logo: "3.jpg", link: "Dubai" },
-    { logo: "4.jpg", link: "Dubai" },
-    // { logo: "5.jpg", link: "Dubai" },
-    // { logo: "6.jpg", link: "Dubai" },
-    // { logo: "7.jpg", link: "Dubai" },
-    // { logo: "8.jpg", link: "Dubai" },
-    // { logo: "9.jpg", link: "Dubai" },
-    // { logo: "10.jpg", link: "Dubai" },
-    // { logo: "11.jpg", link: "Dubai" },
-    // { logo: "12.jpg", link: "Dubai" },
-    // { logo: "13.jpg", link: "Dubai" },
-    // { logo: "14.jpg", link: "Dubai" },
+    { logo: "orange.png", link: "Dubai" },
+    { logo: "cranfield.png", link: "Dubai" },
+    { logo: "efe.png", link: "Dubai" },
+    { logo: "merck.png", link: "Dubai" },
+    { logo: "joddb.png", link: "Dubai" },
+    { logo: "real.jpg", link: "Dubai" },
+    { logo: "johnson.png", link: "Dubai" },
+    { logo: "giz.png", link: "Dubai" },
+    { logo: "gp.png", link: "Dubai" },
+    { logo: "kempinski.png", link: "Dubai" },
+    { logo: "pfizer.png", link: "Dubai" },
+    { logo: "tabuk.png", link: "Dubai" },
+    { logo: "usaid.png", link: "Dubai" },
+    { logo: "zain.png", link: "Dubai" },
   ];
 
   return (
-    <PageSection title="Trusted By" noMinHeight color="secondary">
+    <PageSection title="Trusted By" noMinHeight color="light">
       {partners.map(({ logo, link }, i) => (
-        <Col md={3} className="p-5" key={i}>
+        <Col md={2} className="p-5" key={i}>
           <img src={`/images/partners/${logo}`} width="100%" />
         </Col>
       ))}

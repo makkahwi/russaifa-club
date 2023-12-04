@@ -27,7 +27,7 @@ const PageSection = ({
               minHeight: "90vh",
             }
       }
-      className={`bg-${color}`}
+      className={`bg-${color} justify-content-center`}
       id={id}
     >
       {title && (
