@@ -8,7 +8,7 @@ Next.js & Typescript Based Landing Page
 - Fix Achivements gap (grid gaps)
 - Fix Contacts height (Flex)
 - Build Testimonials slider
-- Build Blog Posts
+- Build Blog Slider
 - Do Unique Programs symbols
 - Pick photos
 - Update bootstrap colors

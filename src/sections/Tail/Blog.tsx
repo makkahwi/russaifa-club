@@ -1,5 +1,5 @@
 import PageSection from "@/components/PageSection";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import {
   Button,
   ButtonGroup,
@@ -7,6 +7,11 @@ import {
   CardBody,
   CardTitle,
   Col,
+  Modal,
+  ModalBody,
+  ModalFooter,
+  ModalHeader,
+  Row,
 } from "reactstrap";
 
 const BlogSection = () => {
@@ -214,6 +219,8 @@ const BlogSection = () => {
 
   const [pickedPost, setPickedPost] = useState({ title: "" });
 
+  const closeModal = () => setPickedPost({ title: "" });
+
   return (
     <PageSection title="Blog" id="blog">
       <Col md={12} className="text-center p-0 m-0">
@@ -267,6 +274,63 @@ const BlogSection = () => {
           </Col>
         );
       })}
+
+      <Modal isOpen={!!pickedPost.title} toggle={closeModal} size="xl">
+        <ModalHeader toggle={closeModal} />
+
+        <ModalBody className="px-4">
+          <Row>
+            <Col md={2}>
+              <img src={`/images/articles/${pickedPost.img}`} width="100%" />
+            </Col>
+
+            <Col md={10} className="py-5 px-3">
+              <p>{pickedPost.date}</p>
+              <h4>{pickedPost.title}</h4>
+            </Col>
+
+            <Col md={12} className="my-3">
+              {pickedPost.contents?.map(({ type, content }, i) => (
+                <Fragment key={i}>
+                  {type === "title" ? (
+                    <h5 className="text-block fw-bold">{content}</h5>
+                  ) : type === "ol" ? (
+                    <ol>
+                      {content.map((point, y) => (
+                        <li key={y}>{point}</li>
+                      ))}
+                    </ol>
+                  ) : type === "resources" ? (
+                    <Fragment>
+                      <h6>Resources:</h6>
+
+                      <ul>
+                        {content.map((resource, y) => (
+                          <li key={y}>{resource}</li>
+                        ))}
+                      </ul>
+                    </Fragment>
+                  ) : (
+                    <h6
+                      className={`text-block mb-5 ${
+                        type === "boldText" ? "fw-bold" : ""
+                      }`}
+                    >
+                      {content}
+                    </h6>
+                  )}
+                </Fragment>
+              ))}
+            </Col>
+          </Row>
+        </ModalBody>
+
+        <ModalFooter>
+          <Button color="secondary" onClick={closeModal}>
+            Close
+          </Button>
+        </ModalFooter>
+      </Modal>
     </PageSection>
   );
 };
