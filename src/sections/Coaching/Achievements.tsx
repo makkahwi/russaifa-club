@@ -1,5 +1,5 @@
 import PageSection from "@/components/PageSection";
-import { Col, Row } from "reactstrap";
+import { Card, CardBody, Col, Container, Row } from "reactstrap";
 
 const AchievementsSection = () => {
   const photos = [
@@ -44,12 +44,12 @@ const AchievementsSection = () => {
       <Col xs={12} className="mt-5">
         <Row className="justify-content-center">
           {achievements.map(({ content }, i) => (
-            <Col
-              md={4}
-              className="border border-dark border-5 rounded-4 p-5"
-              key={i}
-            >
-              <h5 className="text-block">{content}</h5>
+            <Col md={4} key={i}>
+              <Card className="border border-secondary border-5 rounded-4 p-5">
+                <CardBody>
+                  <h5 className="text-block">{content}</h5>
+                </CardBody>
+              </Card>
             </Col>
           ))}
         </Row>

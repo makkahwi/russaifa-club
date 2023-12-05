@@ -1,7 +1,7 @@
 import PageSection from "@/components/PageSection";
 import { faChartBar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Col, Row } from "reactstrap";
+import { Card, CardBody, Col, Row } from "reactstrap";
 
 const UniqueProgramsSection = () => {
   const programGroups = [
@@ -70,22 +70,22 @@ const UniqueProgramsSection = () => {
       <Col xs={12}>
         <Row className="justify-content-center">
           {programGroups.map(({ icon, programs }, i) => (
-            <Col
-              md={4}
-              className="border border-primary border-5 rounded-4 p-5 my-3"
-              key={i}
-            >
-              <h1 className="text-center mb-4 text-primary">
-                <FontAwesomeIcon icon={icon} />
-              </h1>
+            <Col md={4} key={i}>
+              <Card className="border border-primary border-5 rounded-4 p-5 my-3">
+                <CardBody>
+                  <h1 className="text-center mb-4 text-primary">
+                    <FontAwesomeIcon icon={icon} />
+                  </h1>
 
-              {programs.map((program, y) => (
-                <h4 className="text-center" key={y}>
-                  {program}
-                  <br />
-                  <br />
-                </h4>
-              ))}
+                  {programs.map((program, y) => (
+                    <h4 className="text-center" key={y}>
+                      {program}
+                      <br />
+                      <br />
+                    </h4>
+                  ))}
+                </CardBody>
+              </Card>
             </Col>
           ))}
         </Row>
