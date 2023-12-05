@@ -6,8 +6,7 @@ Next.js & Typescript Based Landing Page
 
 - Fix navbar sticky to top
 - Build Testimonials slider
-- Build Blog Slider
-- Do Unique Programs symbols
+- Build Blog slider
 - Do certificate logos
 - Update bootstrap colors
 - Get enhanced logo

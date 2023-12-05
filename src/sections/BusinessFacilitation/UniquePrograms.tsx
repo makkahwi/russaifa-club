@@ -1,12 +1,13 @@
 import PageSection from "@/components/PageSection";
-import { faChartBar } from "@fortawesome/free-solid-svg-icons";
+import { faBlackTie } from "@fortawesome/free-brands-svg-icons";
+import { faBriefcase, faBullseye, faChartBar, faFaceGrinStars, faGears, faHandHoldingDollar, faLightbulb, faPersonChalkboard, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Card, CardBody, Col, Row } from "reactstrap";
 
 const UniqueProgramsSection = () => {
   const programGroups = [
     {
-      icon: faChartBar,
+      icon: faUsers,
       programs: [
         "Leadership and Executive Development",
 
@@ -14,23 +15,23 @@ const UniqueProgramsSection = () => {
 
         "Leadership Communication Skills",
 
-        "Building high performance teams",
+        "Building High Performance Teams",
       ],
     },
     {
-      icon: faChartBar,
+      icon: faBullseye,
       programs: [
         "Strategic Thinking for Leaders",
 
-        "Leading change",
+        "Leading Change",
 
-        "Problem solving and Decision making",
+        "Problem Solving and Decision Making",
       ],
     },
     {
-      icon: faChartBar,
+      icon: faFaceGrinStars,
       programs: [
-        "Personal branding for Leaders",
+        "Personal Branding for Leaders",
 
         "Master Speaker and Storyteller",
 
@@ -38,30 +39,30 @@ const UniqueProgramsSection = () => {
       ],
     },
     {
-      icon: faChartBar,
+      icon: faHandHoldingDollar,
       programs: [
-        "Negotiation skills",
+        "Negotiation Skills",
 
         "Selling and Negotiating Techniques",
 
-        "Customer service",
+        "Customer Service",
       ],
     },
     {
-      icon: faChartBar,
-      programs: ["Train the Trainer", "Coaching skills for Leaders"],
+      icon: faPersonChalkboard,
+      programs: ["Train the Trainer", "Coaching Skills for Leaders"],
     },
     {
-      icon: faChartBar,
+      icon: faLightbulb,
       programs: [
         "Innovation and Creative Leadership",
 
-        "Facilitation using Lego Serious Play methodology",
+        "Facilitation Using Lego Serious Play Methodology",
       ],
     },
     {
-      icon: faChartBar,
-      programs: ["Employability skills "],
+      icon: faBriefcase,
+      programs: ["Employability Skills "],
     },
   ];
 
@@ -73,7 +74,7 @@ const UniqueProgramsSection = () => {
             <Col md={4} className="d-flex" key={i}>
               <Card className="border border-primary border-5 rounded-4 p-5 my-3 w-100">
                 <CardBody>
-                  <h1 className="text-center mb-4 text-primary">
+                  <h1 className="text-center mb-4 text-primary display-1">
                     <FontAwesomeIcon icon={icon} />
                   </h1>
 
