@@ -124,8 +124,8 @@ const ContactSection = () => {
   return (
     <PageSection title="Contact Me" id="contact" color="light">
       <Col md={12} className="text-center p-0 m-0">
-        <h5 className="mb-5">
-          We can have a discovery session now, in which you will get...
+        <h5 className="mb-5 text-dark">
+          {"We can have a discovery session now, in which you will get..."}
         </h5>
 
         <Row className="justify-content-center">
@@ -133,7 +133,9 @@ const ContactSection = () => {
             <Col md={6} lg={3} xl={2} className="d-flex my-3" key={i}>
               <Card className="border border-primary w-100">
                 <CardBody>
-                  <CardTitle tag="h6">{point}</CardTitle>
+                  <CardTitle tag="h6" className="text-dark">
+                    {point}
+                  </CardTitle>
                 </CardBody>
               </Card>
             </Col>
@@ -167,7 +169,7 @@ const ContactSection = () => {
             {inputs.map(({ name, title, required, type, fullWidth }, i) => (
               <Col lg={fullWidth ? 12 : 6} key={i}>
                 <FormGroup>
-                  <Label for={name}>
+                  <Label for={name} className="text-dark">
                     {title}
                     {required ? (
                       <span className="text-danger">{" *"}</span>

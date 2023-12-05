@@ -17,7 +17,7 @@ const BusinessFacilitationHeaderSection = () => {
       </Col>
 
       <Col lg={6}>
-        <h5 className="text-block">
+        <h5 className="text-block text-dark">
           {
             "My executive development programs are tailored for excellence, designed to meet the unique needs and objectives of your organization. I understand that one size does not fit all, and I work closely with you to create a program that aligns perfectly with your leadership development goals. "
           }
