@@ -9,7 +9,7 @@ const HeaderSection = () => {
     <Fragment>
       <Row
         style={{
-          minHeight: "90vh",
+          minHeight: "100vh",
           background: "black url('/images/BG.jpg') no-repeat fixed center",
           backgroundSize: "cover",
         }}

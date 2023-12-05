@@ -9,7 +9,7 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
-import { Link } from "react-scroll";
+import { Link, animateScroll } from "react-scroll";
 
 export const links = [
   { title: "About Me", link: "about" },
@@ -25,25 +25,16 @@ const NavbarComp = () => {
 
   const toggle = () => setIsOpen(!isOpen);
 
-  const NavComp = ({ navbar = false }) => (
-    <Nav className="me-auto" navbar={navbar}>
-      {links.map(({ title, link }, i) => (
-        <Link to={link} key={i} role="button">
-          <NavItem>
-            <NavLink className="text-white">{title}</NavLink>
-          </NavItem>
-        </Link>
-      ))}
-    </Nav>
-  );
-
   return (
     <Navbar
       style={{ minHeight: "10vh" }}
-      className="px-5 m-0 poisition-fixed"
+      className="px-5 m-0 w-100"
+      full
+      fixed="top"
       color="dark"
+      expand="lg"
     >
-      <NavbarBrand href="/">
+      <NavbarBrand onClick={() => animateScroll.scrollToTop()} role="button">
         <Image
           src="/images/Logo-White.png"
           alt="Logo"
@@ -53,12 +44,23 @@ const NavbarComp = () => {
         />
       </NavbarBrand>
 
-      <NavComp />
-
-      <NavbarToggler onClick={toggle} />
+      <NavbarToggler onClick={toggle} className=" bg-white" />
 
       <Collapse isOpen={isOpen} navbar>
-        <NavComp navbar />
+        <Nav className="me-auto" navbar>
+          {links.map(({ title, link }, i) => (
+            <Link
+              to={link}
+              role="button"
+              onClick={() => setIsOpen(false)}
+              key={i}
+            >
+              <NavItem>
+                <NavLink className="text-white">{title}</NavLink>
+              </NavItem>
+            </Link>
+          ))}
+        </Nav>
       </Collapse>
     </Navbar>
   );
