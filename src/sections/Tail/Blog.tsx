@@ -1,4 +1,5 @@
 import PageSection from "@/components/PageSection";
+import Slider from "@/components/Slider";
 import { Fragment, useState } from "react";
 import {
   Button,
@@ -13,6 +14,7 @@ import {
   ModalHeader,
   Row,
 } from "reactstrap";
+import { SwiperSlide } from "swiper/react";
 
 interface post {
   date: string;
@@ -269,44 +271,49 @@ const BlogSection = () => {
         </ButtonGroup>
       </Col>
 
-      {posts
-        .filter(({ category }) =>
-          pickedCategory ? category == pickedCategory : true
-        )
-        .map((post, i) => {
-          const { date, title, img, category } = post;
+      <Col md={12} className="text-center p-0 m-0">
+        <Slider
+          slides={posts
+            .filter(({ category }) =>
+              pickedCategory ? category == pickedCategory : true
+            )
+            .map((post, i) => {
+              const { date, title, img, category } = post;
 
-          return (
-            <Col md={3} className="d-flex" key={i}>
-              <Card
-                role="button"
-                onClick={() => setPickedPost(post)}
-                className="w-100"
-              >
-                <div
-                  style={{
-                    height: "30vh",
-                    backgroundImage: `url('/images/articles/${img}')`,
-                    backgroundPositionX: "center",
-                    backgroundPositionY: "center",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                  }}
-                  className="w-100 p-0 m-0"
-                >
-                  <Button className="m-3 p-2" color="primary">
-                    {category}
-                  </Button>
-                </div>
+              return (
+                <SwiperSlide className="mySwiper-slider d-flex" key={i}>
+                  <Card
+                    role="button"
+                    onClick={() => setPickedPost(post)}
+                    className="w-100"
+                  >
+                    <div
+                      style={{
+                        height: "30vh",
+                        backgroundImage: `url('/images/articles/${img}')`,
+                        backgroundPositionX: "center",
+                        backgroundPositionY: "center",
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                      }}
+                      className="w-100 p-0 m-0"
+                    >
+                      <Button className="m-3 p-2 float-end" color="primary">
+                        {category}
+                      </Button>
+                    </div>
 
-                <CardBody>
-                  <small>{date}</small>
-                  <CardTitle className="text-justify">{title}</CardTitle>
-                </CardBody>
-              </Card>
-            </Col>
-          );
-        })}
+                    <CardBody>
+                      <small>{date}</small>
+                      <CardTitle className="text-justify">{title}</CardTitle>
+                    </CardBody>
+                  </Card>
+                </SwiperSlide>
+              );
+            })}
+          slidesCount={3}
+        />
+      </Col>
 
       <Modal isOpen={!!pickedPost.title} toggle={closeModal} size="xl">
         <ModalHeader toggle={closeModal} />

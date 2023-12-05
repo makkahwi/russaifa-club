@@ -1,5 +1,10 @@
 import PageSection from "@/components/PageSection";
+import Slider from "@/components/Slider";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Fragment } from "react";
 import { Col } from "reactstrap";
+import { SwiperSlide } from "swiper/react";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -17,11 +22,33 @@ const TestimonialsSection = () => {
 
   return (
     <PageSection title="Testimonials" id="testimonials" color="light">
-      {testimonials.map((testimonial, i) => (
-        <Col md={4} className="text-justify my-4" key={i}>
-          {testimonial}
-        </Col>
-      ))}
+      <Col md={12} className="text-justify my-4">
+        <Slider
+          slides={
+            <Fragment>
+              {testimonials
+                .map((text) => ({ text, stars: 5 }))
+                ?.map(({ text, stars }, i) => (
+                  <SwiperSlide
+                    className="mySwiper-slider rounded-4 p-5 bg-white border border-3 border-primary"
+                    key={i}
+                  >
+                    <h5 className="text-justify">{text}</h5>
+
+                    {Array.from(Array(stars || 0).keys()).map((y) => (
+                      <FontAwesomeIcon
+                        icon={faStar}
+                        className="text-primary h5 mt-4"
+                        key={y}
+                      />
+                    ))}
+                  </SwiperSlide>
+                ))}
+            </Fragment>
+          }
+          coverflow
+        />
+      </Col>
     </PageSection>
   );
 };
