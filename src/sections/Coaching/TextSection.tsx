@@ -5,11 +5,11 @@ const TextSection = () => {
   return (
     <PageSection>
       <Col md={6} className="my-auto">
-        <h4 className="text-block">
+        <h5 className="text-block">
           {
             "My coaching expertise spans a wide range of areas, including organizational leadership, performance development, communication, high-impact presentations, team building, pitching, entrepreneurship, strategic leadership, and more. In 2020, I was honored to be recognized by the European Union as one of the most influential women."
           }
-        </h4>
+        </h5>
       </Col>
 
       <Col md={6} className="my-auto">

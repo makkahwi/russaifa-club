@@ -20,8 +20,6 @@ import {
   FormGroup,
   Input,
   Label,
-  List,
-  ListInlineItem,
   Row,
 } from "reactstrap";
 
@@ -126,18 +124,16 @@ const ContactSection = () => {
   return (
     <PageSection title="Contact Me" id="contact" color="light">
       <Col md={12} className="text-center p-0 m-0">
-        <h4 className="mb-5">
+        <h5 className="mb-5">
           We can have a discovery session now, in which you will get...
-        </h4>
+        </h5>
 
         <Row className="justify-content-center">
           {whatYouWillGet.map((point, i) => (
             <Col md={2} className="d-flex" key={i}>
               <Card className="border border-primary w-100">
                 <CardBody>
-                  <CardTitle tag="h5" className="my-auto">
-                    {point}
-                  </CardTitle>
+                  <CardTitle tag="h6">{point}</CardTitle>
                 </CardBody>
               </Card>
             </Col>
@@ -155,9 +151,9 @@ const ContactSection = () => {
                   className="p-3 my-3 w-100"
                   color="transparent"
                 >
-                  <h5 className="text-center text-white p-0 m-0">
+                  <h6 className="text-center text-white p-0 m-0">
                     <FontAwesomeIcon icon={icon} /> {label}
-                  </h5>
+                  </h6>
                 </Button>
               </a>
             </Col>
@@ -204,7 +200,7 @@ const ContactSection = () => {
                 className="p-3 my-3 float-end"
                 type="submit"
               >
-                <h5 className="text-center p-0 m-0">Reach Me Now</h5>
+                <h6 className="text-center p-0 m-0">Reach Me Now</h6>
               </Button>
             </Col>
           </Row>

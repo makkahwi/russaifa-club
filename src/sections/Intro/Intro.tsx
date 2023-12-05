@@ -14,7 +14,7 @@ const AboutIntroSection = () => {
       <Col md={6} className="my-auto">
         <div
           style={{
-            height: "60vh",
+            height: "50vh",
             backgroundImage: `url("/images/gallery/IMG-20231128-WA0017.jpg")`,
             backgroundPositionX: "center",
             backgroundPositionY: "top",

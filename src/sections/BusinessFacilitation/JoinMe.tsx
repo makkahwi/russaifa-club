@@ -29,18 +29,18 @@ const JoinMeSection = () => {
       color="light"
     >
       <Col md={12} className="border border-primary border-5 rounded-4 p-5">
-        <h4 className="text-block text-primary">
+        <h5 className="text-block text-primary">
           {
             "Whether you're a seasoned executive or an emerging leader, I have a program that's perfect for you. If you're looking to elevate your leadership skills, drive organizational success, and unlock your full potential, my executive development programs are your gateway to excellence."
           }
-        </h4>
+        </h5>
         <br />
         <br />
-        <h4 className="text-block text-primary">
+        <h5 className="text-block text-primary">
           {
             "Contact me today to learn more about my executive development programs and how we can collaborate to meet your specific leadership development needs. Your peoples’ journey to becoming an exceptional leader starts here."
           }
-        </h4>
+        </h5>
       </Col>
     </PageSection>
   );

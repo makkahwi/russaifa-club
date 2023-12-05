@@ -54,21 +54,21 @@ const WhoAmISection = () => {
   return (
     <PageSection title="In-Depth Look" color="light">
       <Col md={12}>
-        <h4 className="text-block">
+        <h5 className="text-block">
           I am a vibrant, high-energy Leadership Facilitator and Executive Coach
           passionately harnessing the transformative potential of
           Solution-Focused Methodology. As the driving force behind the Noor
           Kayyali Training Institute, I am on a mission to inspire and empower
           individuals and teams.
-        </h4>
+        </h5>
       </Col>
 
       <Col md={12}>
-        <h4 className="text-block">
+        <h5 className="text-block">
           {
             "I proudly hold many certifications & recognition. Those are not just qualifications; they are tools I wield with unwavering zeal to ignite growth, innovation, and meaningful change. Let's embark on this incredible journey together!"
           }
-        </h4>
+        </h5>
       </Col>
 
       <Col md={12} className="border border-dark border-5 rounded-4 mt-5">
