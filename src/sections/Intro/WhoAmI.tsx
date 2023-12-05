@@ -78,7 +78,7 @@ const WhoAmISection = () => {
           </Col>
 
           {certs.map(({ title, date, source }, i) => (
-            <Col md={4} className="text-center my-4" key={i}>
+            <Col md={6} lg={4} className="text-center my-4" key={i}>
               <h6>
                 {date} @ {source}
               </h6>

@@ -15,7 +15,7 @@ const VlogSection = () => {
   return (
     <PageSection title="Vlog" id="vlog" color="light">
       {videos.map(({ link }, i) => (
-        <Col md={3} key={i}>
+        <Col md={6} xl={3} key={i}>
           <iframe
             width="100%"
             height="250vh"
@@ -33,7 +33,7 @@ const VlogSection = () => {
         >
           <Button
             style={{ backgroundColor: "#FF0000" }}
-            className="p-3 m-3 w-25"
+            className="p-3 m-3"
             color="transparent"
           >
             <h5 className="text-white p-0 m-0">

@@ -25,7 +25,7 @@ const TrustedBySection = () => {
   return (
     <PageSection title="Trusted By" noMinHeight>
       {partners.map(({ logo, link }, i) => (
-        <Col md={2} className="p-5" key={i}>
+        <Col xs={6} md={6} lg={4} xl={2} className="p-5" key={i}>
           <a href={link} target="_blank">
             <img src={`/images/partners/${logo}`} width="100%" />
           </a>

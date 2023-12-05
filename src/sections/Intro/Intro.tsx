@@ -11,7 +11,7 @@ const AboutIntroSection = () => {
 
   return (
     <PageSection id="about">
-      <Col md={6} className="my-auto">
+      <Col lg={6} className="my-auto">
         <div
           style={{
             height: "50vh",
@@ -25,15 +25,15 @@ const AboutIntroSection = () => {
         />
       </Col>
 
-      <Col md={6} className="my-auto">
+      <Col lg={6} className="my-auto">
         <h4 className="text-block">
           Where Style Meets Substance. Embrace the Power of Confidence and
           Influence. Elevate Your Presence, Own the Room.
         </h4>
 
-        <Row className="justify-content-center py-auto px-5">
+        <Row className="justify-content-between py-auto px-5">
           {stats.map(({ title, count }, i) => (
-            <Col md={3} className="my-auto text-center my-5 mx-4" key={i}>
+            <Col md={12} lg={3} className="my-auto text-center my-5" key={i}>
               <h1 className="mt-4 text-primary">{count}</h1>
               <h5 className="mt-2">{title}</h5>
             </Col>

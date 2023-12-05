@@ -130,7 +130,7 @@ const ContactSection = () => {
 
         <Row className="justify-content-center">
           {whatYouWillGet.map((point, i) => (
-            <Col md={2} className="d-flex" key={i}>
+            <Col md={6} lg={3} xl={2} className="d-flex my-3" key={i}>
               <Card className="border border-primary w-100">
                 <CardBody>
                   <CardTitle tag="h6">{point}</CardTitle>
@@ -144,7 +144,7 @@ const ContactSection = () => {
       <Col md={12} className="text-center p-0 m-0 my-5">
         <Row>
           {socialLinksList.map(({ name, icon, link, label, color }, i) => (
-            <Col sm={6} md={3} key={i}>
+            <Col sm={6} md={4} lg={3} key={i}>
               <a href={link} target="_blank">
                 <Button
                   style={{ backgroundColor: color }}
@@ -165,7 +165,7 @@ const ContactSection = () => {
         <form onSubmit={onSubmit}>
           <Row>
             {inputs.map(({ name, title, required, type, fullWidth }, i) => (
-              <Col md={fullWidth ? 12 : 6} key={i}>
+              <Col lg={fullWidth ? 12 : 6} key={i}>
                 <FormGroup>
                   <Label for={name}>
                     {title}

@@ -7,4 +7,3 @@ Next.js & Typescript Based Landing Page
 - Fix navbar sticky to top
 - Do certificate logos
 - Get enhanced logo
-- Fix mobile views
