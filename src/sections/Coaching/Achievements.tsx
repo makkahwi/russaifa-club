@@ -44,8 +44,8 @@ const AchievementsSection = () => {
       <Col xs={12} className="mt-5">
         <Row className="justify-content-center">
           {achievements.map(({ content }, i) => (
-            <Col md={4} key={i}>
-              <Card className="border border-secondary border-5 rounded-4 p-5">
+            <Col md={4} className="d-flex" key={i}>
+              <Card className="border border-secondary border-5 rounded-4 p-5 w-100">
                 <CardBody>
                   <h5 className="text-block">{content}</h5>
                 </CardBody>

@@ -70,8 +70,8 @@ const UniqueProgramsSection = () => {
       <Col xs={12}>
         <Row className="justify-content-center">
           {programGroups.map(({ icon, programs }, i) => (
-            <Col md={4} key={i}>
-              <Card className="border border-primary border-5 rounded-4 p-5 my-3">
+            <Col md={4} className="d-flex" key={i}>
+              <Card className="border border-primary border-5 rounded-4 p-5 my-3 w-100">
                 <CardBody>
                   <h1 className="text-center mb-4 text-primary">
                     <FontAwesomeIcon icon={icon} />

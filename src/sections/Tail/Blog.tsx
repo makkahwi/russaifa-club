@@ -277,8 +277,12 @@ const BlogSection = () => {
           const { date, title, img, category } = post;
 
           return (
-            <Col md={3} key={i}>
-              <Card role="button" onClick={() => setPickedPost(post)}>
+            <Col md={3} className="d-flex" key={i}>
+              <Card
+                role="button"
+                onClick={() => setPickedPost(post)}
+                className="w-100"
+              >
                 <div
                   style={{
                     height: "30vh",

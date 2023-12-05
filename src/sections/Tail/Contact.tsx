@@ -1,29 +1,9 @@
 import PageSection from "@/components/PageSection";
-import {
-  faFacebook,
-  faInstagram,
-  faLinkedinIn,
-  faWhatsapp,
-  faXTwitter,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faInstagram, faLinkedinIn, faWhatsapp, faXTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import {
-  Alert,
-  Button,
-  Card,
-  CardBody,
-  CardTitle,
-  Col,
-  FormGroup,
-  Input,
-  Label,
-  List,
-  ListInlineItem,
-  Row,
-} from "reactstrap";
+import { Alert, Button, Card, CardBody, CardTitle, Col, FormGroup, Input, Label, List, ListInlineItem, Row } from "reactstrap";
 
 export const socialLinksList = [
   {
@@ -132,10 +112,12 @@ const ContactSection = () => {
 
         <Row className="justify-content-center">
           {whatYouWillGet.map((point, i) => (
-            <Col md={2} key={i}>
-              <Card className="border border-primary">
+            <Col md={2} className="d-flex" key={i}>
+              <Card className="border border-primary w-100">
                 <CardBody>
-                  <CardTitle tag="h5">{point}</CardTitle>
+                  <CardTitle tag="h5" className="my-auto">
+                    {point}
+                  </CardTitle>
                 </CardBody>
               </Card>
             </Col>
