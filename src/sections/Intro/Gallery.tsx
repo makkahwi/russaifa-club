@@ -25,7 +25,7 @@ const GallerySection = () => {
   return (
     <Row className="p-0 m-0">
       {images.map(({ src, width }, i) => (
-        <Col md={width} className="p-0 m-0" key={i}>
+        <Col xs={width} className="p-0 m-0" key={i}>
           <div
             style={{
               height: "40vh",

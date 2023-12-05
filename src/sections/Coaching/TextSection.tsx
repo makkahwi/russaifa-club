@@ -22,7 +22,7 @@ const TextSection = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="w-100 p-0 m-0"
+          className="w-100 p-0 m-0 rounded-5 soft-edges"
         />
       </Col>
     </PageSection>

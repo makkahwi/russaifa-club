@@ -20,10 +20,10 @@ const PageSection = ({
       style={
         noMinHeight
           ? {
-              padding: "10vh 10vw",
+              padding: "10vh 15vw",
             }
           : {
-              padding: "10vh 10vw",
+              padding: "10vh 15vw",
               minHeight: "90vh",
             }
       }

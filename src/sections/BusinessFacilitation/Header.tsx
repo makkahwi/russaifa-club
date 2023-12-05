@@ -9,7 +9,11 @@ const BusinessFacilitationHeaderSection = () => {
       id="business"
     >
       <Col md={6}>
-        <img src="/images/gallery/IMG-20231128-WA0021.jpg" width="100%" />
+        <img
+          src="/images/gallery/IMG-20231128-WA0021.jpg"
+          width="100%"
+          className="rounded-5 soft-edges"
+        />
       </Col>
 
       <Col md={6}>

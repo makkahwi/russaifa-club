@@ -5,7 +5,11 @@ const CoachingHeaderSection = () => {
   return (
     <PageSection title="Welcome to Coaching!" color="secondary" id="coaching">
       <Col md={6}>
-        <img src="/images/gallery/IMG-20231128-WA0029.jpg" width="100%" />
+        <img
+          src="/images/gallery/IMG-20231128-WA0029.jpg"
+          width="100%"
+          className="rounded-5 soft-edges"
+        />
       </Col>
 
       <Col md={6}>

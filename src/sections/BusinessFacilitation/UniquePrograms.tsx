@@ -1,8 +1,18 @@
 import PageSection from "@/components/PageSection";
 import { faBlackTie } from "@fortawesome/free-brands-svg-icons";
-import { faBriefcase, faBullseye, faChartBar, faFaceGrinStars, faGears, faHandHoldingDollar, faLightbulb, faPersonChalkboard, faUsers } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBriefcase,
+  faBullseye,
+  faChartBar,
+  faFaceGrinStars,
+  faGears,
+  faHandHoldingDollar,
+  faLightbulb,
+  faPersonChalkboard,
+  faUsers,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Card, CardBody, Col, Row } from "reactstrap";
+import { Card, CardBody, Col, ListGroup, ListGroupItem, Row } from "reactstrap";
 
 const UniqueProgramsSection = () => {
   const programGroups = [
@@ -71,20 +81,20 @@ const UniqueProgramsSection = () => {
       <Col xs={12}>
         <Row className="justify-content-center">
           {programGroups.map(({ icon, programs }, i) => (
-            <Col md={4} className="d-flex" key={i}>
-              <Card className="border border-primary border-5 rounded-4 p-5 my-3 w-100">
+            <Col md={i < 3 ? 4 : 3} className="d-flex" key={i}>
+              <Card className="border border-primary border-5 rounded-4 py-4 my-3 w-100">
                 <CardBody>
                   <h1 className="text-center mb-4 text-primary display-1">
                     <FontAwesomeIcon icon={icon} />
                   </h1>
 
-                  {programs.map((program, y) => (
-                    <h4 className="text-center" key={y}>
-                      {program}
-                      <br />
-                      <br />
-                    </h4>
-                  ))}
+                  <ListGroup flush>
+                    {programs.map((program, y) => (
+                      <ListGroupItem key={y}>
+                        <h5 className="text-center my-1">{program}</h5>
+                      </ListGroupItem>
+                    ))}
+                  </ListGroup>
                 </CardBody>
               </Card>
             </Col>
