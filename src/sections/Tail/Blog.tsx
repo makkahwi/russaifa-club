@@ -252,7 +252,7 @@ const BlogSection = () => {
         <ButtonGroup>
           <Button
             onClick={() => setPickedCategory("")}
-            color={pickedCategory === "" ? "primary" : "secondary"}
+            color={pickedCategory === "" ? "primary" : "dark"}
           >
             All
           </Button>
@@ -261,7 +261,7 @@ const BlogSection = () => {
             <Button
               onClick={() => setPickedCategory(category)}
               key={i}
-              color={pickedCategory === category ? "primary" : "secondary"}
+              color={pickedCategory === category ? "primary" : "dark"}
             >
               {category}
             </Button>

@@ -40,6 +40,72 @@
   --card-border-rgb: 131, 134, 135;
 }
 
+.text-primary {
+  color: #c5005f !important;
+}
+
+.bg-primary {
+  background-color: #c5005f !important;
+}
+
+.border-primary {
+  border-color: #c5005f !important;
+}
+
+.btn-primary {
+  background-color: #c5005f !important;
+  border-color: #c5005f !important;
+}
+
+.btn-primary:hover {
+  background-color: #af0155 !important;
+  border-color: #af0155 !important;
+}
+
+.text-light {
+  color: #f2f2f2 !important;
+}
+
+.bg-light {
+  background-color: #f2f2f2 !important;
+}
+
+.border-light {
+  border-color: #f2f2f2 !important;
+}
+
+.btn-light {
+  background-color: #f2f2f2 !important;
+  border-color: #f2f2f2 !important;
+}
+
+.btn-light:hover {
+  background-color: #e5e5e5 !important;
+  border-color: #e5e5e5 !important;
+}
+
+.text-secondary {
+  color: #e5e5e5 !important;
+}
+
+.bg-secondary {
+  background-color: #e5e5e5 !important;
+}
+
+.border-secondary {
+  border-color: #e5e5e5 !important;
+}
+
+.btn-secondary {
+  background-color: #e5e5e5 !important;
+  border-color: #e5e5e5 !important;
+}
+
+.btn-secondary:hover {
+  background-color: #cecece !important;
+  border-color: #cecece !important;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -113,8 +179,4 @@ a {
   html {
     color-scheme: dark;
   }
-}
-
-.bg-light {
-  background-color: rgb(205, 205, 205) !important;
 }

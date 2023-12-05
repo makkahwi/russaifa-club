@@ -1,9 +1,29 @@
 import PageSection from "@/components/PageSection";
-import { faFacebook, faInstagram, faLinkedinIn, faWhatsapp, faXTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedinIn,
+  faWhatsapp,
+  faXTwitter,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import { Alert, Button, Card, CardBody, CardTitle, Col, FormGroup, Input, Label, List, ListInlineItem, Row } from "reactstrap";
+import {
+  Alert,
+  Button,
+  Card,
+  CardBody,
+  CardTitle,
+  Col,
+  FormGroup,
+  Input,
+  Label,
+  List,
+  ListInlineItem,
+  Row,
+} from "reactstrap";
 
 export const socialLinksList = [
   {
@@ -133,8 +153,9 @@ const ContactSection = () => {
                 <Button
                   style={{ backgroundColor: color }}
                   className="p-3 my-3 w-100"
+                  color="transparent"
                 >
-                  <h5 className="text-center p-0 m-0">
+                  <h5 className="text-center text-white p-0 m-0">
                     <FontAwesomeIcon icon={icon} /> {label}
                   </h5>
                 </Button>

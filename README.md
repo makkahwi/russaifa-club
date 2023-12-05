@@ -8,6 +8,5 @@ Next.js & Typescript Based Landing Page
 - Build Testimonials slider
 - Build Blog slider
 - Do certificate logos
-- Update bootstrap colors
 - Get enhanced logo
 - Fix mobile views

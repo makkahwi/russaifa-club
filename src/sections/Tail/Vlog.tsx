@@ -34,8 +34,9 @@ const VlogSection = () => {
           <Button
             style={{ backgroundColor: "#FF0000" }}
             className="p-3 m-3 w-25"
+            color="transparent"
           >
-            <h5 className="p-0 m-0">
+            <h5 className="text-white p-0 m-0">
               <FontAwesomeIcon icon={faYoutube} /> Find More On YouTube Channel
             </h5>
           </Button>
