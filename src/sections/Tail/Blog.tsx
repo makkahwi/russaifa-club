@@ -304,8 +304,10 @@ const BlogSection = () => {
                     </div>
 
                     <CardBody>
-                      <small>{date}</small>
-                      <CardTitle className="text-justify">{title}</CardTitle>
+                      <small className="text-start text-dark">{date}</small>
+                      <CardTitle className="text-justify text-dark">
+                        {title}
+                      </CardTitle>
                     </CardBody>
                   </Card>
                 </SwiperSlide>

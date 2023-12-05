@@ -62,7 +62,7 @@ const FooterSection = () => {
       </Row>
 
       <Row className="py-5">
-        <h6 className="text-center">
+        <h6 className="text-center text-dark">
           All Rights Reserved For{" "}
           <span className="text-primary">NOOR KAYYALI</span> ©{" "}
           {new Date().getFullYear()}
@@ -71,7 +71,7 @@ const FooterSection = () => {
         <a
           href="https://www.alembicsoft.com/"
           target="_blank"
-          className="text-center"
+          className="text-center text-dark"
         >
           <small>Built By AlembicSoft</small>
         </a>

@@ -26,7 +26,7 @@ const AboutIntroSection = () => {
       </Col>
 
       <Col lg={6} className="my-auto">
-        <h4 className="text-block">
+        <h4 className="text-block text-dark">
           Where Style Meets Substance. Embrace the Power of Confidence and
           Influence. Elevate Your Presence, Own the Room.
         </h4>
@@ -35,7 +35,7 @@ const AboutIntroSection = () => {
           {stats.map(({ title, count }, i) => (
             <Col md={12} lg={3} className="my-auto text-center my-5" key={i}>
               <h1 className="mt-4 text-primary">{count}</h1>
-              <h5 className="mt-2">{title}</h5>
+              <h5 className="mt-2 text-dark">{title}</h5>
             </Col>
           ))}
         </Row>

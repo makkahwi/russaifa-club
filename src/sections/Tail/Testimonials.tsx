@@ -33,7 +33,7 @@ const TestimonialsSection = () => {
                     className="mySwiper-slider rounded-4 p-5 bg-white border border-3 border-primary"
                     key={i}
                   >
-                    <h5 className="text-justify">{text}</h5>
+                    <h5 className="text-justify text-dark">{text}</h5>
 
                     {Array.from(Array(stars || 0).keys()).map((y) => (
                       <FontAwesomeIcon

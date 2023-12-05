@@ -47,7 +47,7 @@ const AchievementsSection = () => {
             <Col lg={4} className="d-flex my-3" key={i}>
               <Card className="border border-dark bg-transparent border-5 rounded-4 p-5 w-100">
                 <CardBody>
-                  <h5 className="text-block">{content}</h5>
+                  <h5 className="text-block text-dark">{content}</h5>
                 </CardBody>
               </Card>
             </Col>
