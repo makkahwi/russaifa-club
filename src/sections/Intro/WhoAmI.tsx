@@ -69,10 +69,10 @@ const WhoAmISection = () => {
         </h5>
       </Col>
 
-      <Col md={12} className="border border-dark border-5 rounded-4 mt-5">
+      <Col md={12} className="border border-primary border-5 rounded-4 mt-5">
         <Row>
           <Col md={12} className="my-4">
-            <h3 className="text-center text-dark">Certifications</h3>
+            <h3 className="text-center text-primary">Certifications</h3>
           </Col>
 
           {certs.map(({ title, date, source }, i) => (
