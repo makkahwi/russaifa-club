@@ -122,7 +122,7 @@ const ContactSection = () => {
   };
 
   return (
-    <PageSection title="Contact Me" id="contact" color="light">
+    <PageSection title="Contact Me" id="contact">
       <Col md={12} className="text-center p-0 m-0">
         <h5 className="mb-5 text-dark">
           {"We can have a discovery session now, in which you will get..."}

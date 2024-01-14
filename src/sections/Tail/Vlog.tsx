@@ -13,7 +13,7 @@ const VlogSection = () => {
   ];
 
   return (
-    <PageSection title="Vlog" id="vlog" color="light">
+    <PageSection title="Vlog" id="vlog">
       {videos.map(({ link }, i) => (
         <Col md={6} xl={3} key={i}>
           <iframe

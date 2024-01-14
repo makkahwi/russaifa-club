@@ -29,7 +29,7 @@ const TrustedBySection = () => {
   ];
 
   return (
-    <PageSection title="Trusted By" noMinHeight>
+    <PageSection title="Trusted By" noMinHeight color="light">
       {partners.map(({ logo, link, bigger }, i) => (
         <Col xs={6} md={6} lg={4} xl={bigger ? 3 : 2} className="p-5" key={i}>
           <a href={link} target="_blank">
