@@ -10,7 +10,7 @@ const FooterSection = () => {
       <Row className="bg-dark py-5">
         <Col xs={12} className="text-center pb-5">
           <Image
-            src="/images/logo/Logo-white.png"
+            src="/images/logo/logo-white.png"
             alt="Logo"
             width={1082 * 0.25}
             height={1082 * 0.25}
