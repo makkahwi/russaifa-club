@@ -11,7 +11,12 @@ const AchievementsSection = () => {
   const achievements = [
     {
       content:
-        "My recent achievements include Empowered more than 100 business leaders to achieve remarkable growth by providing actionable insights and strategies during coaching sessions, resulting in the development of strong, high-performing teams.",
+        "Empowered more than 100 business leaders to achieve remarkable growth by providing actionable insights and strategies during coaching sessions, resulting in the development of strong, high-performing teams.",
+      fullWidth: true,
+    },
+    {
+      content:
+        "In 2020, I was honored to be recognized by the European Union as one of the most influential women.",
     },
     {
       content:
@@ -43,9 +48,9 @@ const AchievementsSection = () => {
 
       <Col xs={12} className="mt-5">
         <Row className="justify-content-center">
-          {achievements.map(({ content }, i) => (
-            <Col lg={4} className="d-flex my-3" key={i}>
-              <Card className="border border-dark bg-transparent border-5 rounded-4 p-5 w-100">
+          {achievements.map(({ content, fullWidth }, i) => (
+            <Col lg={fullWidth ? 12 : 4} className="d-flex my-3" key={i}>
+              <Card className="border border-primary bg-transparent border-5 rounded-4 p-2 w-100">
                 <CardBody>
                   <h5 className="text-block text-dark">{content}</h5>
                 </CardBody>

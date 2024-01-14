@@ -8,7 +8,7 @@ const CoachingSections = () => {
     <Fragment>
       <CoachingHeaderSection />
 
-      <TextSection />
+      {/* <TextSection /> */}
 
       <AchievementsSection />
     </Fragment>
