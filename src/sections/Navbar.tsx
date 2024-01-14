@@ -36,7 +36,7 @@ const NavbarComp = () => {
     >
       <NavbarBrand onClick={() => animateScroll.scrollToTop()} role="button">
         <Image
-          src="/images/logo/Logo-white.png"
+          src="/images/logo/logo-white.png"
           alt="Logo"
           width={1082 * 0.05}
           height={1082 * 0.05}

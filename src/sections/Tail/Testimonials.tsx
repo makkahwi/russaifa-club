@@ -21,7 +21,7 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <PageSection title="Testimonials" id="testimonials" color="light">
+    <PageSection title="Testimonials" id="testimonials">
       <Col md={12} className="text-justify my-4">
         <Slider
           slides={
