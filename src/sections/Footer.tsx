@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Fragment } from "react";
-import { Link } from "react-scroll";
+import { Link, animateScroll } from "react-scroll";
 import { Col, Nav, NavItem, NavLink, Row } from "reactstrap";
 import { links } from "./Navbar";
 
@@ -15,6 +15,8 @@ const FooterSection = () => {
             width={1082 * 0.25}
             height={1082 * 0.25}
             priority
+            onClick={() => animateScroll.scrollToTop()}
+            role="button"
           />
         </Col>
 
