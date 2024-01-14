@@ -26,7 +26,7 @@ const HeaderSection = () => {
             className="position-absolute end-0 bottom-0 me-5 mt-5"
             alt="Noor Photo"
             width={1200 * 0.36}
-            height={1600 * 0.36}
+            height={1520 * 0.36}
             priority
           />
         </Col>
