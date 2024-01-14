@@ -1,9 +1,11 @@
-import AboutIntroSection from "@/sections/Intro/Intro";
-import GallerySection from "@/sections/Intro/Gallery";
-import WhoAmISection from "@/sections/Intro/WhoAmI";
 import { Fragment } from "react";
+import dynamic from "next/dynamic";
 
 const IntroSections = () => {
+  const AboutIntroSection = dynamic(() => import("@/sections/Intro/Intro"));
+  const GallerySection = dynamic(() => import("@/sections/Intro/Gallery"));
+  const WhoAmISection = dynamic(() => import("@/sections/Intro/WhoAmI"));
+
   return (
     <Fragment>
       <AboutIntroSection />

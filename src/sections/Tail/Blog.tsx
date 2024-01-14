@@ -250,7 +250,7 @@ const BlogSection = () => {
 
   return (
     <PageSection title="Blog" id="blog">
-      <Col md={12} className="text-center p-0 m-0">
+      <Col md={12} className="text-center p-0 m-0 mb-4">
         <ButtonGroup>
           <Button
             onClick={() => setPickedCategory("")}

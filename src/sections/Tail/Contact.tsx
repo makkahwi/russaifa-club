@@ -42,7 +42,7 @@ export const socialLinksList = [
     name: "Phone",
     icon: faPhone,
     link: "tel:+962797030228",
-    label: "Call Me Maybe",
+    label: "Call Me Now",
     color: "#001F3F",
   },
   {

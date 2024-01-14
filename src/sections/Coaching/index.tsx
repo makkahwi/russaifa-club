@@ -1,14 +1,16 @@
+import dynamic from "next/dynamic";
 import { Fragment } from "react";
-import CoachingHeaderSection from "./Header";
-import TextSection from "./TextSection";
-import AchievementsSection from "./Achievements";
 
 const CoachingSections = () => {
+  const TextSection = dynamic(() => import("./TextSection"));
+  const CoachingHeaderSection = dynamic(() => import("./Header"));
+  const AchievementsSection = dynamic(() => import("./Achievements"));
+
   return (
     <Fragment>
       <CoachingHeaderSection />
 
-      <TextSection />
+      {/* <TextSection /> */}
 
       <AchievementsSection />
     </Fragment>

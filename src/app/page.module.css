@@ -7,6 +7,21 @@
   min-height: 100vh;
 }
 
+html,
+body,
+div,
+section,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small {
+  font-family: Arial;
+}
+
 .description {
   display: inherit;
   justify-content: inherit;
@@ -15,7 +30,7 @@
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
-  font-family: var(--font-mono);
+  font-family: Arial;
 }
 
 .description a {
@@ -36,7 +51,7 @@
 
 .code {
   font-weight: 700;
-  font-family: var(--font-mono);
+  font-family: Arial;
 }
 
 .grid {
@@ -97,7 +112,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);

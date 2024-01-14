@@ -1,33 +1,19 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import { Fragment, useState } from "react";
-import {
-  Button,
-  ButtonGroup,
-  Col,
-  Nav,
-  NavItem,
-  NavLink,
-  Row,
-} from "reactstrap";
-import { socialLinksList } from "./Tail/Contact";
-import { links } from "./Navbar";
+import { Fragment } from "react";
 import { Link } from "react-scroll";
+import { Col, Nav, NavItem, NavLink, Row } from "reactstrap";
+import { links } from "./Navbar";
 
 const FooterSection = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
   return (
     <Fragment>
       <Row className="bg-dark py-5">
         <Col xs={12} className="text-center pb-5">
           <Image
-            src="/images/Logo-White.png"
+            src="/images/logo/Logo-white.png"
             alt="Logo"
-            width={73 * 2}
-            height={92 * 2}
+            width={1082 * 0.25}
+            height={1082 * 0.25}
             priority
           />
         </Col>
