@@ -1,11 +1,12 @@
+import dynamic from "next/dynamic";
 import { Fragment } from "react";
 
-import BusinessFacilitationHeaderSection from "./Header";
-import JoinMeSection from "./JoinMe";
-import TextSection from "./TextSection";
-import UniqueProgramsSection from "./UniquePrograms";
-
 const BusinessFacilitationSections = () => {
+  const BusinessFacilitationHeaderSection = dynamic(() => import("./Header"));
+  const JoinMeSection = dynamic(() => import("./JoinMe"));
+  const TextSection = dynamic(() => import("./TextSection"));
+  const UniqueProgramsSection = dynamic(() => import("./UniquePrograms"));
+
   return (
     <Fragment>
       <BusinessFacilitationHeaderSection />
