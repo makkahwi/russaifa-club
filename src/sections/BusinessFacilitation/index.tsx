@@ -11,7 +11,7 @@ const BusinessFacilitationSections = () => {
     <Fragment>
       <BusinessFacilitationHeaderSection />
 
-      <TextSection />
+      {/* <TextSection /> */}
 
       <UniqueProgramsSection />
 

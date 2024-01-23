@@ -1,4 +1,5 @@
 "use client";
+import ScrollUpButton from "@/components/ScrollUp";
 import dynamic from "next/dynamic";
 import { Fragment } from "react";
 
@@ -25,6 +26,8 @@ const HomePage = () => {
       <TailSections />
 
       <FooterSection />
+
+      {/* <ScrollUpButton /> */}
     </Fragment>
   );
 };
