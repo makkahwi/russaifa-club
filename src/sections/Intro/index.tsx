@@ -1,5 +1,5 @@
-import { Fragment } from "react";
 import dynamic from "next/dynamic";
+import { Fragment } from "react";
 
 const IntroSections = () => {
   const AboutIntroSection = dynamic(() => import("@/sections/Intro/Intro"));
@@ -12,7 +12,7 @@ const IntroSections = () => {
 
       <WhoAmISection />
 
-      <GallerySection />
+      {/* <GallerySection /> */}
     </Fragment>
   );
 };
