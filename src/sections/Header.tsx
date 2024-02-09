@@ -23,10 +23,19 @@ const HeaderSection = () => {
         <Col lg={4} md={6} className="position-relative mt-5">
           <Image
             src="/images/gallery/IMG-20231128-WA0017.png"
-            className="position-absolute end-0 bottom-0 me-5 mt-5"
+            className="position-absolute end-0 bottom-0 me-5 mt-5 d-block d-md-none"
             alt="Noor Photo"
-            width={1200 * 0.36}
-            height={1520 * 0.36}
+            width={1200 * 0.33}
+            height={1520 * 0.33}
+            priority
+          />
+
+          <Image
+            src="/images/gallery/IMG-20231128-WA0017.png"
+            className="position-absolute end-0 bottom-0 me-5 mt-5 d-none d-md-block"
+            alt="Noor Photo"
+            width={1200 * 0.43}
+            height={1520 * 0.43}
             priority
           />
         </Col>

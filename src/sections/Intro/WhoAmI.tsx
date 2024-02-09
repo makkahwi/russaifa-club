@@ -1,10 +1,11 @@
 import PageSection from "@/components/PageSection";
+import { capitalizeSentenceFirstLetters } from "@/functions/utils";
 import { Col, Row } from "reactstrap";
 
 const WhoAmISection = () => {
   const certs = [
     {
-      title: "Certified MBTI practitioner",
+      title: "Certified MBTI Practitioner",
       date: 2022,
       source: "A",
     },
@@ -24,37 +25,51 @@ const WhoAmISection = () => {
       source: "B",
     },
     {
-      title: "DANIEL GOLEMAN EMOTIONAL INTELLIGENCE",
+      title: "Daniel Goleman Emotional Intelligence Coach",
       date: 2022,
       source: "C",
     },
     {
-      title: "CERTIFIED LEVEL 2 CONVERSATIONAL",
+      title: "Certified Level 2 Conversational Intelligence Coach",
       date: 2022,
       source: "WEINSTITUTE",
     },
     {
-      title: "INTELLIGENCE COACH",
-      date: 2022,
-      source: "D",
-    },
-    {
       title:
-        "CERTIFIED LEADERSHIP, GOVERNANCE AND STRATEGIC THINKING FACILITATOR ",
+        "Certified Leadership Governance and Strategic Thinking Facilitator",
       date: 2021,
       source: "WHO",
     },
     {
-      title: "CERTIFIED level 2 AQAI ASSESSMENT COACH AND PRACTITIONER",
+      title: "Certified Level 2 AQAI Assessment Coach and Practitioner",
       date: 2012,
       source: "UK",
     },
     {
-      title: "CERTIFIED TRAINER",
+      title: "Certified Trainer",
       date: 2012,
       source: "E",
     },
+    {
+      title: "Certified Leadership Network Diagnostic Tool Practitioner ",
+      date: 2033,
+      source: "F",
+    },
   ];
+
+  const CertsCol = ({ list = certs }) => (
+    <Col md={12} lg={6} className="text-justify my-4 text-dark p-3">
+      {list.map(({ title, date, source }, i) => (
+        // <h6>
+        //   {/* {date} @  */}
+        //   {/* {source} */}
+        // </h6>
+        <h5 className="lh-lg" key={i}>
+          - {capitalizeSentenceFirstLetters(title)}
+        </h5>
+      ))}
+    </Col>
+  );
 
   return (
     <PageSection title="In-Depth Look" color="light">
@@ -75,21 +90,24 @@ const WhoAmISection = () => {
       </Col>
 
       <Col md={12} className="border border-primary border-5 rounded-4 mt-5">
-        <Row>
+        <Row className="justify-content-center">
           <Col md={12} className="my-4">
             <h3 className="text-center text-primary">Certifications</h3>
           </Col>
 
-          {certs.map(({ title, date, source }, i) => (
-            <Col md={6} lg={4} className="text-center my-4 text-dark" key={i}>
-              <h6>
-                {/* {date} @  */}
-                {source}
-              </h6>
-
-              <h5>{title}</h5>
-            </Col>
-          ))}
+          <Col xs={12} className="text-justify my-4 text-dark p-3">
+            <h5 className="lh-lg">
+              <ul>
+                {certs.map(({ title, date, source }, i) => (
+                  // <h6>
+                  //   {/* {date} @  */}
+                  //   {/* {source} */}
+                  // </h6>
+                  <li key={i}>{capitalizeSentenceFirstLetters(title)}</li>
+                ))}
+              </ul>
+            </h5>
+          </Col>
         </Row>
       </Col>
     </PageSection>

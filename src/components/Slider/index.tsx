@@ -74,7 +74,7 @@ const Slider = ({ slides, coverflow, slidesCount = 2 }: props) => {
         }}
       >
         <FontAwesomeIcon
-          className="swiper-button-prev bg-dark p-2 px-3 rounded-circle text-white"
+          className="swiper-button-prev bg-white p-2 px-3 rounded-circle text-primary"
           icon={faArrowLeft}
           onClick={() => swiper.slidePrev()}
         />
@@ -82,7 +82,7 @@ const Slider = ({ slides, coverflow, slidesCount = 2 }: props) => {
         {slides}
 
         <FontAwesomeIcon
-          className="swiper-button-next bg-dark p-2 px-3 rounded-circle text-white"
+          className="swiper-button-next bg-white p-2 px-3 rounded-circle text-primary"
           icon={faArrowRight}
           onClick={() => swiper.slideNext()}
         />

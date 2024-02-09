@@ -1,5 +1,6 @@
 import PageSection from "@/components/PageSection";
 import Slider from "@/components/Slider";
+import { capitalizeSentenceFirstLetters } from "@/functions/utils";
 import { Fragment, useState } from "react";
 import {
   Button,
@@ -50,10 +51,12 @@ const BlogSection = () => {
 
   const posts = [
     {
-      date: "7 Oct 2023",
-      title: "HOW SOLUTION FOCUSED COACHING TRANSFORMED MY TRAINING STYLE",
+      date: "7 Dec 2023",
+      title: capitalizeSentenceFirstLetters(
+        "HOW SOLUTION FOCUSED COACHING TRANSFORMED MY TRAINING STYLE".toLowerCase()
+      ),
       category: "Articles",
-      img: "1.jpg",
+      img: "2.jpg",
       contents: [
         {
           type: "text",
@@ -93,11 +96,12 @@ const BlogSection = () => {
       ],
     },
     {
-      date: "7 Oct 2023",
-      title:
-        "WHEN COACHING CONVERGES WITH TRAINING: IGNITING THE FLAME OF PASSION AND UNLEASHING POTENTIAL",
+      date: "7 Nov 2023",
+      title: capitalizeSentenceFirstLetters(
+        "WHEN COACHING CONVERGES WITH TRAINING: IGNITING THE FLAME OF PASSION AND UNLEASHING POTENTIAL".toLowerCase()
+      ),
       category: "Articles",
-      img: "1.jpg",
+      img: "3.png",
       contents: [
         {
           type: "text",
@@ -155,10 +159,11 @@ const BlogSection = () => {
     },
     {
       date: "7 Oct 2023",
-      title:
-        "The Science of Adaptability: How to Evolve and Thrive in a Shifting World",
+      title: capitalizeSentenceFirstLetters(
+        "The Science of Adaptability: How to Evolve and Thrive in a Shifting World".toLowerCase()
+      ),
       category: "Articles",
-      img: "1.jpg",
+      img: "4.jpg",
       contents: [
         {
           type: "text",
@@ -322,11 +327,11 @@ const BlogSection = () => {
 
         <ModalBody className="px-4">
           <Row>
-            <Col md={2}>
+            <Col md={4}>
               <img src={`/images/articles/${pickedPost.img}`} width="100%" />
             </Col>
 
-            <Col md={10} className="py-5 px-3">
+            <Col md={8} className="py-5 px-3">
               <p>{pickedPost.date}</p>
               <h4>{pickedPost.title}</h4>
             </Col>
