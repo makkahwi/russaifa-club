@@ -20,7 +20,7 @@ const TestimonialsSection = () => {
     {
       author: "IT Manager - UAE",
       content:
-        "I highly recommend Mrs. noor as a life coach for anyone seeking personal and professional growth. I have had the pleasure of working with Mrs. Noor for 4 Sessions, and her guidance and expertise have been invaluable in helping me achieve my goals and improve my overall well-being.",
+        "I highly recommend Mrs. Noor as a life coach for anyone seeking personal and professional growth. I have had the pleasure of working with Mrs. Noor for 4 Sessions, and her guidance and expertise have been invaluable in helping me achieve my goals and improve my overall well-being.",
     },
     {
       author: "",
