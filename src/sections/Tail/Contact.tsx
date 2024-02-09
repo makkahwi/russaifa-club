@@ -130,7 +130,7 @@ const ContactSection = () => {
 
         <Row className="justify-content-center">
           {whatYouWillGet.map((point, i) => (
-            <Col md={6} lg={3} xl={2} key={i}>
+            <Col xs={6} lg={3} xl={2} className="my-3" key={i}>
               <div className="d-flex border rounded-3 border-primary w-100 h-100 p-3">
                 <h6 className="text-dark m-auto">{point}</h6>
               </div>
