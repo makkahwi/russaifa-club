@@ -12,7 +12,7 @@ const IntroSections = () => {
 
       <WhoAmISection />
 
-      {/* <GallerySection /> */}
+      <GallerySection />
     </Fragment>
   );
 };
