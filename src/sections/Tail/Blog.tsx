@@ -327,11 +327,11 @@ const BlogSection = () => {
 
         <ModalBody className="px-4">
           <Row>
-            <Col md={2}>
+            <Col md={4}>
               <img src={`/images/articles/${pickedPost.img}`} width="100%" />
             </Col>
 
-            <Col md={10} className="py-5 px-3">
+            <Col md={8} className="py-5 px-3">
               <p>{pickedPost.date}</p>
               <h4>{pickedPost.title}</h4>
             </Col>
