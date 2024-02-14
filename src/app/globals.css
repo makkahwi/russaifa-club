@@ -48,6 +48,10 @@
   background-color: #c5005f !important;
 }
 
+.bg-primary-dark {
+  background-color: #660031 !important;
+}
+
 .border-primary {
   border-color: #c5005f !important;
 }

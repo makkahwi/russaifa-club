@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
+import { animateScroll, Link } from "react-scroll";
 import {
   Collapse,
   Nav,
@@ -9,7 +10,6 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
-import { Link, animateScroll } from "react-scroll";
 
 export const links = [
   { title: "About Me", link: "about" },
@@ -38,8 +38,8 @@ const NavbarComp = () => {
         <Image
           src="/images/logo/logo-white.png"
           alt="Logo"
-          width={1082 * 0.05}
-          height={1082 * 0.05}
+          width={543 * 0.075}
+          height={771 * 0.075}
           priority
         />
       </NavbarBrand>
