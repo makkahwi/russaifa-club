@@ -158,7 +158,7 @@ const ContactSection = () => {
       <Col md={12} className="text-center p-0 m-0 my-5">
         <Row>
           {socialLinksList.map(({ name, icon, link, label, color }, i) => (
-            <Col sm={6} md={4} lg={3} key={i}>
+            <Col xs={6} md={4} lg={3} key={i}>
               <a href={link} target="_blank">
                 <Button
                   style={{ backgroundColor: color }}
