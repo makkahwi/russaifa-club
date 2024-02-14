@@ -1,5 +1,6 @@
 import PageSection from "@/components/PageSection";
 import { capitalizeSentenceFirstLetters } from "@/functions/utils";
+import Image from "next/image";
 import { Col, Row } from "reactstrap";
 
 const WhoAmISection = () => {
@@ -72,7 +73,22 @@ const WhoAmISection = () => {
   );
 
   return (
-    <PageSection title="In-Depth Look" color="light">
+    <PageSection
+      title="In-Depth Look"
+      color="light"
+      aboveTitle={
+        <Col md={12} className="text-center">
+          <Image
+            src="/images/logo/logo-white-text-only.png"
+            className="mb-5"
+            alt="Sun"
+            width={543 * 0.35}
+            height={439 * 0.35}
+            priority
+          />
+        </Col>
+      }
+    >
       <Col md={12}>
         <h5 className="text-block text-dark">
           {
