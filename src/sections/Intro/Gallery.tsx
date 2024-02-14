@@ -9,16 +9,16 @@ const GallerySection = () => {
       width: 9,
     },
     {
-      src: "IMG_3683.jpg",
+      src: "z.jpg",
       width: 3,
     },
     {
       src: "IMG_6843.jpg",
-      width: 5,
+      width: 6,
     },
     {
-      src: "IMG_5538.jpg",
-      width: 7,
+      src: "IMG_3683.jpg",
+      width: 6,
     },
   ];
 

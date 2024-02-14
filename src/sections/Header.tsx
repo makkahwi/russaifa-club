@@ -10,7 +10,8 @@ const HeaderSection = () => {
       <Row
         style={{
           minHeight: "100vh",
-          background: "black url('/images/BG.jpg') no-repeat fixed center",
+          background:
+            "black url('/images/BG-Color.jpg') no-repeat fixed center",
           backgroundSize: "cover",
         }}
         className="justify-content-center"
@@ -22,20 +23,20 @@ const HeaderSection = () => {
 
         <Col lg={4} md={6} className="position-relative mt-5">
           <Image
-            src="/images/gallery/IMG-20231128-WA0017.png"
+            src="/images/0005.png"
             className="position-absolute end-0 bottom-0 me-5 mt-5 d-block d-md-none"
             alt="Noor Photo"
-            width={1200 * 0.33}
-            height={1520 * 0.33}
+            width={2012 * 0.12}
+            height={3332 * 0.12}
             priority
           />
 
           <Image
-            src="/images/gallery/IMG-20231128-WA0017.png"
+            src="/images/0005.png"
             className="position-absolute end-0 bottom-0 me-5 mt-5 d-none d-md-block"
             alt="Noor Photo"
-            width={1200 * 0.43}
-            height={1520 * 0.43}
+            width={2012 * 0.16}
+            height={3332 * 0.16}
             priority
           />
         </Col>
