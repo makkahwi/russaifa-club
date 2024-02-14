@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 import { useState } from "react";
 import {
   Alert,
@@ -122,7 +123,22 @@ const ContactSection = () => {
   };
 
   return (
-    <PageSection title="Contact Me" id="contact">
+    <PageSection
+      title="Contact Me"
+      id="contact"
+      aboveTitle={
+        <Col md={12} className="text-center">
+          <Image
+            src="/images/logo/sun.png"
+            className="mb-5"
+            alt="Sun"
+            width={409 * 0.35}
+            height={244 * 0.35}
+            priority
+          />
+        </Col>
+      }
+    >
       <Col md={12} className="text-center p-0 m-0">
         <h5 className="mb-5 text-dark">
           {"We can have a discovery session now, in which you will get..."}
@@ -131,7 +147,7 @@ const ContactSection = () => {
         <Row className="justify-content-center">
           {whatYouWillGet.map((point, i) => (
             <Col xs={6} lg={3} xl={2} className="my-3" key={i}>
-              <div className="d-flex border rounded-3 border-primary w-100 h-100 p-3">
+              <div className="d-flex border rounded-5 border-primary w-100 h-100 p-3">
                 <h6 className="text-dark m-auto">{point}</h6>
               </div>
             </Col>

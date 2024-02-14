@@ -30,7 +30,7 @@ const JoinMeSection = () => {
     >
       <Col
         md={12}
-        className="border border-primary border-5 rounded-4 p-3 p-md-5"
+        className="border border-primary border-5 rounded-5 p-3 p-md-5"
       >
         <h5 className="text-block text-black">
           {

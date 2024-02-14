@@ -17,7 +17,7 @@ const GallerySection = () => {
       width: 6,
     },
     {
-      src: "IMG_3683.jpg",
+      src: "IMG_0092.jpg",
       width: 6,
     },
   ];
