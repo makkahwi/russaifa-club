@@ -10,11 +10,12 @@ const HeaderSection = () => {
       <Row
         style={{
           minHeight: "100vh",
-          background:
-            "black url('/images/BG-Color.jpg') no-repeat fixed center",
+          backgroundImage: `url('/images/Pattern.png')`,
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        className="justify-content-center"
+        className="justify-content-center bg-primary-dark"
       >
         <Col lg={5} md={6} className="my-auto px-5 text-white">
           <h2 className="mt-4 display-3 fw-bold">NOOR KAYYALI</h2>
@@ -35,8 +36,8 @@ const HeaderSection = () => {
             src="/images/0005.png"
             className="position-absolute end-0 bottom-0 me-5 mt-5 d-none d-md-block"
             alt="Noor Photo"
-            width={2012 * 0.16}
-            height={3332 * 0.16}
+            width={2012 * 0.17}
+            height={3332 * 0.17}
             priority
           />
         </Col>
