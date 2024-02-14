@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { Fragment } from "react";
-import { Link, animateScroll } from "react-scroll";
+import { animateScroll, Link } from "react-scroll";
 import { Col, Nav, NavItem, NavLink, Row } from "reactstrap";
+
 import { links } from "./Navbar";
 
 const FooterSection = () => {
@@ -12,8 +13,8 @@ const FooterSection = () => {
           <Image
             src="/images/logo/logo-white.png"
             alt="Logo"
-            width={1082 * 0.25}
-            height={1082 * 0.25}
+            width={543 * 0.25}
+            height={771 * 0.25}
             priority
             onClick={() => animateScroll.scrollToTop()}
             role="button"
