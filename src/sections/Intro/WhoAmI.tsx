@@ -105,7 +105,7 @@ const WhoAmISection = () => {
         </h5>
       </Col>
 
-      <Col md={12} className="border border-primary border-5 rounded-4 mt-5">
+      <Col md={12} className="border border-primary border-5 rounded-5 mt-5">
         <Row className="justify-content-center">
           <Col md={12} className="my-4">
             <h3 className="text-center text-primary">Certifications</h3>
