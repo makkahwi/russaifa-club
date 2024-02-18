@@ -35,7 +35,7 @@ const TestimonialsSection = () => {
     {
       author: "",
       content:
-        "Moreover, Mrs. Noor pushes me outside of my comfort zone in a supportive and empowering way. She encourages growth and challenge limiting beliefs, helping me overcome self-imposed barriers and break through obstacles that were holding me back. Their wealth of knowledge and experience, combined with their intuitive understanding of my needs, have provided me with valuable insights and strategies for personal growth and success.",
+        "Mrs. Noor pushes me outside of my comfort zone in a supportive and empowering way. She encourages growth and challenge limiting beliefs, helping me overcome self-imposed barriers and break through obstacles that were holding me back. Their wealth of knowledge and experience, combined with their intuitive understanding of my needs, have provided me with valuable insights and strategies for personal growth and success.",
     },
     {
       author: "HR Manager - KSA",
