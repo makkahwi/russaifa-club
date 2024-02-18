@@ -26,13 +26,6 @@ import {
 
 export const socialLinksList = [
   {
-    name: "Phone",
-    icon: faPhone,
-    link: "tel:+962797030228",
-    label: "Call Me Now",
-    color: "#660031",
-  },
-  {
     name: "LinkedIn",
     icon: faLinkedinIn,
     link: "https://www.linkedin.com/in/noor-kayyali-a4668811/",
@@ -45,6 +38,13 @@ export const socialLinksList = [
     link: "https://wasap.my/962797030228",
     label: "Text Me Anytime",
     color: "#1fb355",
+  },
+  {
+    name: "Phone",
+    icon: faPhone,
+    link: "tel:+962797030228",
+    label: "Call Me Now",
+    color: "#660031",
   },
   {
     name: "Email",
