@@ -57,6 +57,11 @@ const TestimonialsSection = () => {
       content:
         "I am deeply grateful for the invaluable guidance and unwavering support you have provided during our sessions. Your help has made a profound impact on my life.",
     },
+    {
+      author: "Nidal Khoury - Co-founder of 12 Clients",
+      content:
+        "The coaching sessions with Nour were very organized, strategic and beneficial for our company. We are thankful for every minute Nour spent with us. From the second session, we started seeing focused actions and directly after that we started sensing measurable results on our focus and a few sessions after, the strategic direction of the business at large started to become clearer. The sessions, tools and methodologies used were up to date and helped us scale our business and put it on the right track for growth.",
+    },
   ];
 
   return (
