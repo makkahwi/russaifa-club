@@ -5,9 +5,9 @@ import { Col, Row } from "reactstrap";
 
 const AboutIntroSection = () => {
   const stats = [
-    { title: "Organizations Served", count: 100 },
-    { title: "Workshops Held", count: 1000 },
-    { title: "Persons Mentored", count: 10000 },
+    { title: "Organizations Served", count: 200 },
+    { title: "Workshops Held", count: 2000 },
+    { title: "Persons Mentored", count: 12000 },
   ];
 
   return (

@@ -16,7 +16,7 @@ const AchievementsSection = () => {
     },
     {
       content:
-        "In 2020, I was honored to be recognized by the European Union as one of the most influential women.",
+        "I was honored to be recognized by the European Union as one of the most influential women in Jordan in 2020.",
     },
     {
       content:
