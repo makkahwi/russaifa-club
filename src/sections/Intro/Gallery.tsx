@@ -1,45 +1,63 @@
-import PageSection from "@/components/PageSection";
-import Image from "next/image";
+import Slider from "@/components/Slider";
+import { Fragment } from "react";
 import { Col, Row } from "reactstrap";
+import { SwiperSlide } from "swiper/react";
 
 const GallerySection = () => {
   const images = [
     {
-      src: "IMG_8701.jpg",
+      src: "a.jpg",
       width: 9,
     },
     {
-      src: "z.jpg",
+      src: "b.jpg",
       width: 3,
     },
     {
-      src: "IMG_6843.jpg",
+      src: "d.jpg",
       width: 6,
     },
     {
-      src: "IMG_0092.jpg",
+      src: "f.jpg",
+      width: 6,
+    },
+    {
+      src: "e.jpg",
+      width: 6,
+    },
+    {
+      src: "g.jpg",
+      width: 6,
+    },
+    {
+      src: "h.jpg",
       width: 6,
     },
   ];
 
   return (
-    <Row className="p-0 m-0">
-      {images.map(({ src, width }, i) => (
-        <Col xs={width} className="p-0 m-0" key={i}>
-          <div
-            style={{
-              height: "40vh",
-              backgroundImage: `url('/images/gallery/${src}')`,
-              backgroundPositionX: "center",
-              backgroundPositionY: "center",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-            }}
-            className="w-100 p-0 m-0"
-          />
-        </Col>
-      ))}
-    </Row>
+    <Slider
+      autoPlayTime={3000}
+      slides={
+        <Fragment>
+          {images.map(({ src, width }, i) => (
+            <SwiperSlide className="mySwiper-slider p-0 w-100" key={i}>
+              <div
+                style={{
+                  height: "75vh",
+                  backgroundImage: `url('/images/gallery/${src}')`,
+                  backgroundPositionX: "center",
+                  backgroundPositionY: "center",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+                className="w-100 p-0 m-0"
+              />
+            </SwiperSlide>
+          ))}
+        </Fragment>
+      }
+    />
   );
 };
 

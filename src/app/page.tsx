@@ -1,4 +1,5 @@
 "use client";
+import BookNowButton from "@/components/BookNowButton";
 import ScrollUpButton from "@/components/ScrollUp";
 import dynamic from "next/dynamic";
 import { Fragment } from "react";
@@ -26,6 +27,8 @@ const HomePage = () => {
       <TailSections />
 
       <FooterSection />
+
+      <BookNowButton />
 
       {/* <ScrollUpButton /> */}
     </Fragment>

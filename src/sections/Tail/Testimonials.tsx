@@ -35,7 +35,7 @@ const TestimonialsSection = () => {
     {
       author: "",
       content:
-        "Moreover, Mrs. Noor pushes me outside of my comfort zone in a supportive and empowering way. She encourages growth and challenge limiting beliefs, helping me overcome self-imposed barriers and break through obstacles that were holding me back. Their wealth of knowledge and experience, combined with their intuitive understanding of my needs, have provided me with valuable insights and strategies for personal growth and success.",
+        "Mrs. Noor pushes me outside of my comfort zone in a supportive and empowering way. She encourages growth and challenge limiting beliefs, helping me overcome self-imposed barriers and break through obstacles that were holding me back. Their wealth of knowledge and experience, combined with their intuitive understanding of my needs, have provided me with valuable insights and strategies for personal growth and success.",
     },
     {
       author: "HR Manager - KSA",
@@ -57,17 +57,23 @@ const TestimonialsSection = () => {
       content:
         "I am deeply grateful for the invaluable guidance and unwavering support you have provided during our sessions. Your help has made a profound impact on my life.",
     },
+    {
+      author: "Nidal Khoury - Co-founder of 12 Clients",
+      content:
+        "The coaching sessions with Nour were very organized, strategic and beneficial for our company. We are thankful for every minute Nour spent with us. From the second session, we started seeing focused actions and directly after that we started sensing measurable results on our focus and a few sessions after, the strategic direction of the business at large started to become clearer. The sessions, tools and methodologies used were up to date and helped us scale our business and put it on the right track for growth.",
+    },
   ];
 
   return (
     <PageSection title="Testimonials" id="testimonials">
       <Col md={12} className="text-justify my-4">
         <Slider
+          navigation
           slides={
             <Fragment>
               {testimonials?.map(({ content, author }, i) => (
                 <SwiperSlide
-                  className="mySwiper-slider rounded-5 p-3 p-md-5 bg-white border border-3 border-primary"
+                  className="mySwiper-slider rounded-5 p-3 p-md-5 bg-white border border-2 border-primary"
                   key={i}
                 >
                   <div className="px-4">
@@ -86,7 +92,7 @@ const TestimonialsSection = () => {
               ))}
             </Fragment>
           }
-          coverflow
+          // coverflow
         />
       </Col>
     </PageSection>

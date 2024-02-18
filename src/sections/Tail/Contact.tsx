@@ -37,50 +37,50 @@ export const socialLinksList = [
     icon: faWhatsapp,
     link: "https://wasap.my/962797030228",
     label: "Text Me Anytime",
-    color: "#25D366",
+    color: "#1fb355",
   },
   {
     name: "Phone",
     icon: faPhone,
     link: "tel:+962797030228",
     label: "Call Me Now",
-    color: "#001F3F",
+    color: "#660031",
   },
   {
     name: "Email",
     icon: faEnvelope,
     link: "mailto:ask@noorkayyali.com",
     label: "Inbox Awaits You",
-    color: "#006400",
+    color: "#c5005f",
   },
-  {
-    name: "Facebook",
-    icon: faFacebook,
-    link: "https://facebook.com/Noorcoach",
-    label: "Let's Chat Forever",
-    color: "#1877F2",
-  },
-  {
-    name: "Instagram",
-    icon: faInstagram,
-    link: "https://www.instagram.com/noorkayyali303/",
-    label: "Capture Life Together",
-    color: "#E4405F",
-  },
-  {
-    name: "X",
-    icon: faXTwitter,
-    link: "https://twitter.com/Noorkayyali303",
-    label: "Join My Conversations",
-    color: "#181717",
-  },
-  {
-    name: "Youtube",
-    icon: faYoutube,
-    link: "https://www.youtube.com/channel/UCdCODCOiHkQXfCGHGDQel4Q",
-    label: "Subscribe, Watch, Like",
-    color: "#FF0000",
-  },
+  // {
+  //   name: "Facebook",
+  //   icon: faFacebook,
+  //   link: "https://facebook.com/Noorcoach",
+  //   label: "Let's Chat Forever",
+  //   color: "#1877F2",
+  // },
+  // {
+  //   name: "Instagram",
+  //   icon: faInstagram,
+  //   link: "https://www.instagram.com/noorkayyali303/",
+  //   label: "Capture Life Together",
+  //   color: "#E4405F",
+  // },
+  // {
+  //   name: "X",
+  //   icon: faXTwitter,
+  //   link: "https://twitter.com/Noorkayyali303",
+  //   label: "Join My Conversations",
+  //   color: "#181717",
+  // },
+  // {
+  //   name: "Youtube",
+  //   icon: faYoutube,
+  //   link: "https://www.youtube.com/channel/UCdCODCOiHkQXfCGHGDQel4Q",
+  //   label: "Subscribe, Watch, Like",
+  //   color: "#FF0000",
+  // },
 ];
 
 const ContactSection = () => {
@@ -158,7 +158,7 @@ const ContactSection = () => {
       <Col md={12} className="text-center p-0 m-0 my-5">
         <Row>
           {socialLinksList.map(({ name, icon, link, label, color }, i) => (
-            <Col sm={6} md={4} lg={3} key={i}>
+            <Col xs={6} md={4} lg={3} key={i}>
               <a href={link} target="_blank">
                 <Button
                   style={{ backgroundColor: color }}

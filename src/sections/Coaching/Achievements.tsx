@@ -1,9 +1,9 @@
 import PageSection from "@/components/PageSection";
-import { Card, CardBody, Col, Container, Row } from "reactstrap";
+import { Col, ListGroup, ListGroupItem } from "reactstrap";
 
 const AchievementsSection = () => {
   const photos = [
-    { width: 3, photo: "IMG_5633.jpg" },
+    { width: 3, photo: "c.jpg" },
     { width: 5, photo: "IMG_7004.jpg" },
     { width: 4, photo: "48bfc81d-a0e9-4626-ad98-8b1a5ff09efd.jpg" },
   ];
@@ -16,7 +16,7 @@ const AchievementsSection = () => {
     },
     {
       content:
-        "In 2020, I was honored to be recognized by the European Union as one of the most influential women.",
+        "I was honored to be recognized by the European Union as one of the most influential women in Jordan in 2020.",
     },
     {
       content:
@@ -47,17 +47,16 @@ const AchievementsSection = () => {
       ))}
 
       <Col xs={12} className="mt-5">
-        <Row className="justify-content-center">
+        <ListGroup className="rounded-5 border-primary">
           {achievements.map(({ content, fullWidth }, i) => (
-            <Col lg={fullWidth ? 12 : 4} className="d-flex my-3" key={i}>
-              <Card className="border border-primary bg-transparent border-5 rounded-5 p-2 w-100">
-                <CardBody>
-                  <h5 className="text-block text-dark">{content}</h5>
-                </CardBody>
-              </Card>
-            </Col>
+            <ListGroupItem
+              className="bg-transparent border-2 border-primary p-4"
+              key={i}
+            >
+              {content}
+            </ListGroupItem>
           ))}
-        </Row>
+        </ListGroup>
       </Col>
     </PageSection>
   );
