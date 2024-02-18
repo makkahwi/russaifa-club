@@ -278,6 +278,7 @@ const BlogSection = () => {
 
       <Col md={12} className="text-center p-0 m-0">
         <Slider
+          navigation
           slides={posts
             .filter(({ category }) =>
               pickedCategory ? category == pickedCategory : true

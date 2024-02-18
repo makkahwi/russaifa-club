@@ -12,11 +12,29 @@ import { Swiper, useSwiper } from "swiper/react";
 interface props {
   slides: React.ReactNode;
   coverflow?: boolean;
+  navigation?: boolean;
   slidesCount?: number;
+  autoPlayTime?: number;
 }
 
-const Slider = ({ slides, coverflow, slidesCount = 2 }: props) => {
+const Slider = ({
+  slides,
+  navigation,
+  coverflow,
+  autoPlayTime = 5000,
+  slidesCount = 2,
+}: props) => {
   const swiper = useSwiper();
+
+  const modules = [Pagination, Autoplay];
+
+  if (navigation) {
+    modules.push(Navigation);
+  }
+
+  if (coverflow) {
+    modules.push(EffectCoverflow);
+  }
 
   return (
     <Container fluid className="swiper-container col-md-12">
@@ -25,11 +43,7 @@ const Slider = ({ slides, coverflow, slidesCount = 2 }: props) => {
         // observeParents
         // watchOverflow={false}
         // watchSlidesProgress
-        modules={
-          coverflow
-            ? [Pagination, Navigation, Autoplay, EffectCoverflow]
-            : [Pagination, Navigation, Autoplay]
-        }
+        modules={modules}
         centeredSlides={coverflow ? true : false}
         className="mySwiper"
         navigation={{
@@ -53,7 +67,7 @@ const Slider = ({ slides, coverflow, slidesCount = 2 }: props) => {
         }
         loop={true}
         autoplay={{
-          delay: 5000,
+          delay: autoPlayTime,
           disableOnInteraction: true,
         }}
         updateOnWindowResize={true}
@@ -77,19 +91,23 @@ const Slider = ({ slides, coverflow, slidesCount = 2 }: props) => {
           },
         }}
       >
-        <FontAwesomeIcon
-          className="swiper-button-prev bg-white p-2 px-3 rounded-circle text-primary"
-          icon={faArrowLeft}
-          onClick={() => swiper.slidePrev()}
-        />
+        {navigation && (
+          <FontAwesomeIcon
+            className="swiper-button-prev bg-white p-2 px-3 rounded-circle text-primary"
+            icon={faArrowLeft}
+            onClick={() => swiper.slidePrev()}
+          />
+        )}
 
         {slides}
 
-        <FontAwesomeIcon
-          className="swiper-button-next bg-white p-2 px-3 rounded-circle text-primary"
-          icon={faArrowRight}
-          onClick={() => swiper.slideNext()}
-        />
+        {navigation && (
+          <FontAwesomeIcon
+            className="swiper-button-next bg-white p-2 px-3 rounded-circle text-primary"
+            icon={faArrowRight}
+            onClick={() => swiper.slideNext()}
+          />
+        )}
       </Swiper>
     </Container>
   );

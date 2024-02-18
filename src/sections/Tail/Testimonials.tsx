@@ -68,6 +68,7 @@ const TestimonialsSection = () => {
     <PageSection title="Testimonials" id="testimonials">
       <Col md={12} className="text-justify my-4">
         <Slider
+          navigation
           slides={
             <Fragment>
               {testimonials?.map(({ content, author }, i) => (
