@@ -4,8 +4,6 @@ Next.js & Typescript Based Landing Page
 
 ## To Do
 
-- A little bit lighter for text dark
-- A little thinner box borders
 - Replace gallery with looping 1 big photo, get rid of empowering people
 - Replace "Welcome to Coaching!" image with header image
 - Replace many boxes section with fewer
