@@ -47,17 +47,16 @@ const AchievementsSection = () => {
       ))}
 
       <Col xs={12} className="mt-5">
-        <Row className="justify-content-center">
+        <ul className="list-group rounded-5 border-primary">
           {achievements.map(({ content, fullWidth }, i) => (
-            <Col lg={fullWidth ? 12 : 4} className="d-flex my-3" key={i}>
-              <Card className="border border-primary bg-transparent border-2 rounded-5 p-2 w-100">
-                <CardBody>
-                  <h5 className="text-block text-dark">{content}</h5>
-                </CardBody>
-              </Card>
-            </Col>
+            <li
+              className="list-group-item bg-transparent border-2 border-primary p-4"
+              key={i}
+            >
+              {content}
+            </li>
           ))}
-        </Row>
+        </ul>
       </Col>
     </PageSection>
   );
