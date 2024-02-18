@@ -3,7 +3,7 @@ import { Col, ListGroup, ListGroupItem } from "reactstrap";
 
 const AchievementsSection = () => {
   const photos = [
-    { width: 3, photo: "IMG_5633.jpg" },
+    { width: 3, photo: "c.jpg" },
     { width: 5, photo: "IMG_7004.jpg" },
     { width: 4, photo: "48bfc81d-a0e9-4626-ad98-8b1a5ff09efd.jpg" },
   ];

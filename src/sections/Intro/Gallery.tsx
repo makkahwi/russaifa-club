@@ -18,10 +18,6 @@ const GallerySection = () => {
       width: 6,
     },
     {
-      src: "c.jpg",
-      width: 6,
-    },
-    {
       src: "f.jpg",
       width: 6,
     },
