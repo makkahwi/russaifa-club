@@ -67,7 +67,7 @@ const TestimonialsSection = () => {
             <Fragment>
               {testimonials?.map(({ content, author }, i) => (
                 <SwiperSlide
-                  className="mySwiper-slider rounded-5 p-3 p-md-5 bg-white border border-3 border-primary"
+                  className="mySwiper-slider rounded-5 p-3 p-md-5 bg-white border border-2 border-primary"
                   key={i}
                 >
                   <div className="px-4">

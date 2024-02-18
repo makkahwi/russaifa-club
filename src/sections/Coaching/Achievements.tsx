@@ -50,7 +50,7 @@ const AchievementsSection = () => {
         <Row className="justify-content-center">
           {achievements.map(({ content, fullWidth }, i) => (
             <Col lg={fullWidth ? 12 : 4} className="d-flex my-3" key={i}>
-              <Card className="border border-primary bg-transparent border-5 rounded-5 p-2 w-100">
+              <Card className="border border-primary bg-transparent border-2 rounded-5 p-2 w-100">
                 <CardBody>
                   <h5 className="text-block text-dark">{content}</h5>
                 </CardBody>
