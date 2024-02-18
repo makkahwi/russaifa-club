@@ -91,7 +91,7 @@ const TestimonialsSection = () => {
               ))}
             </Fragment>
           }
-          coverflow
+          // coverflow
         />
       </Col>
     </PageSection>

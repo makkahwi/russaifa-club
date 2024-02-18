@@ -25,7 +25,11 @@ const Slider = ({ slides, coverflow, slidesCount = 2 }: props) => {
         // observeParents
         // watchOverflow={false}
         // watchSlidesProgress
-        modules={[Pagination, Navigation, EffectCoverflow, Autoplay]}
+        modules={
+          coverflow
+            ? [Pagination, Navigation, Autoplay, EffectCoverflow]
+            : [Pagination, Navigation, Autoplay]
+        }
         centeredSlides={coverflow ? true : false}
         className="mySwiper"
         navigation={{
