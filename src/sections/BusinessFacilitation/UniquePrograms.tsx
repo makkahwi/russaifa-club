@@ -88,9 +88,9 @@ const UniqueProgramsSection = () => {
                   <ListGroup flush>
                     {programs.map((program, y) => (
                       <ListGroupItem key={y}>
-                        <h5 className="text-center my-1 text-dark">
+                        <h6 className="text-center my-1 text-dark">
                           {program}
-                        </h5>
+                        </h6>
                       </ListGroupItem>
                     ))}
                   </ListGroup>

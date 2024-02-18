@@ -1,5 +1,5 @@
 import PageSection from "@/components/PageSection";
-import { Card, CardBody, Col, Container, Row } from "reactstrap";
+import { Col, ListGroup, ListGroupItem } from "reactstrap";
 
 const AchievementsSection = () => {
   const photos = [
@@ -47,16 +47,16 @@ const AchievementsSection = () => {
       ))}
 
       <Col xs={12} className="mt-5">
-        <ul className="list-group rounded-5 border-primary">
+        <ListGroup className="rounded-5 border-primary">
           {achievements.map(({ content, fullWidth }, i) => (
-            <li
-              className="list-group-item bg-transparent border-2 border-primary p-4"
+            <ListGroupItem
+              className="bg-transparent border-2 border-primary p-4"
               key={i}
             >
               {content}
-            </li>
+            </ListGroupItem>
           ))}
-        </ul>
+        </ListGroup>
       </Col>
     </PageSection>
   );
