@@ -22,6 +22,21 @@ const TrustedBySection = () => {
     { logo: "usaid.png", link: "https://www.usaid.gov/jordan", bigger: true },
     { logo: "ccl.png", link: "https://www.ccl.org/", bigger: true },
     {
+      logo: "aqai.png",
+      link: "https://www.aqai.io/",
+      bigger: true,
+    },
+    {
+      logo: "correlation.png",
+      link: "https://www.correlation-one.com/",
+      bigger: true,
+    },
+    {
+      logo: "qrce.png",
+      link: "https://www.qrce.org/",
+      bigger: true,
+    },
+    {
       logo: "zain.png",
       link: "https://www.jo.zain.com",
       bigger: true,
