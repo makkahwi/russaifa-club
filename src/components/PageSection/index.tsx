@@ -1,4 +1,4 @@
-import { Col, Row } from "reactstrap";
+import { Col, Row } from "react-bootstrap";
 
 interface props {
   children: React.ReactNode;

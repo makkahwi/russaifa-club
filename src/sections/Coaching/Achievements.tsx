@@ -1,5 +1,5 @@
 import PageSection from "@/components/PageSection";
-import { Col, ListGroup, ListGroupItem } from "reactstrap";
+import { Col, ListGroup, ListGroupItem } from "react-bootstrap";
 
 const AchievementsSection = () => {
   const photos = [

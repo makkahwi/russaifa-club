@@ -1,5 +1,4 @@
-import { Button } from "reactstrap";
-import { animateScroll, Link } from "react-scroll";
+import { Link } from "react-scroll";
 
 const BookNowButton = () => {
   return (

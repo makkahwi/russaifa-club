@@ -1,8 +1,7 @@
 import PageSection from "@/components/PageSection";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
-import { Button, ButtonGroup, Col } from "reactstrap";
+import { Button, Col } from "react-bootstrap";
 
 const VlogSection = () => {
   const videos = [
@@ -34,7 +33,7 @@ const VlogSection = () => {
           <Button
             style={{ backgroundColor: "#FF0000" }}
             className="p-3 m-3"
-            color="transparent"
+            variant="transparent"
           >
             <h5 className="text-white p-0 m-0">
               <FontAwesomeIcon icon={faYoutube} /> Find More On YouTube Channel

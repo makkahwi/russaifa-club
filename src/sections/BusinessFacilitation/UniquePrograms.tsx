@@ -1,15 +1,7 @@
 import PageSection from "@/components/PageSection";
-import {
-  faBriefcase,
-  faBullseye,
-  faFaceGrinStars,
-  faHandHoldingDollar,
-  faLightbulb,
-  faPersonChalkboard,
-  faUsers,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBriefcase, faBullseye, faFaceGrinStars, faHandHoldingDollar, faLightbulb, faPersonChalkboard, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Card, CardBody, Col, ListGroup, ListGroupItem, Row } from "reactstrap";
+import { Card, CardBody, Col, ListGroup, ListGroupItem, Row } from "react-bootstrap";
 
 const UniqueProgramsSection = () => {
   const programGroups = [
@@ -85,7 +77,7 @@ const UniqueProgramsSection = () => {
                     <FontAwesomeIcon icon={icon} />
                   </h1>
 
-                  <ListGroup flush>
+                  <ListGroup variant="flush">
                     {programs.map((program, y) => (
                       <ListGroupItem key={y}>
                         <h6 className="text-center my-1 text-dark">

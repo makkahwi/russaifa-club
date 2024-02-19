@@ -1,7 +1,7 @@
 import PageSection from "@/components/PageSection";
 import Image from "next/image";
 import CountUp from "react-countup";
-import { Col, Row } from "reactstrap";
+import { Col, Row } from "react-bootstrap";
 
 const AboutIntroSection = () => {
   const stats = [
