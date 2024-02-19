@@ -50,7 +50,7 @@ const FooterSection = () => {
         </Col> */}
       </Row>
 
-      <Row className="py-5">
+      <Row className="py-5 bg-white">
         <h6 className="text-center text-dark">
           All Rights Reserved For{" "}
           <span className="text-primary">NOOR KAYYALI</span> ©{" "}
