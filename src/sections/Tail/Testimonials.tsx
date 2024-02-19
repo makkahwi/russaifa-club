@@ -4,7 +4,6 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Fragment } from "react";
 import { Col } from "reactstrap";
-import { SwiperSlide } from "swiper/react";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -69,30 +68,21 @@ const TestimonialsSection = () => {
       <Col md={12} className="text-justify my-4">
         <Slider
           navigation
-          slides={
-            <Fragment>
-              {testimonials?.map(({ content, author }, i) => (
-                <SwiperSlide
-                  className="mySwiper-slider rounded-5 p-3 p-md-5 bg-white border border-2 border-primary"
-                  key={i}
-                >
-                  <div className="px-4">
-                    <h5 className="text-justify text-dark">{content}</h5>
+          indicators
+          slides={testimonials?.map(({ content, author }, i) => (
+            <div className="p-4 border border-primary rounded-5 mx-3" key={i}>
+              <h5 className="text-justify text-dark">{content}</h5>
 
-                    <h5 className="text-justify text-primary mt-4">{author}</h5>
-                    {Array.from(Array(5).keys()).map((y) => (
-                      <FontAwesomeIcon
-                        icon={faStar}
-                        className="text-primary h5"
-                        key={y}
-                      />
-                    ))}
-                  </div>
-                </SwiperSlide>
+              <h5 className="text-justify text-primary mt-4">{author}</h5>
+              {Array.from(Array(5).keys()).map((y) => (
+                <FontAwesomeIcon
+                  icon={faStar}
+                  className="text-primary h5"
+                  key={y}
+                />
               ))}
-            </Fragment>
-          }
-          // coverflow
+            </div>
+          ))}
         />
       </Col>
     </PageSection>

@@ -1,7 +1,4 @@
 import Slider from "@/components/Slider";
-import { Fragment } from "react";
-import { Col, Row } from "reactstrap";
-import { SwiperSlide } from "swiper/react";
 
 const GallerySection = () => {
   const images = [
@@ -37,26 +34,20 @@ const GallerySection = () => {
 
   return (
     <Slider
-      autoPlayTime={3000}
-      slides={
-        <Fragment>
-          {images.map(({ src, width }, i) => (
-            <SwiperSlide className="mySwiper-slider p-0 w-100" key={i}>
-              <div
-                style={{
-                  height: "75vh",
-                  backgroundImage: `url('/images/gallery/${src}')`,
-                  backgroundPositionX: "center",
-                  backgroundPositionY: "center",
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "cover",
-                }}
-                className="w-100 p-0 m-0"
-              />
-            </SwiperSlide>
-          ))}
-        </Fragment>
-      }
+      slides={images.map(({ src, width }, i) => (
+        <div
+          style={{
+            height: "75vh",
+            backgroundImage: `url('/images/gallery/${src}')`,
+            backgroundPositionX: "center",
+            backgroundPositionY: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+          key={i}
+          className="w-100 p-0 m-0"
+        />
+      ))}
     />
   );
 };
