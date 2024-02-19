@@ -1,15 +1,7 @@
 import Image from "next/image";
-import { useState } from "react";
+import { Fragment, useState } from "react";
+import { Collapse, Container, Nav, Navbar, NavbarBrand, NavbarCollapse, NavbarToggle, NavItem, NavLink } from "react-bootstrap";
 import { animateScroll, Link } from "react-scroll";
-import {
-  Collapse,
-  Nav,
-  Navbar,
-  NavbarBrand,
-  NavbarToggler,
-  NavItem,
-  NavLink,
-} from "reactstrap";
 
 export const links = [
   { title: "About Me", link: "about" },
@@ -28,40 +20,41 @@ const NavbarComp = () => {
   return (
     <Navbar
       style={{ minHeight: "10vh" }}
-      className="px-5 m-0 w-100"
-      full
+      className="px-5 m-0 w-100 bg-dark"
       fixed="top"
-      color="dark"
       expand="lg"
     >
-      <NavbarBrand onClick={() => animateScroll.scrollToTop()} role="button">
-        <Image
-          src="/images/logo/logo-white.png"
-          alt="Logo"
-          width={543 * 0.075}
-          height={771 * 0.075}
-          priority
+      <Container>
+        <NavbarBrand onClick={() => animateScroll.scrollToTop()} role="button">
+          <Image
+            src="/images/logo/logo-white.png"
+            alt="Logo"
+            width={543 * 0.075}
+            height={771 * 0.075}
+            priority
+          />
+        </NavbarBrand>
+
+        <NavbarToggle
+          aria-controls="basic-navbar-nav"
+          onClick={toggle}
+          className=" bg-white"
         />
-      </NavbarBrand>
 
-      <NavbarToggler onClick={toggle} className=" bg-white" />
-
-      <Collapse isOpen={isOpen} navbar>
-        <Nav className="me-auto" navbar>
-          {links.map(({ title, link }, i) => (
-            <Link
-              to={link}
-              role="button"
-              onClick={() => setIsOpen(false)}
-              key={i}
-            >
-              <NavItem>
-                <NavLink className="text-white">{title}</NavLink>
-              </NavItem>
-            </Link>
-          ))}
-        </Nav>
-      </Collapse>
+        <NavbarCollapse id="basic-navbar-nav">
+          <Nav className="me-auto" navbar>
+            {links.map(({ title, link }, i) => (
+              <NavLink key={i}>
+                <Link to={link} role="button" onClick={() => setIsOpen(false)}>
+                  <NavItem>
+                    <NavLink className="text-white">{title}</NavLink>
+                  </NavItem>
+                </Link>
+              </NavLink>
+            ))}
+          </Nav>
+        </NavbarCollapse>
+      </Container>
     </Navbar>
   );
 };

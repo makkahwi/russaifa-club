@@ -7,14 +7,13 @@ import {
   ButtonGroup,
   Card,
   CardBody,
-  CardTitle,
   Col,
   Modal,
   ModalBody,
   ModalFooter,
   ModalHeader,
   Row,
-} from "reactstrap";
+} from "react-bootstrap";
 
 interface post {
   date: string;
@@ -258,7 +257,7 @@ const BlogSection = () => {
         <ButtonGroup>
           <Button
             onClick={() => setPickedCategory("")}
-            color={pickedCategory === "" ? "primary" : "dark"}
+            variant={pickedCategory === "" ? "primary" : "dark"}
           >
             All
           </Button>
@@ -267,7 +266,7 @@ const BlogSection = () => {
             <Button
               onClick={() => setPickedCategory(category)}
               key={i}
-              color={pickedCategory === category ? "primary" : "dark"}
+              variant={pickedCategory === category ? "primary" : "dark"}
             >
               {category}
             </Button>
@@ -309,16 +308,14 @@ const BlogSection = () => {
                       }}
                       className="w-100 p-0 m-0"
                     >
-                      <Button className="m-3 p-2 float-end" color="primary">
+                      <Button className="m-3 p-2 float-end" variant="primary">
                         {category}
                       </Button>
                     </div>
 
                     <CardBody>
                       <small className="text-start text-dark">{date}</small>
-                      <CardTitle className="text-justify text-dark">
-                        {title}
-                      </CardTitle>
+                      <h6 className="text-justify text-dark">{title}</h6>
                     </CardBody>
                   </Card>
                 </div>
@@ -328,8 +325,8 @@ const BlogSection = () => {
         />
       </Col>
 
-      <Modal isOpen={!!pickedPost.title} toggle={closeModal} size="xl">
-        <ModalHeader toggle={closeModal} />
+      <Modal show={!!pickedPost.title} onHide={closeModal} size="xl">
+        <ModalHeader closeButton />
 
         <ModalBody className="px-4">
           <Row>
@@ -379,7 +376,7 @@ const BlogSection = () => {
         </ModalBody>
 
         <ModalFooter>
-          <Button color="secondary" onClick={closeModal}>
+          <Button variant="dark" onClick={closeModal}>
             Close
           </Button>
         </ModalFooter>

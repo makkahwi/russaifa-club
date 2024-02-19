@@ -1,5 +1,5 @@
 import PageSection from "@/components/PageSection";
-import { Col } from "reactstrap";
+import { Col } from "react-bootstrap";
 
 const CoachingHeaderSection = () => {
   return (

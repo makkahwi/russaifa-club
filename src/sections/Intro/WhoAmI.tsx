@@ -1,7 +1,7 @@
 import PageSection from "@/components/PageSection";
 import { capitalizeSentenceFirstLetters } from "@/functions/utils";
 import Image from "next/image";
-import { Col, Row } from "reactstrap";
+import { Col, Row } from "react-bootstrap";
 
 const WhoAmISection = () => {
   const certs = [
