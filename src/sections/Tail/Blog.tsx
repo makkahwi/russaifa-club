@@ -287,11 +287,16 @@ const BlogSection = () => {
               const { date, title, img, category } = post;
 
               return (
-                <div className="px-3" key={i}>
+                <div
+                  className="px-3 h-100"
+                  style={{ display: "table" }}
+                  key={i}
+                >
                   <Card
                     role="button"
                     onClick={() => setPickedPost(post)}
-                    className="w-100"
+                    className="w-100 h-100"
+                    style={{ display: "table-cell" }}
                   >
                     <div
                       style={{
