@@ -1,12 +1,5 @@
 import PageSection from "@/components/PageSection";
-import {
-  faFacebook,
-  faInstagram,
-  faLinkedinIn,
-  faWhatsapp,
-  faXTwitter,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
@@ -14,15 +7,12 @@ import { useState } from "react";
 import {
   Alert,
   Button,
-  Card,
-  CardBody,
-  CardTitle,
   Col,
+  FormControl,
   FormGroup,
-  Input,
-  Label,
+  FormLabel,
   Row,
-} from "reactstrap";
+} from "react-bootstrap";
 
 export const socialLinksList = [
   {
@@ -163,7 +153,7 @@ const ContactSection = () => {
                 <Button
                   style={{ backgroundColor: color }}
                   className="p-3 my-3 w-100"
-                  color="transparent"
+                  variant="transparent"
                 >
                   <h6 className="text-center text-white p-0 m-0">
                     <FontAwesomeIcon icon={icon} /> {label}
@@ -181,15 +171,15 @@ const ContactSection = () => {
             {inputs.map(({ name, title, required, type, fullWidth }, i) => (
               <Col lg={fullWidth ? 12 : 6} key={i}>
                 <FormGroup>
-                  <Label for={name} className="text-dark">
+                  <FormLabel for={name} className="text-dark">
                     {title}
                     {required ? (
                       <span className="text-danger">{" *"}</span>
                     ) : (
                       ""
                     )}
-                  </Label>
-                  <Input
+                  </FormLabel>
+                  <FormControl
                     id={name}
                     name={name}
                     placeholder={title}
@@ -210,7 +200,7 @@ const ContactSection = () => {
 
             <Col md={3} lg={2}>
               <Button
-                color="primary"
+                variant="primary"
                 className="p-3 my-3 float-end"
                 type="submit"
               >

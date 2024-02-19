@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import "react-slideshow-image/dist/styles.css";
+import "./style.scss";
+import "./style.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

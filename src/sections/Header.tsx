@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Fragment } from "react";
-import { Col, Row } from "reactstrap";
+import { Col, Row } from "react-bootstrap";
 
 import Navbar from "./Navbar";
 
@@ -15,7 +15,7 @@ const HeaderSection = () => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        className="justify-content-center bg-primary-dark"
+        className="justify-content-center bg-danger"
       >
         <Col lg={5} md={6} className="my-auto px-5 text-white">
           <Row>

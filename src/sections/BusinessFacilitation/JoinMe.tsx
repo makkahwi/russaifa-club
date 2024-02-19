@@ -1,5 +1,5 @@
 import PageSection from "@/components/PageSection";
-import { Col, Row } from "reactstrap";
+import { Col, Row } from "react-bootstrap";
 
 const JoinMeSection = () => {
   const photos = [

@@ -2,8 +2,7 @@ import PageSection from "@/components/PageSection";
 import Slider from "@/components/Slider";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Fragment } from "react";
-import { Col } from "reactstrap";
+import { Col } from "react-bootstrap";
 
 const TestimonialsSection = () => {
   const testimonials = [

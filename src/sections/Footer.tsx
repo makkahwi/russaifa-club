@@ -1,7 +1,15 @@
 import Image from "next/image";
 import { Fragment } from "react";
+import {
+  Col,
+  Container,
+  Nav,
+  Navbar,
+  NavItem,
+  NavLink,
+  Row,
+} from "react-bootstrap";
 import { animateScroll, Link } from "react-scroll";
-import { Col, Nav, NavItem, NavLink, Row } from "reactstrap";
 
 import { links } from "./Navbar";
 
@@ -22,15 +30,19 @@ const FooterSection = () => {
         </Col>
 
         <Col xs={12} className="text-center">
-          <Nav className="mx-auto" horizontal="center">
-            {links.map(({ title, link }, i) => (
-              <Link to={link} role="button" key={i}>
-                <NavItem>
-                  <NavLink className="text-white">{title}</NavLink>
-                </NavItem>
-              </Link>
-            ))}
-          </Nav>
+          <Navbar expand="lg">
+            <Container>
+              <Nav className="mx-auto">
+                {links.map(({ title, link }, i) => (
+                  <Link to={link} role="button" key={i}>
+                    <NavItem>
+                      <NavLink className="text-white">{title}</NavLink>
+                    </NavItem>
+                  </Link>
+                ))}
+              </Nav>
+            </Container>
+          </Navbar>
         </Col>
 
         {/* <Col xs={12} className="text-center">
