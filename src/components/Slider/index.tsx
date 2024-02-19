@@ -17,7 +17,6 @@ const Slider = ({
   return (
     <Slide
       slidesToScroll={1}
-      slidesToShow={slidesCount}
       duration={duration}
       transitionDuration={250}
       indicators={indicators}
