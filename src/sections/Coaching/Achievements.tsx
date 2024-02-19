@@ -16,7 +16,7 @@ const AchievementsSection = () => {
     },
     {
       content:
-        "I was honored to be recognized by the European Union as one of the most influential women in Jordan in 2020.",
+        "Honored to be recognized by the European Union as one of the most influential women in Jordan in 2020.",
     },
     {
       content:
@@ -50,7 +50,7 @@ const AchievementsSection = () => {
         <ListGroup className="rounded-5 border-primary">
           {achievements.map(({ content, fullWidth }, i) => (
             <ListGroupItem
-              className="bg-transparent border-2 border-primary p-4"
+              className="bg-transparent border-primary p-4"
               key={i}
             >
               {content}
