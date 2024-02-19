@@ -4,7 +4,7 @@ import { Col } from "react-bootstrap";
 const CoachingHeaderSection = () => {
   return (
     <PageSection title="Welcome to Coaching!" color="secondary" id="coaching">
-      <Col xl={6}>
+      <Col xl={6} className="px-3">
         <img
           src="/images/00001.jpg"
           width="100%"
@@ -12,7 +12,7 @@ const CoachingHeaderSection = () => {
         />
       </Col>
 
-      <Col xl={6} className="ps-5">
+      <Col xl={6}>
         <h5 className="text-block text-dark mt-3">
           {
             "At Coaching, my passion lies in touching hearts before touching minds and inspiring transformative change. I create a safe and supportive environment where individuals can thrive. In our one-on-one sessions, you'll discover a unique blend of professionalism and enjoyable engagement, ensuring that your time is both productive and genuinely enjoyable."
