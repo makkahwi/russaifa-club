@@ -85,7 +85,7 @@ const TestimonialsSection = () => {
           indicators
           slides={testimonials?.map(({ content, author }, i) => (
             <div className="p-4 border border-primary rounded-5 mx-3" key={i}>
-              <h5 className="text-justify text-dark">{content}</h5>
+              <h5 className="text-block text-dark">{content}</h5>
 
               <h5 className="text-justify text-primary mt-4">{author}</h5>
               {Array.from(Array(5).keys()).map((y) => (

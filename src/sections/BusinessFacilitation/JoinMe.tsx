@@ -38,7 +38,6 @@ const JoinMeSection = () => {
           }
         </h5>
         <br />
-        <br />
         <h5 className="text-block text-dark">
           {
             "Contact me today to learn more about my executive development programs and how we can collaborate to meet your specific leadership development needs. Your peoples’ journey to becoming an exceptional leader starts here."

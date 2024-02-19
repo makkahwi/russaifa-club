@@ -53,7 +53,7 @@ const AchievementsSection = () => {
               className="bg-transparent border-primary p-4"
               key={i}
             >
-              {content}
+              <h5 className="text-dark text-block">{content}</h5>
             </ListGroupItem>
           ))}
         </ListGroup>
