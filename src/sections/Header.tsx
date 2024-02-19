@@ -36,28 +36,28 @@ const HeaderSection = () => {
 
         <Col lg={4} md={6} className="position-relative mt-5">
           <Image
-            src="/images/0005.png"
+            src="/images/05.png"
             className="position-absolute bottom-0 mx-5 mt-5 d-block d-md-none"
             alt="Noor Photo"
             style={{
               left: "50%",
               transform: "translate(-50%, 0%)",
             }}
-            width={2012 * 0.12}
-            height={3332 * 0.12}
+            width={646 * 0.45}
+            height={934 * 0.45}
             priority
           />
 
           <Image
-            src="/images/0005.png"
+            src="/images/05.png"
             className="position-absolute bottom-0 mt-5 d-none d-md-block"
             alt="Noor Photo"
             style={{
               left: "50%",
               transform: "translate(-50%, 0%)",
             }}
-            width={2012 * 0.17}
-            height={3332 * 0.17}
+            width={646 * 0.65}
+            height={934 * 0.65}
             priority
           />
         </Col>

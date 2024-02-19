@@ -15,7 +15,6 @@ import {
   ModalHeader,
   Row,
 } from "reactstrap";
-import { SwiperSlide } from "swiper/react";
 
 interface post {
   date: string;
@@ -279,6 +278,7 @@ const BlogSection = () => {
       <Col md={12} className="text-center p-0 m-0">
         <Slider
           navigation
+          indicators
           slides={posts
             .filter(({ category }) =>
               pickedCategory ? category == pickedCategory : true
@@ -287,11 +287,16 @@ const BlogSection = () => {
               const { date, title, img, category } = post;
 
               return (
-                <SwiperSlide className="mySwiper-slider d-flex" key={i}>
+                <div
+                  className="px-3 h-100"
+                  style={{ display: "table" }}
+                  key={i}
+                >
                   <Card
                     role="button"
                     onClick={() => setPickedPost(post)}
-                    className="w-100"
+                    className="w-100 h-100"
+                    style={{ display: "table-cell" }}
                   >
                     <div
                       style={{
@@ -316,7 +321,7 @@ const BlogSection = () => {
                       </CardTitle>
                     </CardBody>
                   </Card>
-                </SwiperSlide>
+                </div>
               );
             })}
           slidesCount={3}

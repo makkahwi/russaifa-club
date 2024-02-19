@@ -1,12 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "swiper/css";
-import "swiper/css/bundle";
-import "swiper/css/effect-coverflow";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import "./globals.css";
+import "react-slideshow-image/dist/styles.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
