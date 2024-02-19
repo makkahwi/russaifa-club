@@ -74,7 +74,7 @@ const WhoAmISection = () => {
 
   return (
     <PageSection
-      title="In-Depth Look"
+      // title="In-Depth Look"
       color="light"
       aboveTitle={
         <Col md={12} className="text-center">

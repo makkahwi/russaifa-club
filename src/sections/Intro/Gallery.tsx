@@ -34,6 +34,7 @@ const GallerySection = () => {
 
   return (
     <Slider
+      duration={2500}
       slides={images.map(({ src, width }, i) => (
         <div
           style={{

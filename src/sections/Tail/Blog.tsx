@@ -2,18 +2,7 @@ import PageSection from "@/components/PageSection";
 import Slider from "@/components/Slider";
 import { capitalizeSentenceFirstLetters } from "@/functions/utils";
 import { Fragment, useState } from "react";
-import {
-  Button,
-  ButtonGroup,
-  Card,
-  CardBody,
-  Col,
-  Modal,
-  ModalBody,
-  ModalFooter,
-  ModalHeader,
-  Row,
-} from "react-bootstrap";
+import { Button, ButtonGroup, Card, CardBody, Col, Modal, ModalBody, ModalFooter, ModalHeader, Row } from "react-bootstrap";
 
 interface post {
   date: string;
@@ -315,7 +304,7 @@ const BlogSection = () => {
 
                     <CardBody>
                       <small className="text-start text-dark">{date}</small>
-                      <h6 className="text-justify text-dark">{title}</h6>
+                      <h5 className="text-justify text-dark">{title}</h5>
                     </CardBody>
                   </Card>
                 </div>
