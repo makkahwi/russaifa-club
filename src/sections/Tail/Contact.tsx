@@ -187,12 +187,8 @@ const ContactSection = () => {
               </Col>
             ))}
 
-            <Col md={3} lg={2}>
-              <Button
-                variant="danger"
-                className="p-3 my-3 float-end"
-                type="submit"
-              >
+            <Col md={3} lg={2} className="float-end">
+              <Button variant="danger" className="p-3" type="submit">
                 <h6 className="text-center p-0 m-0">Reach Me Now</h6>
               </Button>
             </Col>
