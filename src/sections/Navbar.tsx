@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import {
   Container,
@@ -6,7 +8,6 @@ import {
   NavbarBrand,
   NavbarCollapse,
   NavbarToggle,
-  NavItem,
   NavLink,
 } from "react-bootstrap";
 import { animateScroll, Link } from "react-scroll";

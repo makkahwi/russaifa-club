@@ -1,16 +1,17 @@
 import PageSection from "@/components/PageSection";
-import { faLinkedinIn, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedinIn,
+  faWhatsapp,
+  faXTwitter,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import {
-  Button,
-  Col,
-  FormControl,
-  FormGroup,
-  FormLabel,
-  Row,
-} from "react-bootstrap";
+import { Button, Col, Row } from "react-bootstrap";
+import ContactForm from "./ContactForm";
 
 export const socialLinksList = [
   {
@@ -19,6 +20,7 @@ export const socialLinksList = [
     link: "https://www.linkedin.com/in/noor-kayyali-a4668811/",
     label: "Connect and Empower",
     color: "#0A66C2",
+    common: true,
   },
   {
     name: "WhatsApp",
@@ -26,6 +28,7 @@ export const socialLinksList = [
     link: "https://wasap.my/962797030228",
     label: "Text Me Anytime",
     color: "#1fb355",
+    common: true,
   },
   {
     name: "Phone",
@@ -33,6 +36,7 @@ export const socialLinksList = [
     link: "tel:+962797030228",
     label: "Call Me Now",
     color: "#660031",
+    common: true,
   },
   {
     name: "Email",
@@ -40,50 +44,39 @@ export const socialLinksList = [
     link: "mailto:ask@noorkayyali.com",
     label: "Inbox Awaits You",
     color: "#c5005f",
+    common: true,
   },
-  // {
-  //   name: "Facebook",
-  //   icon: faFacebook,
-  //   link: "https://facebook.com/Noorcoach",
-  //   label: "Let's Chat Forever",
-  //   color: "#1877F2",
-  // },
-  // {
-  //   name: "Instagram",
-  //   icon: faInstagram,
-  //   link: "https://www.instagram.com/noorkayyali303/",
-  //   label: "Capture Life Together",
-  //   color: "#E4405F",
-  // },
-  // {
-  //   name: "X",
-  //   icon: faXTwitter,
-  //   link: "https://twitter.com/Noorkayyali303",
-  //   label: "Join My Conversations",
-  //   color: "#181717",
-  // },
-  // {
-  //   name: "Youtube",
-  //   icon: faYoutube,
-  //   link: "https://www.youtube.com/channel/UCdCODCOiHkQXfCGHGDQel4Q",
-  //   label: "Subscribe, Watch, Like",
-  //   color: "#FF0000",
-  // },
+  {
+    name: "Facebook",
+    icon: faFacebook,
+    link: "https://facebook.com/Noorcoach",
+    label: "Let's Chat Forever",
+    color: "#1877F2",
+  },
+  {
+    name: "Instagram",
+    icon: faInstagram,
+    link: "https://www.instagram.com/noorkayyali303/",
+    label: "Capture Life Together",
+    color: "#E4405F",
+  },
+  {
+    name: "X",
+    icon: faXTwitter,
+    link: "https://twitter.com/Noorkayyali303",
+    label: "Join My Conversations",
+    color: "#181717",
+  },
+  {
+    name: "Youtube",
+    icon: faYoutube,
+    link: "https://www.youtube.com/channel/UCdCODCOiHkQXfCGHGDQel4Q",
+    label: "Subscribe, Watch, Like",
+    color: "#FF0000",
+  },
 ];
 
 const ContactSection = () => {
-  const inputs = [
-    { name: "name", title: "Name", type: "text", required: true },
-    { name: "subject", title: "Subject", type: "text", required: false },
-    {
-      name: "message",
-      title: "Message",
-      type: "textarea",
-      required: true,
-      fullWidth: true,
-    },
-  ];
-
   const whatYouWillGet = [
     "45 - 60 minute",
     "Targeted assessments, as appropriate",
@@ -91,21 +84,6 @@ const ContactSection = () => {
     "Free 30 minute consultation for new clients",
     "Customized packages",
   ];
-
-  const onSubmit = (e: any) => {
-    e.preventDefault();
-
-    const values = inputs.reduce(
-      (final, current) => ({
-        ...final,
-        [current.name]: e.target[current.name].value,
-      }),
-      {}
-    );
-
-    console.log({ values });
-    alert("You're message has been sent. TQ :)");
-  };
 
   return (
     <PageSection
@@ -142,58 +120,28 @@ const ContactSection = () => {
 
       <Col md={12} className="text-center p-0 m-0 my-5">
         <Row>
-          {socialLinksList.map(({ name, icon, link, label, color }, i) => (
-            <Col xs={6} md={4} lg={3} key={i}>
-              <a href={link} target="_blank">
-                <Button
-                  style={{ backgroundColor: color }}
-                  className="p-3 my-3 w-100"
-                  variant="transparent"
-                >
-                  <h6 className="text-center text-white p-0 m-0">
-                    <FontAwesomeIcon icon={icon} /> {label}
-                  </h6>
-                </Button>
-              </a>
-            </Col>
-          ))}
+          {socialLinksList
+            .filter(({ common }) => common)
+            .map(({ name, icon, link, label, color }, i) => (
+              <Col xs={6} md={4} lg={3} key={i}>
+                <a href={link} target="_blank">
+                  <Button
+                    style={{ backgroundColor: color }}
+                    className="p-3 my-3 w-100"
+                    variant="transparent"
+                  >
+                    <h6 className="text-center text-white p-0 m-0">
+                      <FontAwesomeIcon icon={icon} /> {label}
+                    </h6>
+                  </Button>
+                </a>
+              </Col>
+            ))}
         </Row>
       </Col>
 
       <Col md={12} className="p-0 m-0">
-        <form onSubmit={onSubmit}>
-          <Row>
-            {inputs.map(({ name, title, required, type, fullWidth }, i) => (
-              <Col lg={fullWidth ? 12 : 6} className="mb-2" key={i}>
-                <FormGroup>
-                  <FormLabel for={name} className="text-dark">
-                    {title}
-                    {required ? (
-                      <span className="text-danger">{" *"}</span>
-                    ) : (
-                      ""
-                    )}
-                  </FormLabel>
-                  <FormControl
-                    id={name}
-                    name={name}
-                    placeholder={title}
-                    className="py-3"
-                    as={type === "textarea" ? type : undefined}
-                    type={type}
-                    required={required}
-                  />
-                </FormGroup>
-              </Col>
-            ))}
-
-            <Col md={3} lg={2} className="float-end">
-              <Button variant="danger" className="p-3" type="submit">
-                <h6 className="text-center p-0 m-0">Reach Me Now</h6>
-              </Button>
-            </Col>
-          </Row>
-        </form>
+        <ContactForm />
       </Col>
     </PageSection>
   );

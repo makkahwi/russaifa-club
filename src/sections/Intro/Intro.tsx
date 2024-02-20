@@ -1,15 +1,8 @@
 import PageSection from "@/components/PageSection";
-import Image from "next/image";
-import CountUp from "react-countup";
 import { Col, Row } from "react-bootstrap";
+import NumberCounters from "./Numbers";
 
 const AboutIntroSection = () => {
-  const stats = [
-    { title: "Organizations Served", count: 200 },
-    { title: "Workshops Held", count: 2000 },
-    { title: "Persons Mentored", count: 12000 },
-  ];
-
   return (
     <PageSection id="about">
       {/* <Col lg={6} className="my-auto">
@@ -33,26 +26,7 @@ const AboutIntroSection = () => {
         </h4>
 
         <Row className="justify-content-between py-auto px-5">
-          {stats.map(({ title, count }, i) => {
-            const size = (0.35 * String(count).length) / 5;
-
-            return (
-              <Col xs={12} md={3} className="my-auto text-center my-5" key={i}>
-                <Image
-                  src="/images/logo/sun.png"
-                  className="my-2"
-                  alt="Sun"
-                  width={409 * size}
-                  height={244 * size}
-                  priority
-                />
-                <h1 className="text-danger">
-                  <CountUp start={0} end={count} duration={3} enableScrollSpy />
-                </h1>
-                <h5 className="mt-2 text-dark">{title}</h5>
-              </Col>
-            );
-          })}
+          <NumberCounters />
         </Row>
       </Col>
     </PageSection>

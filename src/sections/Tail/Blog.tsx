@@ -1,3 +1,5 @@
+"use client";
+
 import PageSection from "@/components/PageSection";
 import Slider from "@/components/Slider";
 import { capitalizeSentenceFirstLetters } from "@/functions/utils";
