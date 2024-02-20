@@ -7,11 +7,17 @@ import { Fragment } from "react";
 import { Accordion, Button, Card, CardBody, Col, Row } from "react-bootstrap";
 import { useAccordionButton } from "react-bootstrap/AccordionButton";
 
-const CustomToggle = ({ children = <></>, eventKey = "0" }) => {
+const CustomToggle = ({ children = <></>, eventKey = "0", ...rest }) => {
   const decoratedOnClick = useAccordionButton(eventKey);
 
   return (
-    <div role="button" onClick={decoratedOnClick} className="px-3 h-100">
+    <div
+      role="button"
+      onClick={decoratedOnClick}
+      className="h-100 px-3"
+      style={{ display: "table" }}
+      {...rest}
+    >
       {children}
     </div>
   );
@@ -224,71 +230,45 @@ const BlogSection = () => {
 
   return (
     <PageSection title="Blog" id="blog" color="light">
-      {/* <Col md={12} className="text-center p-0 m-0 mb-4">
-        <ButtonGroup>
-          <Button
-            onClick={() => setPickedCategory("")}
-            variant={pickedCategory === "" ? "danger" : "dark"}
-          >
-            All
-          </Button>
-
-          {categories.map((category, i) => (
-            <Button
-              onClick={() => setPickedCategory(category)}
-              key={i}
-              variant={pickedCategory === category ? "danger" : "dark"}
-            >
-              {category}
-            </Button>
-          ))}
-        </ButtonGroup>
-      </Col> */}
-
       <Accordion>
         <Col md={12} className="text-center p-0 m-0">
           <Slider
             navigation
             indicators
-            slides={posts
-              // .filter(({ category }) =>
-              //   pickedCategory ? category == pickedCategory : true
-              // )
-              .map((post, i) => {
-                const { date, title, img, category } = post;
+            slides={posts.map((post, i) => {
+              const { date, title, img, category } = post;
 
-                return (
-                  <CustomToggle eventKey={String(i)} key={i}>
-                    <Card
-                      role="button"
-                      // onClick={() => setPickedPost(post)}
-                      className="w-100 h-100"
-                      style={{ display: "table-cell" }}
+              return (
+                <CustomToggle eventKey={String(i)} key={i}>
+                  <Card
+                    role="button"
+                    className="w-100 h-100"
+                    style={{ display: "table-cell" }}
+                  >
+                    <div
+                      style={{
+                        height: "30vh",
+                        backgroundImage: `url('/images/articles/${img}')`,
+                        backgroundPositionX: "center",
+                        backgroundPositionY: "center",
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                      }}
+                      className="w-100 p-0 m-0"
                     >
-                      <div
-                        style={{
-                          height: "30vh",
-                          backgroundImage: `url('/images/articles/${img}')`,
-                          backgroundPositionX: "center",
-                          backgroundPositionY: "center",
-                          backgroundRepeat: "no-repeat",
-                          backgroundSize: "cover",
-                        }}
-                        className="w-100 p-0 m-0"
-                      >
-                        <Button className="m-3 p-2 float-end" variant="danger">
-                          {category}
-                        </Button>
-                      </div>
+                      <Button className="m-3 p-2 float-end" variant="danger">
+                        {category}
+                      </Button>
+                    </div>
 
-                      <CardBody>
-                        <small className="text-start text-dark">{date}</small>
-                        <h5 className="text-justify text-dark">{title}</h5>
-                      </CardBody>
-                    </Card>
-                  </CustomToggle>
-                );
-              })}
+                    <CardBody>
+                      <small className="text-start text-dark">{date}</small>
+                      <h5 className="text-justify text-dark">{title}</h5>
+                    </CardBody>
+                  </Card>
+                </CustomToggle>
+              );
+            })}
             slidesCount={3}
           />
         </Col>
@@ -298,8 +278,8 @@ const BlogSection = () => {
             <Card.Body>
               <Row>
                 <Col md={12}>
-                  <CustomToggle eventKey={String(i)}>
-                    <Button variant="danger" className="float-end">
+                  <CustomToggle eventKey={String(i)} className="m-0 float-end">
+                    <Button variant="danger">
                       <FontAwesomeIcon icon={faX} />
                     </Button>
                   </CustomToggle>
@@ -349,10 +329,8 @@ const BlogSection = () => {
                 </Col>
 
                 <Col md={12}>
-                  <CustomToggle eventKey={String(i)}>
-                    <Button variant="dark" className="float-end">
-                      Close
-                    </Button>
+                  <CustomToggle eventKey={String(i)} className="m-0 float-end">
+                    <Button variant="dark">Close</Button>
                   </CustomToggle>
                 </Col>
               </Row>
