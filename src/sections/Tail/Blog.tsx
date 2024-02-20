@@ -2,7 +2,18 @@ import PageSection from "@/components/PageSection";
 import Slider from "@/components/Slider";
 import { capitalizeSentenceFirstLetters } from "@/functions/utils";
 import { Fragment, useState } from "react";
-import { Button, ButtonGroup, Card, CardBody, Col, Modal, ModalBody, ModalFooter, ModalHeader, Row } from "react-bootstrap";
+import {
+  Button,
+  ButtonGroup,
+  Card,
+  CardBody,
+  Col,
+  Modal,
+  ModalBody,
+  ModalFooter,
+  ModalHeader,
+  Row,
+} from "react-bootstrap";
 
 interface post {
   date: string;
@@ -246,7 +257,7 @@ const BlogSection = () => {
         <ButtonGroup>
           <Button
             onClick={() => setPickedCategory("")}
-            variant={pickedCategory === "" ? "primary" : "dark"}
+            variant={pickedCategory === "" ? "danger" : "dark"}
           >
             All
           </Button>
@@ -255,7 +266,7 @@ const BlogSection = () => {
             <Button
               onClick={() => setPickedCategory(category)}
               key={i}
-              variant={pickedCategory === category ? "primary" : "dark"}
+              variant={pickedCategory === category ? "danger" : "dark"}
             >
               {category}
             </Button>
@@ -297,7 +308,7 @@ const BlogSection = () => {
                       }}
                       className="w-100 p-0 m-0"
                     >
-                      <Button className="m-3 p-2 float-end" variant="primary">
+                      <Button className="m-3 p-2 float-end" variant="danger">
                         {category}
                       </Button>
                     </div>

@@ -84,14 +84,14 @@ const TestimonialsSection = () => {
           navigation
           indicators
           slides={testimonials?.map(({ content, author }, i) => (
-            <div className="p-4 border border-primary rounded-5 mx-3" key={i}>
+            <div className="p-4 border border-danger rounded-5 mx-3" key={i}>
               <h5 className="text-block text-dark">{content}</h5>
 
-              <h5 className="text-justify text-primary mt-4">{author}</h5>
+              <h5 className="text-justify text-danger mt-4">{author}</h5>
               {Array.from(Array(5).keys()).map((y) => (
                 <FontAwesomeIcon
                   icon={faStar}
-                  className="text-primary h5"
+                  className="text-danger h5"
                   key={y}
                 />
               ))}

@@ -4,7 +4,15 @@ import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { useState } from "react";
-import { Alert, Button, Col, FormControl, FormGroup, FormLabel, Row } from "react-bootstrap";
+import {
+  Alert,
+  Button,
+  Col,
+  FormControl,
+  FormGroup,
+  FormLabel,
+  Row,
+} from "react-bootstrap";
 
 export const socialLinksList = [
   {
@@ -129,7 +137,7 @@ const ContactSection = () => {
         <Row className="justify-content-center">
           {whatYouWillGet.map((point, i) => (
             <Col xs={6} lg={3} xl={2} className="my-3" key={i}>
-              <div className="d-flex border rounded-5 border-primary w-100 h-100 p-3">
+              <div className="d-flex border rounded-5 border-danger w-100 h-100 p-3">
                 <h6 className="text-dark m-auto">{point}</h6>
               </div>
             </Col>
@@ -192,7 +200,7 @@ const ContactSection = () => {
 
             <Col md={3} lg={2}>
               <Button
-                variant="primary"
+                variant="danger"
                 className="p-3 my-3 float-end"
                 type="submit"
               >

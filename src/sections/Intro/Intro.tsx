@@ -46,7 +46,7 @@ const AboutIntroSection = () => {
                   height={244 * size}
                   priority
                 />
-                <h1 className="text-primary">
+                <h1 className="text-danger">
                   <CountUp start={0} end={count} duration={3} enableScrollSpy />
                 </h1>
                 <h5 className="mt-2 text-dark">{title}</h5>
