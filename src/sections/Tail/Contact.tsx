@@ -3,9 +3,7 @@ import { faLinkedinIn, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import { useState } from "react";
 import {
-  Alert,
   Button,
   Col,
   FormControl,
@@ -74,8 +72,6 @@ export const socialLinksList = [
 ];
 
 const ContactSection = () => {
-  const [showMsg, setShowMsg] = useState(false);
-
   const inputs = [
     { name: "name", title: "Name", type: "text", required: true },
     { name: "subject", title: "Subject", type: "text", required: false },
@@ -97,7 +93,6 @@ const ContactSection = () => {
   ];
 
   const onSubmit = (e: any) => {
-    setShowMsg(false);
     e.preventDefault();
 
     const values = inputs.reduce(
@@ -109,7 +104,7 @@ const ContactSection = () => {
     );
 
     console.log({ values });
-    setShowMsg(true);
+    alert("You're message has been sent. TQ :)");
   };
 
   return (
@@ -169,7 +164,7 @@ const ContactSection = () => {
         <form onSubmit={onSubmit}>
           <Row>
             {inputs.map(({ name, title, required, type, fullWidth }, i) => (
-              <Col lg={fullWidth ? 12 : 6} key={i}>
+              <Col lg={fullWidth ? 12 : 6} className="mb-2" key={i}>
                 <FormGroup>
                   <FormLabel for={name} className="text-dark">
                     {title}
@@ -184,19 +179,13 @@ const ContactSection = () => {
                     name={name}
                     placeholder={title}
                     className="py-3"
+                    as={type === "textarea" ? type : undefined}
+                    type={type}
                     required={required}
                   />
                 </FormGroup>
               </Col>
             ))}
-
-            <Col md={9} lg={10}>
-              {showMsg && (
-                <Alert className="my-3">
-                  {"You're message has been sent. TQ :)"}
-                </Alert>
-              )}
-            </Col>
 
             <Col md={3} lg={2}>
               <Button

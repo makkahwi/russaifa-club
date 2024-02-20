@@ -1,6 +1,14 @@
 import Image from "next/image";
-import { Fragment, useState } from "react";
-import { Collapse, Container, Nav, Navbar, NavbarBrand, NavbarCollapse, NavbarToggle, NavItem, NavLink } from "react-bootstrap";
+import {
+  Container,
+  Nav,
+  Navbar,
+  NavbarBrand,
+  NavbarCollapse,
+  NavbarToggle,
+  NavItem,
+  NavLink,
+} from "react-bootstrap";
 import { animateScroll, Link } from "react-scroll";
 
 export const links = [
@@ -13,16 +21,13 @@ export const links = [
 ];
 
 const NavbarComp = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
   return (
     <Navbar
       style={{ minHeight: "10vh" }}
       className="px-5 m-0 w-100 bg-dark"
       fixed="top"
       expand="lg"
+      collapseOnSelect
     >
       <Container>
         <NavbarBrand onClick={() => animateScroll.scrollToTop()} role="button">
@@ -35,21 +40,20 @@ const NavbarComp = () => {
           />
         </NavbarBrand>
 
-        <NavbarToggle
-          aria-controls="basic-navbar-nav"
-          onClick={toggle}
-          className=" bg-white"
-        />
+        <NavbarToggle aria-controls="navbar-nav" className=" bg-white" />
 
-        <NavbarCollapse id="basic-navbar-nav">
+        <NavbarCollapse id="navbar-nav">
           <Nav className="me-auto" navbar>
             {links.map(({ title, link }, i) => (
-              <NavLink key={i}>
-                <Link to={link} role="button" onClick={() => setIsOpen(false)}>
-                  <NavItem>
-                    <NavLink className="text-white">{title}</NavLink>
-                  </NavItem>
-                </Link>
+              <NavLink
+                as={Link}
+                to={link}
+                className="text-white"
+                role="button"
+                href="#"
+                key={i}
+              >
+                {title}
               </NavLink>
             ))}
           </Nav>
