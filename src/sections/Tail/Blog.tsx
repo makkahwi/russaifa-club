@@ -1,52 +1,23 @@
 import PageSection from "@/components/PageSection";
 import Slider from "@/components/Slider";
 import { capitalizeSentenceFirstLetters } from "@/functions/utils";
-import { Fragment, useState } from "react";
-import {
-  Button,
-  ButtonGroup,
-  Card,
-  CardBody,
-  Col,
-  Modal,
-  ModalBody,
-  ModalFooter,
-  ModalHeader,
-  Row,
-} from "react-bootstrap";
+import { faX } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Fragment } from "react";
+import { Accordion, Button, Card, CardBody, Col, Row } from "react-bootstrap";
+import { useAccordionButton } from "react-bootstrap/AccordionButton";
 
-interface post {
-  date: string;
-  title: string;
-  category: string;
-  img: string;
-  contents: {
-    type: string;
-    contents?: string[];
-    content?: string;
-  }[];
-}
+const CustomToggle = ({ children = <></>, eventKey = "0" }) => {
+  const decoratedOnClick = useAccordionButton(eventKey);
+
+  return (
+    <div role="button" onClick={decoratedOnClick} className="px-3 h-100">
+      {children}
+    </div>
+  );
+};
 
 const BlogSection = () => {
-  const [pickedCategory, setPickedCategory] = useState("");
-
-  const defaultPost = {
-    date: "",
-    title: "",
-    category: "",
-    img: "",
-    contents: [
-      {
-        type: "",
-        content: "",
-      },
-    ],
-  };
-
-  const [pickedPost, setPickedPost] = useState<post>(defaultPost);
-
-  const closeModal = () => setPickedPost(defaultPost);
-
   const posts = [
     {
       date: "7 Dec 2023",
@@ -253,7 +224,7 @@ const BlogSection = () => {
 
   return (
     <PageSection title="Blog" id="blog" color="light">
-      <Col md={12} className="text-center p-0 m-0 mb-4">
+      {/* <Col md={12} className="text-center p-0 m-0 mb-4">
         <ButtonGroup>
           <Button
             onClick={() => setPickedCategory("")}
@@ -272,115 +243,123 @@ const BlogSection = () => {
             </Button>
           ))}
         </ButtonGroup>
-      </Col>
+      </Col> */}
 
-      <Col md={12} className="text-center p-0 m-0">
-        <Slider
-          navigation
-          indicators
-          slides={posts
-            .filter(({ category }) =>
-              pickedCategory ? category == pickedCategory : true
-            )
-            .map((post, i) => {
-              const { date, title, img, category } = post;
+      <Accordion>
+        <Col md={12} className="text-center p-0 m-0">
+          <Slider
+            navigation
+            indicators
+            slides={posts
+              // .filter(({ category }) =>
+              //   pickedCategory ? category == pickedCategory : true
+              // )
+              .map((post, i) => {
+                const { date, title, img, category } = post;
 
-              return (
-                <div
-                  className="px-3 h-100"
-                  style={{ display: "table" }}
-                  key={i}
-                >
-                  <Card
-                    role="button"
-                    onClick={() => setPickedPost(post)}
-                    className="w-100 h-100"
-                    style={{ display: "table-cell" }}
-                  >
-                    <div
-                      style={{
-                        height: "30vh",
-                        backgroundImage: `url('/images/articles/${img}')`,
-                        backgroundPositionX: "center",
-                        backgroundPositionY: "center",
-                        backgroundRepeat: "no-repeat",
-                        backgroundSize: "cover",
-                      }}
-                      className="w-100 p-0 m-0"
+                return (
+                  <CustomToggle eventKey={String(i)} key={i}>
+                    <Card
+                      role="button"
+                      // onClick={() => setPickedPost(post)}
+                      className="w-100 h-100"
+                      style={{ display: "table-cell" }}
                     >
-                      <Button className="m-3 p-2 float-end" variant="danger">
-                        {category}
-                      </Button>
-                    </div>
+                      <div
+                        style={{
+                          height: "30vh",
+                          backgroundImage: `url('/images/articles/${img}')`,
+                          backgroundPositionX: "center",
+                          backgroundPositionY: "center",
+                          backgroundRepeat: "no-repeat",
+                          backgroundSize: "cover",
+                        }}
+                        className="w-100 p-0 m-0"
+                      >
+                        <Button className="m-3 p-2 float-end" variant="danger">
+                          {category}
+                        </Button>
+                      </div>
 
-                    <CardBody>
-                      <small className="text-start text-dark">{date}</small>
-                      <h5 className="text-justify text-dark">{title}</h5>
-                    </CardBody>
-                  </Card>
-                </div>
-              );
-            })}
-          slidesCount={3}
-        />
-      </Col>
+                      <CardBody>
+                        <small className="text-start text-dark">{date}</small>
+                        <h5 className="text-justify text-dark">{title}</h5>
+                      </CardBody>
+                    </Card>
+                  </CustomToggle>
+                );
+              })}
+            slidesCount={3}
+          />
+        </Col>
 
-      <Modal show={!!pickedPost.title} onHide={closeModal} size="xl">
-        <ModalHeader closeButton />
+        {posts.map(({ date, title, img, category, contents }, i) => (
+          <Accordion.Collapse eventKey={String(i)} key={i}>
+            <Card.Body>
+              <Row>
+                <Col md={12}>
+                  <CustomToggle eventKey={String(i)}>
+                    <Button variant="danger" className="float-end">
+                      <FontAwesomeIcon icon={faX} />
+                    </Button>
+                  </CustomToggle>
+                </Col>
 
-        <ModalBody className="px-4">
-          <Row>
-            <Col md={4}>
-              <img src={`/images/articles/${pickedPost.img}`} width="100%" />
-            </Col>
+                <Col md={4}>
+                  <img src={`/images/articles/${img}`} width="100%" />
+                </Col>
 
-            <Col md={8} className="py-5 px-3">
-              <p>{pickedPost.date}</p>
-              <h4>{pickedPost.title}</h4>
-            </Col>
+                <Col md={8} className="py-5 px-3">
+                  <p>{date}</p>
+                  <h4>{title}</h4>
+                </Col>
 
-            <Col md={12} className="my-3">
-              {pickedPost.contents?.map(({ type, content, contents }, i) => (
-                <Fragment key={i}>
-                  {type === "title" ? (
-                    <h5 className="text-block fw-bold">{content}</h5>
-                  ) : type === "ol" ? (
-                    <ol>
-                      {contents?.map((point, y) => (
-                        <li key={y}>{point}</li>
-                      ))}
-                    </ol>
-                  ) : type === "resources" ? (
-                    <Fragment>
-                      <h6>Resources:</h6>
+                <Col md={12} className="my-3">
+                  {contents?.map(({ type, content, contents }, i) => (
+                    <Fragment key={i}>
+                      {type === "title" ? (
+                        <h5 className="text-block fw-bold">{content}</h5>
+                      ) : type === "ol" ? (
+                        <ol>
+                          {contents?.map((point, y) => (
+                            <li key={y}>{point}</li>
+                          ))}
+                        </ol>
+                      ) : type === "resources" ? (
+                        <Fragment>
+                          <h6>Resources:</h6>
 
-                      <ul>
-                        {contents?.map((resource, y) => (
-                          <li key={y}>{resource}</li>
-                        ))}
-                      </ul>
+                          <ul>
+                            {contents?.map((resource, y) => (
+                              <li key={y}>{resource}</li>
+                            ))}
+                          </ul>
+                        </Fragment>
+                      ) : (
+                        <h6
+                          className={`text-block mb-5 ${
+                            type === "boldText" ? "fw-bold" : ""
+                          }`}
+                        >
+                          {content}
+                        </h6>
+                      )}
                     </Fragment>
-                  ) : (
-                    <h6
-                      className={`text-block mb-5 ${
-                        type === "boldText" ? "fw-bold" : ""
-                      }`}
-                    >
-                      {content}
-                    </h6>
-                  )}
-                </Fragment>
-              ))}
-            </Col>
-          </Row>
-        </ModalBody>
+                  ))}
+                </Col>
 
-        <ModalFooter>
-          <Button variant="dark" onClick={closeModal}>
-            Close
-          </Button>
-        </ModalFooter>
-      </Modal>
+                <Col md={12}>
+                  <CustomToggle eventKey={String(i)}>
+                    <Button variant="dark" className="float-end">
+                      Close
+                    </Button>
+                  </CustomToggle>
+                </Col>
+              </Row>
+            </Card.Body>
+          </Accordion.Collapse>
+        ))}
+      </Accordion>
     </PageSection>
   );
 };
