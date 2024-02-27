@@ -1,5 +1,6 @@
 "use client";
 
+import { sendContacts } from "@/api";
 import {
   Button,
   Col,
@@ -12,10 +13,17 @@ import {
 const ContactForm = () => {
   const inputs = [
     { name: "name", title: "Name", type: "text", required: true },
-    { name: "subject", title: "Subject", type: "text", required: false },
+    { name: "email", title: "Email", type: "email", required: true },
+    { name: "phone", title: "Phone", type: "text", required: false },
+    {
+      name: "subject",
+      title: "Message Subject",
+      type: "text",
+      required: false,
+    },
     {
       name: "message",
-      title: "Message",
+      title: "Message Content",
       type: "textarea",
       required: true,
       fullWidth: true,
@@ -33,7 +41,10 @@ const ContactForm = () => {
       {}
     );
 
-    console.log({ values });
+    sendContacts({ ...values, timestamp: new Date() })
+      .then(() => alert("Your message has been sent. TQ :)"))
+      .catch(() => alert("Something went wrong, plz try again. Sorry :("));
+
     alert("You're message has been sent. TQ :)");
   };
 
