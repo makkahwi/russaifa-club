@@ -21,5 +21,15 @@ $theme-colors: (
   // 000000
 );
 
+.text-justify {
+  text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+  .text-justify {
+    text-align: left;
+  }
+}
+
 /* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";
