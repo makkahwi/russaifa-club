@@ -47,12 +47,9 @@ const AchievementsSection = () => {
       ))}
 
       <Col xs={12} className="mt-5">
-        <ListGroup className="rounded-5 border-primary">
+        <ListGroup className="rounded-5 border-danger">
           {achievements.map(({ content, fullWidth }, i) => (
-            <ListGroupItem
-              className="bg-transparent border-primary p-4"
-              key={i}
-            >
+            <ListGroupItem className="bg-transparent border-danger p-4" key={i}>
               <h5 className="text-dark text-block">{content}</h5>
             </ListGroupItem>
           ))}

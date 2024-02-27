@@ -1,3 +1,5 @@
+"use client";
+
 import PageSection from "@/components/PageSection";
 import Slider from "@/components/Slider";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
@@ -75,6 +77,16 @@ const TestimonialsSection = () => {
       content:
         "Since our first session, I noticed something different and asked to launch a long professional relation. And along our ongoing 6-month journey, I witnessed a next level of coaching and was helped to bypass many challenges and obstacles. I will always be grateful to Mrs. Noor and will always be first coach to recommend.",
     },
+    {
+      author: "Julie Buckingham – JulieB Coaching",
+      content:
+        "I have been working with Noor as my coach because I wanted to be clear on my goals and feel more confident about developing myself as a leader and business owner. She listened to me very deeply and I felt that her energy and enthusiasm really boosted my thinking and I was able to push myself more to achieve my goals because I knew that she would be speaking to me again and I wanted to be able to celebrate some wins with her. Noor asked me some very interesting questions and this helped me to be more reflective which was so useful. I would highly recommend working with her, she is so approachable and professional too.",
+    },
+    {
+      author: "Deepthi Upen – UK Designer",
+      content:
+        "You are indeed a ray of light! 1 hr with you has been very enlightening. I was stuck in a loop for many months about what the next steps should be for my business, you guided me to the answers BEAUTIFULLY! I am truly mind blown with your mastery with coaching and how well the session was done. Your polite, kind and friendly approach made the session very enjoyable. The way you patiently listened, the attention given to every word I spoke, makes me feel heard and valued. I truly truly enjoyed time with you. You pulled me out of the quick-sand I was stuck in for many many months. You are very skillful and knowledgeable. May all your lives wishes come to fruition. Hope many others get empowering sessions from you and may Noor's light shine through.",
+    },
   ];
 
   return (
@@ -84,14 +96,14 @@ const TestimonialsSection = () => {
           navigation
           indicators
           slides={testimonials?.map(({ content, author }, i) => (
-            <div className="p-4 border border-primary rounded-5 mx-3" key={i}>
+            <div className="p-4 border border-danger rounded-5 mx-3" key={i}>
               <h5 className="text-block text-dark">{content}</h5>
 
-              <h5 className="text-justify text-primary mt-4">{author}</h5>
+              <h5 className="text-justify text-danger mt-4">{author}</h5>
               {Array.from(Array(5).keys()).map((y) => (
                 <FontAwesomeIcon
                   icon={faStar}
-                  className="text-primary h5"
+                  className="text-danger h5"
                   key={y}
                 />
               ))}
