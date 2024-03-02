@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import {
+  Button,
   Container,
   Nav,
   Navbar,
@@ -59,6 +60,17 @@ const NavbarComp = () => {
             ))}
           </Nav>
         </NavbarCollapse>
+
+        <Link
+          to="contact"
+          className="text-capitalize"
+          style={{
+            zIndex: 1000,
+            fontSize: "calc(10px + 0.15vw)",
+          }}
+        >
+          <Button variant="danger">Book Free Call</Button>
+        </Link>
       </Container>
     </Navbar>
   );
