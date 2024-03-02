@@ -25,7 +25,7 @@ const HomePage = () => {
 
       <FooterSection />
 
-      <BookNowButton />
+      {/* <BookNowButton /> */}
     </Fragment>
   );
 };

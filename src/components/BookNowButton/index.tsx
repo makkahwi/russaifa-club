@@ -13,9 +13,9 @@ const BookNowButton = () => {
         fontSize: "calc(10px + 0.15vw)",
       }}
     >
-      Book Call
+      Book
       <br />
-      For Free
+      Free Call
     </Link>
   );
 };
