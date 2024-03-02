@@ -1,13 +1,17 @@
 "use client";
 
 import PageSection from "@/components/PageSection";
-import Slider from "@/components/Slider";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Col } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 
 const TestimonialsSection = () => {
   const testimonials = [
+    {
+      author: "Deepthi Upen – UK Designer",
+      content:
+        "You are indeed a ray of light! 1 hr with you has been very enlightening. I was stuck in a loop for many months about what the next steps should be for my business, you guided me to the answers BEAUTIFULLY! I am truly mind blown with your mastery with coaching and how well the session was done. Your polite, kind and friendly approach made the session very enjoyable. The way you patiently listened, the attention given to every word I spoke, makes me feel heard and valued. I truly truly enjoyed time with you. You pulled me out of the quick-sand I was stuck in for many many months. You are very skillful and knowledgeable. May all your lives wishes come to fruition. Hope many others get empowering sessions from you and may Noor's light shine through.",
+    },
     {
       author: "R.M. - HR Business Leader - KSA",
       content:
@@ -53,14 +57,14 @@ const TestimonialsSection = () => {
       content: "A Mind opening journey",
     },
     {
+      author: "Julie Buckingham – JulieB Coaching",
+      content:
+        "I have been working with Noor as my coach because I wanted to be clear on my goals and feel more confident about developing myself as a leader and business owner. She listened to me very deeply and I felt that her energy and enthusiasm really boosted my thinking and I was able to push myself more to achieve my goals because I knew that she would be speaking to me again and I wanted to be able to celebrate some wins with her. Noor asked me some very interesting questions and this helped me to be more reflective which was so useful. I would highly recommend working with her, she is so approachable and professional too.",
+    },
+    {
       author: "Amr Dawood - Commercial Excellence Expert",
       content:
         "Words can’t describe the level of caring and dedication I found in the experience of having Mrs. Noor as a life coach. I found here to be kind, informative, eager to help me and full of energy. Her positive attitude is contagious. Wish you all the best Mrs. Noor I truly am greatly grateful for your efforts, you are a wonderful soul.",
-    },
-    {
-      author: "Baraa - Growth flow",
-      content:
-        "I am deeply grateful for the invaluable guidance and unwavering support you have provided during our sessions. Your help has made a profound impact on my life.",
     },
     {
       author: "Hussein Al Dardasawi - Photographer",
@@ -68,35 +72,71 @@ const TestimonialsSection = () => {
         "The session was full of attention, oh, full of attention, thanks to the skill of the trainer 'Noor' in guiding one to a safe space where they could speak from the heart and be assured that the person in front of them would stand by them with all the strength that God has given them! Through this reassurance, I was able to express all my concerns and issues related to my nascent project. This helped me to think out loud a bit more and to listen to myself. With the help of the trainer Noor, I put my foot back on the road again, but this time, with even greater strength!",
     },
     {
+      author: "Baraa - Growth flow",
+      content:
+        "I am deeply grateful for the invaluable guidance and unwavering support you have provided during our sessions. Your help has made a profound impact on my life.",
+    },
+    {
       author: "Nidal Khoury - Co-founder of 12 Clients",
       content:
         "The coaching sessions with Nour were very organized, strategic and beneficial for our company. We are thankful for every minute Nour spent with us. From the second session, we started seeing focused actions and directly after that we started sensing measurable results on our focus and a few sessions after, the strategic direction of the business at large started to become clearer. The sessions, tools and methodologies used were up to date and helped us scale our business and put it on the right track for growth.",
     },
     {
-      author: "Suhaib A. – Entrepreneur",
+      author: "Suhaib Ahmad – Entrepreneur",
       content:
         "Since our first session, I noticed something different and asked to launch a long professional relation. And along our ongoing 6-month journey, I witnessed a next level of coaching and was helped to bypass many challenges and obstacles. I will always be grateful to Mrs. Noor and will always be first coach to recommend.",
     },
-    {
-      author: "Julie Buckingham – JulieB Coaching",
-      content:
-        "I have been working with Noor as my coach because I wanted to be clear on my goals and feel more confident about developing myself as a leader and business owner. She listened to me very deeply and I felt that her energy and enthusiasm really boosted my thinking and I was able to push myself more to achieve my goals because I knew that she would be speaking to me again and I wanted to be able to celebrate some wins with her. Noor asked me some very interesting questions and this helped me to be more reflective which was so useful. I would highly recommend working with her, she is so approachable and professional too.",
-    },
-    {
-      author: "Deepthi Upen – UK Designer",
-      content:
-        "You are indeed a ray of light! 1 hr with you has been very enlightening. I was stuck in a loop for many months about what the next steps should be for my business, you guided me to the answers BEAUTIFULLY! I am truly mind blown with your mastery with coaching and how well the session was done. Your polite, kind and friendly approach made the session very enjoyable. The way you patiently listened, the attention given to every word I spoke, makes me feel heard and valued. I truly truly enjoyed time with you. You pulled me out of the quick-sand I was stuck in for many many months. You are very skillful and knowledgeable. May all your lives wishes come to fruition. Hope many others get empowering sessions from you and may Noor's light shine through.",
-    },
   ];
+
+  const TestimonialComp = ({ content = "", author = "" }) => (
+    <div className="p-4 border border-danger rounded-5 mx-1 mb-4">
+      <p className="text-justify text-dark">{content}</p>
+
+      <h6 className="text-danger mt-4">{author}</h6>
+      {Array.from(Array(5).keys()).map((y) => (
+        <FontAwesomeIcon icon={faStar} className="text-danger h6" key={y} />
+      ))}
+    </div>
+  );
 
   return (
     <PageSection title="Testimonials" id="testimonials">
-      <Col md={12} className="text-justify my-4">
-        <Slider
+      <Col xs={12} className="mb-5 scrollable-testimonials">
+        <Row>
+          <Col lg={4}>
+            {testimonials
+              .slice(0, testimonials.length / 3)
+              ?.map(({ content, author }, i) => (
+                <TestimonialComp content={content} author={author} key={i} />
+              ))}
+          </Col>
+
+          <Col lg={4}>
+            {testimonials
+              .slice(testimonials.length / 3, (testimonials.length / 3) * 2)
+              ?.map(({ content, author }, i) => (
+                <TestimonialComp content={content} author={author} key={i} />
+              ))}
+          </Col>
+
+          <Col lg={4}>
+            {testimonials
+              .slice((testimonials.length / 3) * 2, testimonials.length)
+              ?.map(({ content, author }, i) => (
+                <TestimonialComp content={content} author={author} key={i} />
+              ))}
+          </Col>
+        </Row>
+      </Col>
+
+      {/* <Slider
           navigation
           indicators
           slides={testimonials?.map(({ content, author }, i) => (
-            <div className="p-4 border border-danger rounded-5 mx-3" key={i}>
+            <div
+              className="p-4 border border-danger rounded-5 mx-3 h-100"
+              key={i}
+            >
               <h5 className="text-block text-dark">{content}</h5>
 
               <h5 className="text-justify text-danger mt-4">{author}</h5>
@@ -109,8 +149,7 @@ const TestimonialsSection = () => {
               ))}
             </div>
           ))}
-        />
-      </Col>
+        /> */}
     </PageSection>
   );
 };
