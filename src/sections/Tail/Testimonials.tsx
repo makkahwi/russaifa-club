@@ -8,7 +8,7 @@ import { Col, Row } from "react-bootstrap";
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      author: "Deepthi Upen – UK Designer",
+      author: "Deepthi Upen – UX Designer",
       content:
         "You are indeed a ray of light! 1 hr with you has been very enlightening. I was stuck in a loop for many months about what the next steps should be for my business, you guided me to the answers BEAUTIFULLY! I am truly mind blown with your mastery with coaching and how well the session was done. Your polite, kind and friendly approach made the session very enjoyable. The way you patiently listened, the attention given to every word I spoke, makes me feel heard and valued. I truly truly enjoyed time with you. You pulled me out of the quick-sand I was stuck in for many many months. You are very skillful and knowledgeable. May all your lives wishes come to fruition. Hope many others get empowering sessions from you and may Noor's light shine through.",
     },
