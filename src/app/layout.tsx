@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   description: "Lead With Impact",
 };
 
+export const revalidate = 60 * 60 * 24 * 7; // seconds * minutes * hours * days
+
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html dir="ltr" lang="en">

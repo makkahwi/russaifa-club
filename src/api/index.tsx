@@ -1,3 +1,4 @@
+import { cache } from "react";
 import axios from "axios";
 
 const writeApi = axios.create({
@@ -19,10 +20,54 @@ const readApi = axios.create({
 export const sendContacts = (data: object) =>
   writeApi.post("contact-form.json", data);
 
-export const getCerts = () => readApi.get("certificates.json");
-export const getBlogPosts = () => readApi.get("blog.json");
-export const getAchievements = () => readApi.get("achievements.json");
-export const getPartners = () => readApi.get("partners.json");
-export const getTestimonials = () => readApi.get("testimonials.json");
-export const getUniquePrograms = () => readApi.get("uniquePrograms.json");
-export const getVlog = () => readApi.get("vlog.json");
+const getCertsApi = () => readApi.get("certificates.json");
+const getBlogPostsApi = () => readApi.get("blog.json");
+const getAchievementsApi = () => readApi.get("achievements.json");
+const getPartnersApi = () => readApi.get("partners.json");
+const getTestimonialsApi = () => readApi.get("testimonials.json");
+const getUniqueProgramsApi = () => readApi.get("uniquePrograms.json");
+const getVlogApi = () => readApi.get("vlog.json");
+
+export const apiCallRevalidate = 60 * 60 * 24 * 7; // seconds * mins * hours * days
+
+export const getCerts = cache(async () => {
+  const { data } = await getCertsApi();
+
+  return data;
+});
+
+export const getBlogPosts = cache(async () => {
+  const { data } = await getBlogPostsApi();
+
+  return data;
+});
+
+export const getAchievements = cache(async () => {
+  const { data } = await getAchievementsApi();
+
+  return data;
+});
+
+export const getPartners = cache(async () => {
+  const { data } = await getPartnersApi();
+
+  return data;
+});
+
+export const getTestimonials = cache(async () => {
+  const { data } = await getTestimonialsApi();
+
+  return data;
+});
+
+export const getUniquePrograms = cache(async () => {
+  const { data } = await getUniqueProgramsApi();
+
+  return data;
+});
+
+export const getVlog = cache(async () => {
+  const { data } = await getVlogApi();
+
+  return data;
+});
