@@ -10,8 +10,9 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Noor Kayyal",
-  description: "Lead With Impact",
+  title: "Noor Kayyal - Lead With Impact",
+  description:
+    "This is the website of coach Noor Kayyali, serves both Business Ventures to flourish & Ambitious Entrepreneurs to get their dreams to reality.",
 };
 
 export const revalidate = 60 * 60 * 24 * 7; // seconds * minutes * hours * days
