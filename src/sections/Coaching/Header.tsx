@@ -1,3 +1,4 @@
+import ImageComp from "@/components/Image";
 import PageSection from "@/components/PageSection";
 import { Col } from "react-bootstrap";
 
@@ -5,10 +6,9 @@ const CoachingHeaderSection = () => {
   return (
     <PageSection title="Welcome to Coaching!" color="secondary" id="coaching">
       <Col xl={6} className="px-3">
-        <img
+        <ImageComp
           alt="coaching-photo"
           src="/images/00001.jpg"
-          width="100%"
           className="rounded-5 soft-edges"
         />
       </Col>

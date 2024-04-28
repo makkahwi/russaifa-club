@@ -1,4 +1,5 @@
 import { getPartners } from "@/api";
+import ImageComp from "@/components/Image";
 import PageSection from "@/components/PageSection";
 import { Col } from "react-bootstrap";
 
@@ -23,10 +24,9 @@ const TrustedBySection = async () => {
           key={i}
         >
           <a href={link} target="_blank">
-            <img
+            <ImageComp
               alt={`partner-${i}-logo`}
               src={`/images/partners/${logo}`}
-              width="100%"
             />
           </a>
         </Col>

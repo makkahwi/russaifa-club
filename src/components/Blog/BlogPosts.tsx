@@ -5,6 +5,7 @@ import { faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Fragment } from "react";
 import { Accordion, Button, Card, Col, Row } from "react-bootstrap";
+import ImageComp from "../Image";
 import CustomToggle from "./Toggle";
 
 interface BlogPostProps {
@@ -29,11 +30,7 @@ const BlogPosts = ({ posts }: { posts: BlogPostProps[] }) => {
           </Col>
 
           <Col md={4}>
-            <img
-              alt={`post-${i}-img`}
-              src={`/images/articles/${img}`}
-              width="100%"
-            />
+            <ImageComp alt={`post-${i}-img`} src={`/images/articles/${img}`} />
           </Col>
 
           <Col md={8} className="py-5 px-3">

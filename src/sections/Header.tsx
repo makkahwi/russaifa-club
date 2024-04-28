@@ -1,3 +1,4 @@
+import ImageComp from "@/components/Image";
 import Image from "next/image";
 import { Col, Row } from "react-bootstrap";
 
@@ -16,7 +17,7 @@ const HeaderSection = () => {
       <Col lg={5} md={6} className="my-auto px-5 text-white">
         <Row>
           <Col md={12} xs={12} className="text-center d-none d-md-block">
-            <img
+            <ImageComp
               alt="logo-white"
               src="/images/logo/logo-white-no-text.png"
               width="40%"
