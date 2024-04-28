@@ -1,8 +1,10 @@
 import { getBlogPosts } from "@/api";
 import PageSection from "@/components/PageSection";
+import dynamic from "next/dynamic";
 import { Accordion, Col } from "react-bootstrap";
-import BlogPosts from "../../components/Blog/BlogPosts";
-import BlogSlider from "../../components/Blog/BlogSlider";
+
+const BlogPosts = dynamic(() => import("@/components/Blog/BlogPosts"));
+const BlogSlider = dynamic(() => import("@/components/Blog/BlogSlider"));
 
 interface BlogPostProps {
   date: string;

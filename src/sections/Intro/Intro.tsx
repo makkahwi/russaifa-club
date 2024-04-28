@@ -1,6 +1,8 @@
 import PageSection from "@/components/PageSection";
+import dynamic from "next/dynamic";
 import { Col, Row } from "react-bootstrap";
-import NumberCounters from "./Numbers";
+
+const NumberCounters = dynamic(() => import("./Numbers"));
 
 const AboutIntroSection = () => {
   return (
