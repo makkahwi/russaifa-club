@@ -1,28 +1,7 @@
 import PageSection from "@/components/PageSection";
-import { Col, Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 
 const JoinMeSection = () => {
-  const photos = [
-    { width: 3, photo: "2.jpg" },
-    { width: 5, photo: "3.jpg" },
-    { width: 4, photo: "4.jpg" },
-  ];
-
-  const achievements = [
-    {
-      title: "A",
-      content: "a",
-    },
-    {
-      title: "B",
-      content: "b",
-    },
-    {
-      title: "C",
-      content: "c",
-    },
-  ];
-
   return (
     <PageSection
       title="Join Me on Your Journey to Leadership Excellence"
