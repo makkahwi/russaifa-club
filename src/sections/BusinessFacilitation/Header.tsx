@@ -10,6 +10,7 @@ const BusinessFacilitationHeaderSection = () => {
     >
       <Col lg={6}>
         <img
+          alt="business-photo"
           src="/images/gallery/IMG-20231128-WA0021.jpg"
           width="100%"
           className="rounded-5 soft-edges mb-4"

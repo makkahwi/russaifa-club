@@ -17,6 +17,7 @@ const HeaderSection = () => {
         <Row>
           <Col md={12} xs={12} className="text-center d-none d-md-block">
             <img
+              alt="logo-white"
               src="/images/logo/logo-white-no-text.png"
               width="40%"
               className="my-2"

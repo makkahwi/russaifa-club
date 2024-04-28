@@ -6,6 +6,7 @@ const CoachingHeaderSection = () => {
     <PageSection title="Welcome to Coaching!" color="secondary" id="coaching">
       <Col xl={6} className="px-3">
         <img
+          alt="coaching-photo"
           src="/images/00001.jpg"
           width="100%"
           className="rounded-5 soft-edges"
