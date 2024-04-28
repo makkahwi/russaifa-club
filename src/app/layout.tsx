@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Noor Kayyal",
-  description: "Unlock Your Potential",
+  description: "Lead With Impact",
 };
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
