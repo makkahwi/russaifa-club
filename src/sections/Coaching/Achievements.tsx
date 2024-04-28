@@ -1,32 +1,20 @@
+import { getAchievements } from "@/api";
 import PageSection from "@/components/PageSection";
 import { Col, ListGroup, ListGroupItem } from "react-bootstrap";
 
-const AchievementsSection = () => {
+interface AchievementsProps {
+  content: string;
+  fullWidth?: boolean;
+}
+
+const AchievementsSection = async () => {
   const photos = [
     { width: 3, photo: "c.jpg" },
     { width: 5, photo: "IMG_7004.jpg" },
     { width: 4, photo: "48bfc81d-a0e9-4626-ad98-8b1a5ff09efd.jpg" },
   ];
 
-  const achievements = [
-    {
-      content:
-        "Empowered more than 100 business leaders to achieve remarkable growth by providing actionable insights and strategies during coaching sessions, resulting in the development of strong, high-performing teams.",
-      fullWidth: true,
-    },
-    {
-      content:
-        "Honored to be recognized by the European Union as one of the most influential women in Jordan in 2020.",
-    },
-    {
-      content:
-        "Coached entrepreneurs to navigate complex challenges within our dynamic world, ensuring their success.",
-    },
-    {
-      content:
-        "Elevated the confidence and communication skills of business professionals, resulting in more successful negotiations, partnerships, and career advancements.",
-    },
-  ];
+  const achievements: AchievementsProps[] = await getAchievements();
 
   return (
     <PageSection title="Achievements" color="light">

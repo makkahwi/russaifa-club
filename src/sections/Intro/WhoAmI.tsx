@@ -1,76 +1,17 @@
+import { getCerts } from "@/api";
 import PageSection from "@/components/PageSection";
 import { capitalizeSentenceFirstLetters } from "@/functions/utils";
 import Image from "next/image";
 import { Col, Row } from "react-bootstrap";
 
-const WhoAmISection = () => {
-  const certs = [
-    {
-      title: "Certified MBTI Practitioner",
-      date: 2022,
-      source: "A",
-    },
-    {
-      title: "Certified Facilitator in LEGO® SERIOUS PLAY® (LSP) Methodology",
-      date: 2023,
-      source: "INTHRFACE, DENMARK",
-    },
-    {
-      title: "Certified Professional in Design Thinking (CPDT)",
-      date: 2023,
-      source: "SkillFront",
-    },
-    {
-      title: "Solution Focused Coach",
-      date: 2022,
-      source: "B",
-    },
-    {
-      title: "Daniel Goleman Emotional Intelligence Coach",
-      date: 2022,
-      source: "C",
-    },
-    {
-      title: "Certified Level 2 Conversational Intelligence Coach",
-      date: 2022,
-      source: "WEINSTITUTE",
-    },
-    {
-      title:
-        "Certified Leadership Governance and Strategic Thinking Facilitator",
-      date: 2021,
-      source: "WHO",
-    },
-    {
-      title: "Certified Level 2 AQAI Assessment Coach and Practitioner",
-      date: 2012,
-      source: "UK",
-    },
-    {
-      title: "Certified Trainer",
-      date: 2012,
-      source: "E",
-    },
-    {
-      title: "Certified Leadership Network Diagnostic Tool Practitioner ",
-      date: 2033,
-      source: "F",
-    },
-  ];
+interface CertProps {
+  title: string;
+  date: string;
+  source: string;
+}
 
-  const CertsCol = ({ list = certs }) => (
-    <Col md={12} lg={6} className="text-justify my-4 text-dark p-3">
-      {list.map(({ title, date, source }, i) => (
-        // <h6>
-        //   {/* {date} @  */}
-        //   {/* {source} */}
-        // </h6>
-        <h5 className="lh-lg" key={i}>
-          - {capitalizeSentenceFirstLetters(title)}
-        </h5>
-      ))}
-    </Col>
-  );
+const WhoAmISection = async () => {
+  const certs: CertProps[] = await getCerts();
 
   return (
     <PageSection
@@ -114,7 +55,7 @@ const WhoAmISection = () => {
           <Col xs={12} className="text-justify my-4 text-dark p-3">
             <h5 className="lh-lg">
               <ul>
-                {certs.map(({ title, date, source }, i) => (
+                {certs?.map(({ title, date, source }, i) => (
                   // <h6>
                   //   {/* {date} @  */}
                   //   {/* {source} */}

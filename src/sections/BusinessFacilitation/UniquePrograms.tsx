@@ -1,3 +1,4 @@
+import { getUniquePrograms } from "@/api";
 import PageSection from "@/components/PageSection";
 import {
   faBriefcase,
@@ -18,67 +19,34 @@ import {
   Row,
 } from "react-bootstrap";
 
-const UniqueProgramsSection = () => {
-  const programGroups = [
-    {
-      icon: faUsers,
-      programs: [
-        "Leadership and Executive Development",
+interface UniqueProgramsProps {
+  icon: string;
+  programs: string[];
+}
 
-        "Emotional Intelligence for Leaders",
+const UniqueProgramsSection = async () => {
+  const programGroups: UniqueProgramsProps[] = await getUniquePrograms();
 
-        "Leadership Communication Skills",
-
-        "Building High Performance Teams",
-      ],
-    },
-    {
-      icon: faBullseye,
-      programs: [
-        "Strategic Thinking for Leaders",
-
-        "Leading Change",
-
-        "Problem Solving and Decision Making",
-      ],
-    },
-    {
-      icon: faFaceGrinStars,
-      programs: [
-        "Personal Branding for Leaders",
-
-        "Master Speaker and Storyteller",
-
-        "Productivity and Time Management",
-      ],
-    },
-    {
-      icon: faHandHoldingDollar,
-      programs: [
-        "Negotiation Skills",
-
-        "Selling and Negotiating Techniques",
-
-        "Customer Service",
-      ],
-    },
-    {
-      icon: faPersonChalkboard,
-      programs: ["Train the Trainer", "Coaching Skills for Leaders"],
-    },
-    {
-      icon: faLightbulb,
-      programs: [
-        "Innovation and Creative Leadership",
-
-        "Facilitation Using Lego Serious Play Methodology",
-      ],
-    },
-    {
-      icon: faBriefcase,
-      programs: ["Employability Skills "],
-    },
-  ];
+  const renderIcon = (name = "") => {
+    switch (name) {
+      case "faBriefcase":
+        return faBriefcase;
+      case "faBullseye":
+        return faBullseye;
+      case "faFaceGrinStars":
+        return faFaceGrinStars;
+      case "faHandHoldingDollar":
+        return faHandHoldingDollar;
+      case "faLightbulb":
+        return faLightbulb;
+      case "faPersonChalkboard":
+        return faPersonChalkboard;
+      case "faUsers":
+        return faUsers;
+      default:
+        return faUsers;
+    }
+  };
 
   return (
     <PageSection title="Unique Programs">
@@ -89,7 +57,7 @@ const UniqueProgramsSection = () => {
               {programGroups.map(({ icon, programs }, i) => (
                 <Col className="mb-5" lg={6} xl={i < 3 ? 4 : 3} key={i}>
                   <h1 className="text-center mb-4 text-danger display-3">
-                    <FontAwesomeIcon icon={icon} />
+                    <FontAwesomeIcon icon={renderIcon(icon)} />
                   </h1>
 
                   <ListGroup variant="flush">

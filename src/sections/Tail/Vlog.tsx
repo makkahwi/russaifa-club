@@ -1,15 +1,15 @@
+import { getVlog } from "@/api";
 import PageSection from "@/components/PageSection";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Col } from "react-bootstrap";
 
-const VlogSection = () => {
-  const videos = [
-    { link: "spzO8zZmGVY" },
-    { link: "MMdhJVb7OaE" },
-    { link: "v4eh_yCfzNQ" },
-    { link: "41446G9tUhs" },
-  ];
+interface VlogProps {
+  link: string;
+}
+
+const VlogSection = async () => {
+  const videos: VlogProps[] = await getVlog();
 
   return (
     <PageSection title="Vlog" id="vlog">
