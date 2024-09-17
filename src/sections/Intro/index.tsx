@@ -1,10 +1,13 @@
 import AboutIntroSection from "@/sections/Intro/Intro";
 import WhoAmISection from "@/sections/Intro/WhoAmI";
 import { Fragment } from "react";
+import BadgesSection from "./Badges";
 
 const IntroSections = () => {
   return (
     <Fragment>
+      <BadgesSection />
+
       <AboutIntroSection />
 
       <WhoAmISection />

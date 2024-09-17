@@ -54,7 +54,7 @@ const ContactForm = () => {
         {inputs.map(({ name, title, required, type, fullWidth }, i) => (
           <Col lg={fullWidth ? 12 : 6} className="mb-2" key={i}>
             <FormGroup>
-              <FormLabel for={name} className="text-dark">
+              <FormLabel className="text-dark">
                 {title}
                 {required ? <span className="text-danger">{" *"}</span> : ""}
               </FormLabel>
