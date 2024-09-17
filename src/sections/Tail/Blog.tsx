@@ -15,7 +15,7 @@ interface BlogPostProps {
 }
 
 const BlogSection = async () => {
-  const posts: BlogPostProps[] = await getBlogPosts();
+  const posts: BlogPostProps[] = [];
 
   return (
     <PageSection title="Blog" id="blog" color="light">

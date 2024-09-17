@@ -11,7 +11,7 @@ interface CertProps {
 }
 
 const WhoAmISection = async () => {
-  const certs: CertProps[] = await getCerts();
+  const certs: CertProps[] = [];
 
   return (
     <PageSection
