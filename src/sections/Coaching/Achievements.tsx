@@ -14,7 +14,7 @@ const AchievementsSection = async () => {
     { width: 4, photo: "48bfc81d-a0e9-4626-ad98-8b1a5ff09efd.jpg" },
   ];
 
-  const achievements: AchievementsProps[] = [];
+  const achievements: AchievementsProps[] = await getAchievements();
 
   return (
     <PageSection title="Achievements" color="light">

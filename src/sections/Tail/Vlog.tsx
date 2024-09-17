@@ -9,7 +9,7 @@ interface VlogProps {
 }
 
 const VlogSection = async () => {
-  const videos: VlogProps[] = [];
+  const videos: VlogProps[] = await getVlog();
 
   return (
     <PageSection title="Vlog" id="vlog">

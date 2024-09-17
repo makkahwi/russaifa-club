@@ -25,7 +25,7 @@ interface UniqueProgramsProps {
 }
 
 const UniqueProgramsSection = async () => {
-  const programGroups: UniqueProgramsProps[] = [];
+  const programGroups: UniqueProgramsProps[] = await getUniquePrograms();
 
   const renderIcon = (name = "") => {
     switch (name) {
