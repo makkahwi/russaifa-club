@@ -5,10 +5,13 @@ import { Button, ButtonGroup, Col, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { socialLinksList } from "../Tail/Contact";
 import FooterNav from "./Nav";
+import BadgesSection from "../Intro/Badges";
 
 const FooterSection = () => {
   return (
     <Fragment>
+      <BadgesSection />
+
       <Row className="bg-dark py-5">
         <Col xs={12} className="text-center pb-5">
           <Image

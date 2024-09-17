@@ -32,7 +32,7 @@ const BadgesSection = () => {
         <img
           src={`/images/badges/${src}`}
           key={i}
-          className="col-3 col-md-1 px-2 my-3 mx-auto"
+          className="col-3 col-md-1 px-4 my-3 mx-auto"
         />
       ))}
     </div>
