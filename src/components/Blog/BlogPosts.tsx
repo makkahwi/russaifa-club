@@ -30,7 +30,7 @@ const BlogPosts = ({ posts }: { posts: BlogPostProps[] }) => {
           </Col>
 
           <Col md={4}>
-            <ImageComp alt={`post-${i}-img`} src={`/images/articles/${img}`} />
+            <ImageComp alt={`post-${i}-img`} src={img} />
           </Col>
 
           <Col md={8} className="py-5 px-3">
