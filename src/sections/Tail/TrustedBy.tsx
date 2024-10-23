@@ -24,10 +24,7 @@ const TrustedBySection = async () => {
           key={i}
         >
           <a href={link} target="_blank">
-            <ImageComp
-              alt={`partner-${i}-logo`}
-              src={`/images/partners/${logo}`}
-            />
+            <ImageComp alt={`partner-${i}-logo`} src={logo} />
           </a>
         </Col>
       ))}

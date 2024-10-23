@@ -31,7 +31,7 @@ const BlogSlider = ({ posts }: { posts: BlogPostProps[] }) => {
               <div
                 style={{
                   height: "30vh",
-                  backgroundImage: `url('/images/articles/${img}')`,
+                  backgroundImage: `url('${img}')`,
                   backgroundPositionX: "center",
                   backgroundPositionY: "center",
                   backgroundRepeat: "no-repeat",
