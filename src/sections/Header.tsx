@@ -1,10 +1,8 @@
-import ImageComp from "@/components/Image";
 import Image from "next/image";
-import { Col, Row } from "react-bootstrap";
 
 const HeaderSection = () => {
   return (
-    <Row
+    <div
       style={{
         minHeight: "100vh",
         backgroundImage: `url('/images/Pattern.png')`,
@@ -12,27 +10,26 @@ const HeaderSection = () => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="justify-content-center bg-warning"
+      className="row justify-content-center bg-warning"
     >
-      <Col lg={5} md={6} className="my-auto px-5 text-white">
-        <Row>
-          <Col md={12} xs={12} className="text-center d-none d-md-block">
-            <ImageComp
-              alt="logo-white"
-              src="/images/logo/logo-white-no-text.png"
-              width="40%"
-              className="my-2"
-            />
-          </Col>
+      <div className="col-md-6 col-lg-5 my-auto px-5 text-white">
+        <h5 className="mb-5 text-light">
+          الصحة تبدأ من التغذية السليمة - اكتشف حياتك الصحية الآن! مع
+        </h5>
+        <h4 className="text-light fst-italic">أخصائية التغذية</h4>
+        <h3 className="mt-4 display-4 fw-bold">فاطمة محمد</h3>
 
-          <Col md={12} xs={12}>
-            <h2 className="mt-4 display-3 fw-bold">NOOR KAYYALI</h2>
-            <h4 className="text-light fst-italic">Lead with Impact</h4>
-          </Col>
-        </Row>
-      </Col>
+        <h4 className="text-light mt-5">
+          احصل على خطة غذائية مخصصة تناسب احتياجاتك الصحية وأهدافك الشخصية
+        </h4>
 
-      <Col lg={4} md={6} className="position-relative mt-5">
+        <div className="btn-group my-4" style={{ direction: "ltr" }}>
+          <button className="btn btn-white">ابدأ رحلتك الصحية</button>
+          <button className="btn btn-white">احجز استشارتك الآن</button>
+        </div>
+      </div>
+
+      <div className="col-md-6 col-lg-4 position-relative mt-5">
         <Image
           src="/images/05.png"
           className="position-absolute bottom-0 mx-5 mt-5 d-block d-md-none"
@@ -58,8 +55,8 @@ const HeaderSection = () => {
           height={934 * 0.65}
           priority
         />
-      </Col>
-    </Row>
+      </div>
+    </div>
   );
 };
 

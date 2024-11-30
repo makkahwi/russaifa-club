@@ -2,7 +2,6 @@ import { getTestimonials } from "@/api";
 import PageSection from "@/components/PageSection";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Col, Row } from "react-bootstrap";
 
 interface TestimonialProps {
   author: string;
@@ -24,34 +23,34 @@ const TestimonialsSection = async () => {
   );
 
   return (
-    <PageSection title="Testimonials" id="testimonials">
-      <Col xs={12} className="mb-5 scrollable-testimonials">
-        <Row>
-          <Col lg={4}>
+    <PageSection title="شهادات العملاء" id="testimonials">
+      <div className="col-md-12 mb-5 scrollable-testimonials">
+        <div className="row">
+          <div className="col-lg-4">
             {testimonials
               .slice(0, testimonials.length / 3)
               ?.map(({ content, author }, i) => (
                 <TestimonialComp content={content} author={author} key={i} />
               ))}
-          </Col>
+          </div>
 
-          <Col lg={4}>
+          <div className="col-lg-4">
             {testimonials
               .slice(testimonials.length / 3, (testimonials.length / 3) * 2)
               ?.map(({ content, author }, i) => (
                 <TestimonialComp content={content} author={author} key={i} />
               ))}
-          </Col>
+          </div>
 
-          <Col lg={4}>
+          <div className="col-lg-4">
             {testimonials
               .slice((testimonials.length / 3) * 2, testimonials.length)
               ?.map(({ content, author }, i) => (
                 <TestimonialComp content={content} author={author} key={i} />
               ))}
-          </Col>
-        </Row>
-      </Col>
+          </div>
+        </div>
+      </div>
 
       {/* <Slider
           navigation

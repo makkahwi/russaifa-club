@@ -2,33 +2,21 @@ import PageSection from "@/components/PageSection";
 import {
   faFacebook,
   faInstagram,
-  faLinkedinIn,
   faWhatsapp,
   faXTwitter,
-  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import dynamic from "next/dynamic";
-import Image from "next/image";
-import { Button, Col, Row } from "react-bootstrap";
 
 const ContactForm = dynamic(() => import("./ContactForm"));
 
 export const socialLinksList = [
   {
-    name: "LinkedIn",
-    icon: faLinkedinIn,
-    link: "https://www.linkedin.com/in/noor-kayyali-a4668811/",
-    label: "Connect and Empower",
-    color: "#0A66C2",
-    common: true,
-  },
-  {
     name: "WhatsApp",
     icon: faWhatsapp,
     link: "https://wasap.my/962797030228",
-    label: "Text Me Anytime",
+    label: "عبر الواتس اب في أي وقت",
     color: "#1fb355",
     common: true,
   },
@@ -36,7 +24,7 @@ export const socialLinksList = [
     name: "Phone",
     icon: faPhone,
     link: "tel:+962797030228",
-    label: "Call Me Now",
+    label: "اتصل بي مباشرة",
     color: "#660031",
     common: true,
   },
@@ -44,7 +32,7 @@ export const socialLinksList = [
     name: "Email",
     icon: faEnvelope,
     link: "mailto:ask@noorkayyali.com",
-    label: "Inbox Awaits You",
+    label: "راسلني على البريد الإلكتروني",
     color: "#c5005f",
     common: true,
   },
@@ -69,82 +57,57 @@ export const socialLinksList = [
     label: "Join My Conversations",
     color: "#181717",
   },
-  {
-    name: "Youtube",
-    icon: faYoutube,
-    link: "https://www.youtube.com/channel/UCdCODCOiHkQXfCGHGDQel4Q",
-    label: "Subscribe, Watch, Like",
-    color: "#FF0000",
-  },
 ];
 
 const ContactSection = () => {
   const whatYouWillGet = [
-    "45 - 60 minute",
-    "Targeted assessments, as appropriate",
-    "Guidance and support via text or email",
-    "Free 30 minute consultation for new clients",
-    "Customized packages",
+    "سنقوم بتحليل عاداتك الغذائية الحالية",
+    "فهم تجاربك السابقة في المجال",
+    "التعرف على دوافعك وأهدافك",
+    "استشكاف الوضع الحالي",
+    "بناء الخطة العلاجية",
   ];
 
   return (
-    <PageSection
-      title="Contact Me"
-      id="contact"
-      aboveTitle={
-        <Col md={12} className="text-center">
-          <Image
-            src="/images/logo/sun.png"
-            className="mb-5"
-            alt="Sun"
-            width={409 * 0.35}
-            height={244 * 0.35}
-            priority
-          />
-        </Col>
-      }
-    >
-      <Col md={12} className="text-center p-0 m-0">
-        <h5 className="mb-5 text-dark">
-          {"We can have a discovery session now, in which you will get..."}
-        </h5>
+    <PageSection title="تواصل معي الآن" id="contact">
+      <div className="col-md-12 text-center p-0 m-0">
+        <h5 className="mb-5 text-dark">في أول تواصل بيننا...</h5>
 
-        <Row className="justify-content-center">
+        <div className="row justify-content-center">
           {whatYouWillGet.map((point, i) => (
-            <Col xs={6} lg={3} xl={2} className="my-3" key={i}>
+            <div className="col-xs-12 col-lg-3 col-xl-2 my-3" key={i}>
               <div className="d-flex border rounded-5 border-danger w-100 h-100 p-3">
                 <h6 className="text-dark m-auto">{point}</h6>
               </div>
-            </Col>
+            </div>
           ))}
-        </Row>
-      </Col>
+        </div>
+      </div>
 
-      <Col md={12} className="text-center p-0 m-0 my-5">
-        <Row>
+      <div className="col-md-12 text-center p-0 m-0 my-5">
+        <div className="row justify-content-center">
           {socialLinksList
             .filter(({ common }) => common)
             .map(({ name, icon, link, label, color }, i) => (
-              <Col xs={6} md={4} lg={3} key={i}>
+              <div className="col-xs-6 col-md-4 col-lg-3" key={i}>
                 <a href={link} target="_blank">
-                  <Button
+                  <button
                     style={{ backgroundColor: color }}
-                    className="p-3 my-3 w-100"
-                    variant="transparent"
+                    className="btn btn-transparent p-3 my-3 w-100"
                   >
                     <h6 className="text-center text-white p-0 m-0">
                       <FontAwesomeIcon icon={icon} /> {label}
                     </h6>
-                  </Button>
+                  </button>
                 </a>
-              </Col>
+              </div>
             ))}
-        </Row>
-      </Col>
+        </div>
+      </div>
 
-      <Col md={12} className="p-0 m-0">
+      <div className="col-md-12 p-0 m-0">
         <ContactForm />
-      </Col>
+      </div>
     </PageSection>
   );
 };

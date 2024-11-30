@@ -19,13 +19,13 @@ const HomePage = () => {
 
       <CoachingSections />
 
-      <BusinessFacilitationSections />
+      {/* <BusinessFacilitationSections /> */}
 
       <TailSections />
 
       <FooterSection />
 
-      {/* <BookNowButton /> */}
+      <BookNowButton />
     </Fragment>
   );
 };

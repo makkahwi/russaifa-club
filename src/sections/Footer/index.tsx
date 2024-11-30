@@ -1,17 +1,14 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { Fragment } from "react";
 import { Button, ButtonGroup, Col, Row } from "react-bootstrap";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { socialLinksList } from "../Tail/Contact";
 import FooterNav from "./Nav";
-import BadgesSection from "../Intro/Badges";
 
 const FooterSection = () => {
   return (
     <Fragment>
-      <BadgesSection />
-
       <Row className="bg-dark py-5">
         <Col xs={12} className="text-center pb-5">
           <Image
@@ -43,9 +40,8 @@ const FooterSection = () => {
 
       <Row className="py-5 bg-white">
         <h6 className="text-center text-dark">
-          All Rights Reserved For{" "}
-          <span className="text-danger">NOOR KAYYALI</span> ©{" "}
-          {new Date().getFullYear()}
+          جميع الحقوق محفوظة لـ <span className="text-danger">فاطمة محمد</span>{" "}
+          © {new Date().getFullYear()}
         </h6>
 
         <a
@@ -53,7 +49,7 @@ const FooterSection = () => {
           target="_blank"
           className="text-center text-dark"
         >
-          <small>Built By AlembicSoft</small>
+          <small>تصميم وتنفيذ الانبيق للبرمجيات</small>
         </a>
       </Row>
     </Fragment>

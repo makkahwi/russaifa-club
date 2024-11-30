@@ -12,18 +12,23 @@ import {
 
 const ContactForm = () => {
   const inputs = [
-    { name: "name", title: "Name", type: "text", required: true },
-    { name: "email", title: "Email", type: "email", required: true },
-    { name: "phone", title: "Phone", type: "text", required: false },
+    { name: "name", title: "الاسم", type: "text", required: true },
+    {
+      name: "email",
+      title: "البريد الإلكتروني",
+      type: "email",
+      required: false,
+    },
+    { name: "phone", title: "رقم الهاتف", type: "text", required: true },
     {
       name: "subject",
-      title: "Message Subject",
+      title: "عنوان الرسالة",
       type: "text",
       required: false,
     },
     {
       name: "message",
-      title: "Message Content",
+      title: "محتوى الرسالة",
       type: "textarea",
       required: true,
       fullWidth: true,
@@ -73,7 +78,7 @@ const ContactForm = () => {
 
         <Col md={3} lg={2} className="float-end">
           <Button variant="danger" className="p-3" type="submit">
-            <h6 className="text-center p-0 m-0">Reach Me Now</h6>
+            <h6 className="text-center p-0 m-0">تواصل الآن</h6>
           </Button>
         </Col>
       </Row>

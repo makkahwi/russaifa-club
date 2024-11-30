@@ -13,9 +13,7 @@ const BookNowButton = () => {
         fontSize: "calc(10px + 0.15vw)",
       }}
     >
-      Book
-      <br />
-      Free Call
+      احجز الآن
     </Link>
   );
 };
