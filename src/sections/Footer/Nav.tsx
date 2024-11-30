@@ -13,7 +13,7 @@ const FooterNav = () => {
           {links.map(({ title, link }, i) => (
             <Link to={link} role="button" key={i}>
               <NavItem>
-                <NavLink className="text-white">{title}</NavLink>
+                <NavLink className="text-black">{title}</NavLink>
               </NavItem>
             </Link>
           ))}

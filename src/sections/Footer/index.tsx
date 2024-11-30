@@ -9,7 +9,13 @@ import FooterNav from "./Nav";
 const FooterSection = () => {
   return (
     <Fragment>
-      <Row className="bg-dark py-5">
+      <Row
+        className="bg-warning py-5"
+        style={{
+          backgroundImage: `url('/images/Pattern.png')`,
+          backgroundPosition: "center center",
+        }}
+      >
         <Col xs={12} className="text-center pb-5">
           <Image
             src="/images/logo/logo-white.png"
@@ -28,8 +34,8 @@ const FooterSection = () => {
         <Col xs={12} className="text-center">
           <ButtonGroup>
             {socialLinksList.map(({ name, icon, link, label, color }, i) => (
-              <Button className="p-3 my-3 text-white" variant="link" key={i}>
-                <a href={link} target="_blank" className="text-white">
+              <Button className="p-3 my-3 text-dark" variant="link" key={i}>
+                <a href={link} target="_blank" className="text-black">
                   <FontAwesomeIcon icon={icon} />
                 </a>
               </Button>
