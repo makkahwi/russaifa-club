@@ -12,20 +12,20 @@ const HeaderSection = () => {
       }}
       className="row justify-content-center bg-warning"
     >
-      <div className="col-md-6 col-lg-5 my-auto px-5 text-white">
-        <h5 className="mb-5 text-light">
+      <div className="col-md-6 col-lg-5 my-auto px-5">
+        <h5 className="mb-5 text-black">
           الصحة تبدأ من التغذية السليمة - اكتشف حياتك الصحية الآن! مع
         </h5>
-        <h4 className="text-light fst-italic">أخصائية التغذية</h4>
+        <h4 className="text-black fst-italic">أخصائية التغذية</h4>
         <h3 className="mt-4 display-4 fw-bold">فاطمة محمد</h3>
 
-        <h4 className="text-light mt-5">
+        <h4 className="text-black mt-5">
           احصل على خطة غذائية مخصصة تناسب احتياجاتك الصحية وأهدافك الشخصية
         </h4>
 
         <div className="btn-group my-4" style={{ direction: "ltr" }}>
-          <button className="btn btn-white">ابدأ رحلتك الصحية</button>
-          <button className="btn btn-white">احجز استشارتك الآن</button>
+          <button className="btn btn-black">ابدأ رحلتك الصحية</button>
+          <button className="btn btn-black">احجز استشارتك الآن</button>
         </div>
       </div>
 

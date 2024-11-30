@@ -23,7 +23,7 @@ const BlogPosts = ({ posts }: { posts: BlogPostProps[] }) => {
         <Row>
           <Col md={12}>
             <CustomToggle eventKey={String(i)} className="m-0 float-end">
-              <Button variant="danger">
+              <Button variant="dark">
                 <FontAwesomeIcon icon={faX} />
               </Button>
             </CustomToggle>

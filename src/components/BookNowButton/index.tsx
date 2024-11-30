@@ -6,7 +6,7 @@ const BookNowButton = () => {
   return (
     <Link
       to="contact"
-      className="btn btn-danger position-fixed bottom-0 end-0 m-5 p-3 rounded-circle text-capitalize"
+      className="btn btn-dark position-fixed bottom-0 end-0 m-5 p-3 rounded-circle text-capitalize"
       role="button"
       style={{
         zIndex: 1000,

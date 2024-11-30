@@ -12,12 +12,12 @@ const TestimonialsSection = async () => {
   const testimonials: TestimonialProps[] = await getTestimonials();
 
   const TestimonialComp = ({ content = "", author = "" }) => (
-    <div className="p-4 border border-danger rounded-5 mx-1 mb-4">
+    <div className="p-4 border border-dark rounded-5 mx-1 mb-4">
       <p className="text-justify text-dark">{content}</p>
 
-      <h6 className="text-danger mt-4">{author}</h6>
+      <h6 className="text-dark mt-4">{author}</h6>
       {Array.from(Array(5).keys()).map((y) => (
-        <FontAwesomeIcon icon={faStar} className="text-danger h6" key={y} />
+        <FontAwesomeIcon icon={faStar} className="text-dark h6" key={y} />
       ))}
     </div>
   );
@@ -57,16 +57,16 @@ const TestimonialsSection = async () => {
           indicators
           slides={testimonials?.map(({ content, author }, i) => (
             <div
-              className="p-4 border border-danger rounded-5 mx-3 h-100"
+              className="p-4 border border-dark rounded-5 mx-3 h-100"
               key={i}
             >
               <h5 className="text-block text-dark">{content}</h5>
 
-              <h5 className="text-justify text-danger mt-4">{author}</h5>
+              <h5 className="text-justify text-dark mt-4">{author}</h5>
               {Array.from(Array(5).keys()).map((y) => (
                 <FontAwesomeIcon
                   icon={faStar}
-                  className="text-danger h5"
+                  className="text-dark h5"
                   key={y}
                 />
               ))}

@@ -40,8 +40,8 @@ const FooterSection = () => {
 
       <Row className="py-5 bg-white">
         <h6 className="text-center text-dark">
-          جميع الحقوق محفوظة لـ <span className="text-danger">فاطمة محمد</span>{" "}
-          © {new Date().getFullYear()}
+          جميع الحقوق محفوظة لـ <span className="text-dark">فاطمة محمد</span> ©{" "}
+          {new Date().getFullYear()}
         </h6>
 
         <a

@@ -26,10 +26,10 @@ const WhoAmISection = async () => {
         </h5>
       </div>
 
-      <div className="col-md-12 border border-danger border-2 rounded-5 mt-5">
+      <div className="col-md-12 border border-dark border-2 rounded-5 mt-5">
         <div className="row justify-content-center">
           <div className="col-md-12 my-4">
-            <h3 className="text-center text-danger">عضويات</h3>
+            <h3 className="text-center text-dark">عضويات</h3>
           </div>
 
           <div className="col-md-12 text-justify my-4 text-dark p-3">

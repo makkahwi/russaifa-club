@@ -39,7 +39,7 @@ const BlogSlider = ({ posts }: { posts: BlogPostProps[] }) => {
                 }}
                 className="w-100 p-0 m-0"
               >
-                <Button className="m-3 p-2 float-end" variant="danger">
+                <Button className="m-3 p-2 float-end" variant="dark">
                   {category}
                 </Button>
               </div>
