@@ -59,6 +59,17 @@ const NavbarComp = () => {
             ))}
           </Nav>
         </NavbarCollapse>
+
+        <Link
+          to="contact"
+          className="text-capitalize"
+          style={{
+            zIndex: 1000,
+            fontSize: "calc(10px + 0.15vw)",
+          }}
+        >
+          <Button variant="warning">احجز الآن</Button>
+        </Link>
       </Container>
     </Navbar>
   );
