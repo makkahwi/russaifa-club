@@ -18,7 +18,7 @@ const BlogSection = async () => {
   const posts: BlogPostProps[] = await getBlogPosts();
 
   return (
-    <PageSection title="Blog" id="blog" color="light">
+    <PageSection title="المدونة" id="blog" color="light">
       <Accordion>
         <Col md={12} className="text-center p-0 m-0">
           <BlogSlider posts={posts} />

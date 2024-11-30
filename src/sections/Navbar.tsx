@@ -14,12 +14,11 @@ import {
 import { animateScroll, Link } from "react-scroll";
 
 export const links = [
-  { title: "About Me", link: "about" },
-  { title: "Coaching", link: "coaching" },
-  { title: "Business Facilitation", link: "business" },
-  { title: "Testimonials", link: "testimonials" },
-  { title: "Blog", link: "blog" },
-  { title: "Contact Me", link: "contact" },
+  { title: "عني", link: "about" },
+  { title: "خدماتنا", link: "coaching" },
+  { title: "شهادات العملاء", link: "testimonials" },
+  { title: "المدونة", link: "blog" },
+  { title: "تواصل الآن", link: "contact" },
 ];
 
 const NavbarComp = () => {
@@ -69,7 +68,7 @@ const NavbarComp = () => {
             fontSize: "calc(10px + 0.15vw)",
           }}
         >
-          <Button variant="danger">Book Free Call</Button>
+          <Button variant="warning">احجز الآن</Button>
         </Link>
       </Container>
     </Navbar>

@@ -10,16 +10,16 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Noor Kayyal - Lead With Impact",
-  description:
-    "This is the website of coach Noor Kayyali, serves both Business Ventures to flourish & Ambitious Entrepreneurs to get their dreams to reality.",
+  title:
+    "فاطمة محمد - الصحة تبدأ من التغذية السليمة - اكتشف حياتك الصحية الآن!",
+  description: "الموقع الخاص بأخصائية التغذية فاطمة محمد",
 };
 
 export const revalidate = 60 * 60 * 24 * 7; // seconds * minutes * hours * days
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html dir="ltr" lang="en">
+    <html dir="rtl" lang="ar">
       <head>
         <link rel="icon" href="/FavIcon.jpg" sizes="any" />
       </head>

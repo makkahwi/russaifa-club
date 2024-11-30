@@ -10,9 +10,9 @@ const VlogSection = dynamic(() => import("@/sections/Tail/Vlog"));
 const TailSections = () => {
   return (
     <Fragment>
-      <VlogSection />
+      {/* <VlogSection /> */}
 
-      <TrustedBySection />
+      {/* <TrustedBySection /> */}
 
       <TestimonialsSection />
 

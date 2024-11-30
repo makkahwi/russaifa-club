@@ -1,13 +1,10 @@
-import AboutIntroSection from "@/sections/Intro/Intro";
 import WhoAmISection from "@/sections/Intro/WhoAmI";
 import { Fragment } from "react";
-import BadgesSection from "./Badges";
+import AboutIntroSection from "../Coaching/Intro";
 
 const IntroSections = () => {
   return (
     <Fragment>
-      <BadgesSection />
-
       <AboutIntroSection />
 
       <WhoAmISection />
@@ -17,7 +14,7 @@ const IntroSections = () => {
       <div
         style={{
           height: "75vh",
-          backgroundImage: `url('/images/gallery/d.jpg')`,
+          backgroundImage: `url('/images/bg.jpeg')`,
           backgroundPositionX: "center",
           backgroundPositionY: "center",
           backgroundRepeat: "no-repeat",
