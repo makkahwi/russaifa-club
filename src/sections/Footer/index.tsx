@@ -14,6 +14,8 @@ const FooterSection = () => {
         style={{
           backgroundImage: `url('/images/Pattern.png')`,
           backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
         }}
       >
         <Col xs={12} className="text-center pb-5">

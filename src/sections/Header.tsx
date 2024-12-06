@@ -7,6 +7,8 @@ const HeaderSection = () => {
         minHeight: "100vh",
         backgroundImage: `url('/images/Pattern.png')`,
         backgroundPosition: "center center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
       }}
       className="row justify-content-center bg-warning"
     >
