@@ -17,7 +17,6 @@ export const links = [
   { title: "خدماتنا", link: "coaching" },
   { title: "شهادات العملاء", link: "testimonials" },
   { title: "المدونة", link: "blog" },
-  { title: "تواصل الآن", link: "contact" },
 ];
 
 const NavbarComp = () => {
