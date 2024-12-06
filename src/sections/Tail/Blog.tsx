@@ -1,7 +1,6 @@
 import { getBlogPosts } from "@/api";
 import PageSection from "@/components/PageSection";
 import dynamic from "next/dynamic";
-import { Accordion, Col } from "react-bootstrap";
 
 const BlogPosts = dynamic(() => import("@/components/Blog/BlogPosts"));
 const BlogSlider = dynamic(() => import("@/components/Blog/BlogSlider"));
@@ -19,13 +18,13 @@ const BlogSection = async () => {
 
   return (
     <PageSection title="المدونة" id="blog" color="light">
-      <Accordion>
-        <Col md={12} className="text-center p-0 m-0">
+      <div className="accordion">
+        <div className="col-md-12 text-center p-0 m-0">
           <BlogSlider posts={posts} />
-        </Col>
+        </div>
 
         <BlogPosts posts={posts} />
-      </Accordion>
+      </div>
     </PageSection>
   );
 };

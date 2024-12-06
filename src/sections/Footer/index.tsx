@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { Fragment } from "react";
-import { Button, ButtonGroup, Col, Row } from "react-bootstrap";
 
 import { socialLinksList } from "../Tail/Contact";
 import FooterNav from "./Nav";
@@ -9,8 +8,8 @@ import FooterNav from "./Nav";
 const FooterSection = () => {
   return (
     <Fragment>
-      <Row
-        className="bg-warning py-5"
+      <div
+        className="row bg-warning py-5"
         style={{
           backgroundImage: `url('/images/Pattern.png')`,
           backgroundPosition: "center center",
@@ -18,7 +17,7 @@ const FooterSection = () => {
           backgroundSize: "cover",
         }}
       >
-        <Col xs={12} className="text-center pb-5">
+        <div className="col-xs-12 text-center pb-5">
           <Image
             src="/images/logo/logo-white.png"
             alt="Logo"
@@ -27,26 +26,26 @@ const FooterSection = () => {
             priority
             role="button"
           />
-        </Col>
+        </div>
 
-        <Col xs={12} className="text-center">
+        <div className="col-xs-12 text-center">
           <FooterNav />
-        </Col>
+        </div>
 
-        <Col xs={12} className="text-center">
-          <ButtonGroup>
+        <div className="col-xs-12 text-center">
+          <div className="btn-group">
             {socialLinksList.map(({ name, icon, link, label, color }, i) => (
-              <Button className="p-3 my-3 text-dark" variant="link" key={i}>
+              <div className="btn btn-link p-3 my-3 text-dark" key={i}>
                 <a href={link} target="_blank" className="text-black">
                   <FontAwesomeIcon icon={icon} />
                 </a>
-              </Button>
+              </div>
             ))}
-          </ButtonGroup>
-        </Col>
-      </Row>
+          </div>
+        </div>
+      </div>
 
-      <Row className="py-5 bg-white">
+      <div className="row py-5 bg-white">
         <h6 className="text-center text-dark">
           جميع الحقوق محفوظة لـ <span className="text-dark">فاطمة محمد</span> ©{" "}
           {new Date().getFullYear()}
@@ -59,7 +58,7 @@ const FooterSection = () => {
         >
           <small>تصميم وتنفيذ الانبيق للبرمجيات</small>
         </a>
-      </Row>
+      </div>
     </Fragment>
   );
 };

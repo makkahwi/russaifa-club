@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import {
-  Button,
   Container,
   Nav,
   Navbar,
@@ -68,7 +67,7 @@ const NavbarComp = () => {
             fontSize: "calc(10px + 0.15vw)",
           }}
         >
-          <Button variant="warning">احجز الآن</Button>
+          <div className="btn btn-warning">احجز الآن</div>
         </Link>
       </Container>
     </Navbar>

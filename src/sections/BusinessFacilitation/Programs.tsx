@@ -1,4 +1,3 @@
-import { getUniquePrograms } from "@/api";
 import PageSection from "@/components/PageSection";
 import {
   faBriefcase,
@@ -10,22 +9,12 @@ import {
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  Card,
-  CardBody,
-  Col,
-  ListGroup,
-  ListGroupItem,
-  Row,
-} from "react-bootstrap";
 
-interface UniqueProgramsProps {
-  icon: string;
-  programs: string[];
-}
-
-const UniqueProgramsSection = async () => {
-  const programGroups: UniqueProgramsProps[] = await getUniquePrograms();
+const ProgramsSection = async () => {
+  const programGroups = [
+    { icon: "faBriefcase", title: "برنامج 1", programs: ["أ", "ب", "ج", "د"] },
+    { icon: "faBullseye", title: "برنامج 2", programs: ["أ", "ب", "ج", "د"] },
+  ];
 
   const renderIcon = (name = "") => {
     switch (name) {
@@ -49,34 +38,39 @@ const UniqueProgramsSection = async () => {
   };
 
   return (
-    <PageSection title="Unique Programs">
-      <Col xs={12}>
-        <Card className="border border-dark border-2 rounded-5 py-4 my-3 w-100">
-          <CardBody>
-            <Row className="justify-content-center">
-              {programGroups.map(({ icon, programs }, i) => (
-                <Col className="mb-5" lg={6} xl={i < 3 ? 4 : 3} key={i}>
+    <PageSection title="برامج التغذية">
+      <div className="col-xs-12">
+        <div className="card border border-dark border-2 rounded-5 py-4 my-3 w-100">
+          <div className="card-body">
+            <div className="row justify-content-center">
+              {programGroups?.map(({ icon, title, programs }, i) => (
+                <div
+                  className={`col-lg-6 mb-5 col-xl-${i < 3 ? 4 : 3}`}
+                  key={i}
+                >
                   <h1 className="text-center mb-4 text-dark display-3">
                     <FontAwesomeIcon icon={renderIcon(icon)} />
                   </h1>
 
-                  <ListGroup variant="flush">
+                  <h3 className="text-center mb-4 text-dark">{title}</h3>
+
+                  <div className="list-group list-group-flush">
                     {programs.map((program, y) => (
-                      <ListGroupItem key={y}>
+                      <div className="list-group-item" key={y}>
                         <h5 className="text-center my-1 text-dark">
                           {program}
                         </h5>
-                      </ListGroupItem>
+                      </div>
                     ))}
-                  </ListGroup>
-                </Col>
+                  </div>
+                </div>
               ))}
-            </Row>
-          </CardBody>
-        </Card>
-      </Col>
+            </div>
+          </div>
+        </div>
+      </div>
     </PageSection>
   );
 };
 
-export default UniqueProgramsSection;
+export default ProgramsSection;

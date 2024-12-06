@@ -1,16 +1,15 @@
 import PageSection from "@/components/PageSection";
-import { Col } from "react-bootstrap";
 
 const TextSection = () => {
   return (
     <PageSection>
-      <Col lg={12} className="my-auto">
+      <div className="col-lg-12 my-auto">
         <h5 className="text-block text-dark">
           {
             "My coaching expertise spans a wide range of areas, including organizational leadership, performance development, communication, high-impact presentations, team building, pitching, entrepreneurship, strategic leadership, and more."
           }
         </h5>
-      </Col>
+      </div>
 
       {/* <Col lg={6} className="my-auto">
         <div

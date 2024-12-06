@@ -1,7 +1,6 @@
 import { getPartners } from "@/api";
 import ImageComp from "@/components/Image";
 import PageSection from "@/components/PageSection";
-import { Col } from "react-bootstrap";
 
 interface PartnerProps {
   logo: string;
@@ -15,18 +14,16 @@ const TrustedBySection = async () => {
   return (
     <PageSection title="Trusted By" noMinHeight color="light">
       {partners.map(({ logo, link, bigger }, i) => (
-        <Col
-          xs={6}
-          md={3}
-          lg={4}
-          xl={bigger ? 3 : 2}
-          className="p-3 p-lg-5"
+        <div
+          className={`col-xl-${
+            bigger ? 3 : 2
+          } col-lg-4 col-md-3 col-xs-6 p-3 p-lg-5`}
           key={i}
         >
           <a href={link} target="_blank">
             <ImageComp alt={`partner-${i}-logo`} src={logo} />
           </a>
-        </Col>
+        </div>
       ))}
     </PageSection>
   );

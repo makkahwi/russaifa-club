@@ -1,6 +1,5 @@
 import { getAchievements } from "@/api";
 import PageSection from "@/components/PageSection";
-import { Col, ListGroup, ListGroupItem } from "react-bootstrap";
 
 interface AchievementsProps {
   content: string;
@@ -19,7 +18,7 @@ const AchievementsSection = async () => {
   return (
     <PageSection title="Achievements" color="light">
       {photos.map(({ width, photo }, i) => (
-        <Col md={width} key={i}>
+        <div className={`col-md-${width}`} key={i}>
           <div
             style={{
               height: "25vh",
@@ -31,18 +30,21 @@ const AchievementsSection = async () => {
             }}
             className="w-100 p-0 m-0"
           />
-        </Col>
+        </div>
       ))}
 
-      <Col xs={12} className="mt-5">
-        <ListGroup className="rounded-5 border-dark">
+      <div className="col-xs-12 mt-5">
+        <div className="list-group rounded-5 border-dark">
           {achievements.map(({ content, fullWidth }, i) => (
-            <ListGroupItem className="bg-transparent border-dark p-4" key={i}>
+            <div
+              className="list-group-item bg-transparent border-dark p-4"
+              key={i}
+            >
               <h5 className="text-dark text-block">{content}</h5>
-            </ListGroupItem>
+            </div>
           ))}
-        </ListGroup>
-      </Col>
+        </div>
+      </div>
     </PageSection>
   );
 };

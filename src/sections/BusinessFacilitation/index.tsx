@@ -1,17 +1,12 @@
 import { Fragment } from "react";
 
-import BusinessFacilitationHeaderSection from "./Header";
 import JoinMeSection from "./JoinMe";
-import UniqueProgramsSection from "./UniquePrograms";
+import ProgramsSection from "./Programs";
 
 const BusinessFacilitationSections = () => {
   return (
     <Fragment>
-      <BusinessFacilitationHeaderSection />
-
-      {/* <TextSection /> */}
-
-      <UniqueProgramsSection />
+      <ProgramsSection />
 
       <JoinMeSection />
     </Fragment>

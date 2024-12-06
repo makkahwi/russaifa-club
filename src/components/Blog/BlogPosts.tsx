@@ -4,7 +4,6 @@ import { capitalizeSentenceFirstLetters } from "@/functions/utils";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Fragment } from "react";
-import { Accordion, Button, Card, Col, Row } from "react-bootstrap";
 import ImageComp from "../Image";
 import CustomToggle from "./Toggle";
 
@@ -18,27 +17,31 @@ interface BlogPostProps {
 
 const BlogPosts = ({ posts }: { posts: BlogPostProps[] }) => {
   return posts.map(({ date, title, img, category, contents }, i) => (
-    <Accordion.Collapse eventKey={String(i)} key={i}>
-      <Card.Body>
-        <Row>
-          <Col md={12}>
+    <div
+      className="accordion-collapse collapse"
+      data-bs-target={String(i)}
+      key={i}
+    >
+      <div className="card-body">
+        <div className="row">
+          <div className="col-md-12">
             <CustomToggle eventKey={String(i)} className="m-0 float-end">
-              <Button variant="dark">
+              <div className="btn btn-dark">
                 <FontAwesomeIcon icon={faX} />
-              </Button>
+              </div>
             </CustomToggle>
-          </Col>
+          </div>
 
-          <Col md={4}>
+          <div className="col-md-4">
             <ImageComp alt={`post-${i}-img`} src={img} />
-          </Col>
+          </div>
 
-          <Col md={8} className="py-5 px-3">
+          <div className="col-md-8 py-5 px-3">
             <p>{date}</p>
             <h4>{capitalizeSentenceFirstLetters(title.toLowerCase())}</h4>
-          </Col>
+          </div>
 
-          <Col md={12} className="my-3">
+          <div className="col-md-12 my-3">
             {contents?.map(({ type, content, contents: texts }, i) => (
               <Fragment key={i}>
                 {type === "title" ? (
@@ -70,16 +73,16 @@ const BlogPosts = ({ posts }: { posts: BlogPostProps[] }) => {
                 )}
               </Fragment>
             ))}
-          </Col>
+          </div>
 
-          <Col md={12}>
+          <div className="col-md-12">
             <CustomToggle eventKey={String(i)} className="m-0 float-end">
-              <Button variant="dark">Close</Button>
+              <div className="btn btn-dark">Close</div>
             </CustomToggle>
-          </Col>
-        </Row>
-      </Card.Body>
-    </Accordion.Collapse>
+          </div>
+        </div>
+      </div>
+    </div>
   ));
 };
 

@@ -24,8 +24,13 @@ const HeaderSection = () => {
         </h4>
 
         <div className="btn-group my-4" style={{ direction: "ltr" }}>
-          <button className="btn btn-black">ابدأ رحلتك الصحية</button>
-          <button className="btn btn-black">احجز استشارتك الآن</button>
+          <a className="btn btn-dark p-2 px-3" href="#contact">
+            ابدأ رحلتك الصحية
+          </a>
+
+          <a className="btn btn-dark p-2 px-3" href="#contact">
+            احجز استشارتك الآن
+          </a>
         </div>
       </div>
 
