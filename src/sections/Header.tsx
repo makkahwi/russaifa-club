@@ -38,7 +38,7 @@ const HeaderSection = () => {
         <Image
           src="/images/Profile.png"
           className="mx-5 mt-5 d-block d-md-none"
-          alt="Noor Photo"
+          alt="Fatima Photo"
           width={646 * 0.45}
           height={934 * 0.45}
           priority
@@ -47,7 +47,7 @@ const HeaderSection = () => {
         <Image
           src="/images/Profile.png"
           className="mt-5 d-none d-md-block"
-          alt="Noor Photo"
+          alt="Fatima Photo"
           width={646 * 0.65}
           height={934 * 0.65}
           priority
