@@ -29,7 +29,7 @@ const HeaderSection = () => {
 
       <div className="col-md-6 col-lg-4 position-relative mt-5">
         <Image
-          src="/images/05.png"
+          src="/images/Profile.png"
           className="position-absolute bottom-0 mx-5 mt-5 d-block d-md-none"
           alt="Noor Photo"
           style={{
@@ -42,7 +42,7 @@ const HeaderSection = () => {
         />
 
         <Image
-          src="/images/05.png"
+          src="/images/Profile.png"
           className="position-absolute bottom-0 mt-5 d-none d-md-block"
           alt="Noor Photo"
           style={{

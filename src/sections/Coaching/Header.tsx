@@ -35,7 +35,7 @@ const CoachingHeaderSection = () => {
       <Col xl={6} className="px-3">
         <ImageComp
           alt="coaching-photo"
-          src="/images/00001.jpg"
+          src="/images/gallery/Food.jpg"
           className="rounded-5 soft-edges"
         />
       </Col>

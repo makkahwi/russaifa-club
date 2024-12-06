@@ -1,5 +1,6 @@
 import WhoAmISection from "@/sections/Intro/WhoAmI";
 import { Fragment } from "react";
+
 import AboutIntroSection from "../Coaching/Intro";
 
 const IntroSections = () => {
@@ -14,7 +15,7 @@ const IntroSections = () => {
       <div
         style={{
           height: "75vh",
-          backgroundImage: `url('/images/bg.jpeg')`,
+          backgroundImage: `url('/images/gallery/BG.jpeg')`,
           backgroundPositionX: "center",
           backgroundPositionY: "center",
           backgroundRepeat: "no-repeat",

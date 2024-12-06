@@ -12,7 +12,7 @@ const BusinessFacilitationHeaderSection = () => {
       <Col lg={6}>
         <ImageComp
           alt="business-photo"
-          src="/images/gallery/IMG-20231128-WA0021.jpg"
+          src="/images/gallery/Food.jpg"
           className="rounded-5 soft-edges mb-4"
         />
       </Col>
