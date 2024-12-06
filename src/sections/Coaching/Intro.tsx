@@ -14,7 +14,7 @@ const AboutIntroSection = () => {
   ];
 
   return (
-    <PageSection id="about">
+    <PageSection>
       <div className="col-lg-12 my-auto">
         <h4 className="text-justify text-dark">
           بتعاني من مشاكل زيادة الوزن؟ حاولت أكثر من برنامج تغذية مثل الكيتو وما
