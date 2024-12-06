@@ -25,7 +25,7 @@ const getBlogPostsApi = () => readApi.get("blog.json");
 const getAchievementsApi = () => readApi.get("achievements.json");
 const getPartnersApi = () => readApi.get("partners.json");
 const getTestimonialsApi = () => readApi.get("testimonials.json");
-const getUniqueProgramsApi = () => readApi.get("uniquePrograms.json");
+const getProgramsApi = () => readApi.get("uniquePrograms.json");
 const getVlogApi = () => readApi.get("vlog.json");
 
 export const apiCallRevalidate = 60 * 60 * 24 * 7; // seconds * mins * hours * days
@@ -60,8 +60,8 @@ export const getTestimonials = cache(async () => {
   return data;
 });
 
-export const getUniquePrograms = cache(async () => {
-  const { data } = await getUniqueProgramsApi();
+export const getPrograms = cache(async () => {
+  const { data } = await getProgramsApi();
 
   return data;
 });

@@ -1,5 +1,3 @@
-import { Col, Row } from "react-bootstrap";
-
 interface props {
   children: React.ReactNode;
   aboveTitle?: React.ReactNode;
@@ -18,7 +16,7 @@ const PageSection = ({
   id,
 }: props) => {
   return (
-    <Row
+    <div
       style={
         noMinHeight
           ? {
@@ -29,19 +27,19 @@ const PageSection = ({
               minHeight: "90vh",
             }
       }
-      className={`bg-${color} justify-content-center`}
+      className={`row bg-${color} justify-content-center`}
       id={id}
     >
       {aboveTitle}
 
       {title && (
-        <Col xs={12}>
+        <div className="col-xs-12">
           <h1 className="mb-5 pb-5 text-center text-dark">{title}</h1>
-        </Col>
+        </div>
       )}
 
       {children}
-    </Row>
+    </div>
   );
 };
 

@@ -1,4 +1,4 @@
-import CoachingSections from "@/sections/Coaching";
+import ServiceSections from "@/sections/Services";
 import FooterSection from "@/sections/Footer";
 import HeaderSection from "@/sections/Header";
 import IntroSections from "@/sections/Intro";
@@ -15,9 +15,7 @@ const HomePage = () => {
 
       <IntroSections />
 
-      <CoachingSections />
-
-      {/* <BusinessFacilitationSections /> */}
+      <ServiceSections />
 
       <TailSections />
 

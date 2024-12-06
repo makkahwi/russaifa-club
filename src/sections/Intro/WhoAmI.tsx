@@ -1,21 +1,13 @@
-import { getCerts } from "@/api";
 import PageSection from "@/components/PageSection";
 import dynamic from "next/dynamic";
 
 const NumberCounters = dynamic(() => import("./Numbers"));
 
-interface CertProps {
-  title: string;
-  date: string;
-  source: string;
-}
-
 const WhoAmISection = async () => {
-  // const certs: CertProps[] = await getCerts();
   const certs = ["الجمعية الأردنية لأخصائيي التغذية"];
 
   return (
-    <PageSection color="light" title="عني">
+    <PageSection color="light" title="عني" id="about">
       <div className="col-md-12">
         <NumberCounters />
 

@@ -2,7 +2,6 @@
 
 import Slider from "@/components/Slider";
 import { capitalizeSentenceFirstLetters } from "@/functions/utils";
-import { Button, Card, CardBody } from "react-bootstrap";
 import CustomToggle from "./Toggle";
 
 interface BlogPostProps {
@@ -23,9 +22,9 @@ const BlogSlider = ({ posts }: { posts: BlogPostProps[] }) => {
 
         return (
           <CustomToggle eventKey={String(i)} key={i}>
-            <Card
+            <div
               role="button"
-              className="w-100 h-100"
+              className="card w-100 h-100"
               style={{ display: "table-cell" }}
             >
               <div
@@ -39,18 +38,16 @@ const BlogSlider = ({ posts }: { posts: BlogPostProps[] }) => {
                 }}
                 className="w-100 p-0 m-0"
               >
-                <Button className="m-3 p-2 float-end" variant="dark">
-                  {category}
-                </Button>
+                <div className="btn btn-dark m-3 p-2 float-end">{category}</div>
               </div>
 
-              <CardBody>
+              <div className="card-body">
                 <small className="text-start text-dark">{date}</small>
                 <h5 className="text-justify text-dark">
                   {capitalizeSentenceFirstLetters(title.toLowerCase())}
                 </h5>
-              </CardBody>
-            </Card>
+              </div>
+            </div>
           </CustomToggle>
         );
       })}

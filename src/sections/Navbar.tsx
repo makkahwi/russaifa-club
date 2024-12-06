@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import {
-  Button,
   Container,
   Nav,
   Navbar,
@@ -15,10 +14,11 @@ import { animateScroll, Link } from "react-scroll";
 
 export const links = [
   { title: "عني", link: "about" },
-  { title: "خدماتنا", link: "coaching" },
+  { title: "خدماتنا", link: "services" },
+  { title: "برامج التغذية", link: "programs" },
+  { title: "الموسوعة الغذائية", link: "info" },
   { title: "شهادات العملاء", link: "testimonials" },
   { title: "المدونة", link: "blog" },
-  { title: "تواصل الآن", link: "contact" },
 ];
 
 const NavbarComp = () => {
@@ -68,7 +68,7 @@ const NavbarComp = () => {
             fontSize: "calc(10px + 0.15vw)",
           }}
         >
-          <Button variant="warning">احجز الآن</Button>
+          <div className="btn btn-warning">احجز الآن</div>
         </Link>
       </Container>
     </Navbar>

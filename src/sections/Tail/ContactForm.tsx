@@ -1,14 +1,6 @@
 "use client";
 
 import { sendContacts } from "@/api";
-import {
-  Button,
-  Col,
-  FormControl,
-  FormGroup,
-  FormLabel,
-  Row,
-} from "react-bootstrap";
 
 const ContactForm = () => {
   const inputs = [
@@ -55,33 +47,32 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={onSubmit}>
-      <Row>
+      <div className="row">
         {inputs.map(({ name, title, required, type, fullWidth }, i) => (
-          <Col lg={fullWidth ? 12 : 6} className="mb-2" key={i}>
-            <FormGroup>
-              <FormLabel className="text-dark">
-                {title}
-                {required ? <span className="text-dark">{" *"}</span> : ""}
-              </FormLabel>
-              <FormControl
-                id={name}
-                name={name}
-                placeholder={title}
-                className="py-3"
-                as={type === "textarea" ? type : undefined}
-                type={type}
-                required={required}
-              />
-            </FormGroup>
-          </Col>
+          <div className={`col-lg-${fullWidth ? 12 : 6} mb-2`} key={i}>
+            <div className="form-label text-dark">
+              {title}
+              {required ? <span className="text-danger">{" *"}</span> : ""}
+            </div>
+
+            <input
+              id={name}
+              name={name}
+              placeholder={title}
+              className="form-control py-3"
+              // as={type === "textarea" ? type : undefined}
+              type={type}
+              required={required}
+            />
+          </div>
         ))}
 
-        <Col md={3} lg={2} className="float-end">
-          <Button variant="dark" className="p-3" type="submit">
+        <div className="col-lg-2 col-md-3 float-end">
+          <button className="btn btn-dark p-3" type="submit">
             <h6 className="text-center p-0 m-0">تواصل الآن</h6>
-          </Button>
-        </Col>
-      </Row>
+          </button>
+        </div>
+      </div>
     </form>
   );
 };

@@ -15,7 +15,7 @@ export const socialLinksList = [
   {
     name: "WhatsApp",
     icon: faWhatsapp,
-    link: "https://wasap.my/962797030228",
+    link: "https://wasap.my/962797571084",
     label: "عبر الواتس اب في أي وقت",
     color: "#1fb355",
     common: true,
@@ -23,7 +23,7 @@ export const socialLinksList = [
   {
     name: "Phone",
     icon: faPhone,
-    link: "tel:+962797030228",
+    link: "tel:+962797571084",
     label: "اتصل بي مباشرة",
     color: "#81c784",
     common: true,
@@ -63,8 +63,8 @@ const ContactSection = () => {
   const whatYouWillGet = [
     "سنقوم بتحليل عاداتك الغذائية الحالية",
     "فهم تجاربك السابقة في المجال",
-    "التعرف على دوافعك وأهدافك",
-    "استشكاف الوضع الحالي",
+    "استشكاف دوافعك وأهدافك",
+    "التعرف على وضعك الحالي",
     "بناء الخطة العلاجية",
   ];
 

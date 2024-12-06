@@ -7,10 +7,12 @@ const HeaderSection = () => {
         minHeight: "100vh",
         backgroundImage: `url('/images/Pattern.png')`,
         backgroundPosition: "center center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
       }}
-      className="row justify-content-center bg-warning"
+      className="row justify-content-center bg-warning py-5"
     >
-      <div className="col-md-6 col-lg-5 my-auto px-5">
+      <div className="col-md-6 col-lg-5 my-auto p-5">
         <h5 className="mb-5 text-black">
           الصحة تبدأ من التغذية السليمة - اكتشف حياتك الصحية الآن! مع
         </h5>
@@ -22,33 +24,30 @@ const HeaderSection = () => {
         </h4>
 
         <div className="btn-group my-4" style={{ direction: "ltr" }}>
-          <button className="btn btn-black">ابدأ رحلتك الصحية</button>
-          <button className="btn btn-black">احجز استشارتك الآن</button>
+          <a className="btn btn-dark p-2 px-3" href="#contact">
+            ابدأ رحلتك الصحية
+          </a>
+
+          <a className="btn btn-dark p-2 px-3" href="#contact">
+            احجز استشارتك الآن
+          </a>
         </div>
       </div>
 
       <div className="col-md-6 col-lg-4 position-relative mt-5">
         <Image
-          src="/images/05.png"
-          className="position-absolute bottom-0 mx-5 mt-5 d-block d-md-none"
-          alt="Noor Photo"
-          style={{
-            left: "50%",
-            transform: "translate(-50%, 0%)",
-          }}
+          src="/images/Profile.png"
+          className="mx-5 mt-5 d-block d-md-none"
+          alt="Fatima Photo"
           width={646 * 0.45}
           height={934 * 0.45}
           priority
         />
 
         <Image
-          src="/images/05.png"
-          className="position-absolute bottom-0 mt-5 d-none d-md-block"
-          alt="Noor Photo"
-          style={{
-            left: "50%",
-            transform: "translate(-50%, 0%)",
-          }}
+          src="/images/Profile.png"
+          className="mt-5 d-none d-md-block"
+          alt="Fatima Photo"
           width={646 * 0.65}
           height={934 * 0.65}
           priority
