@@ -1,7 +1,7 @@
 import WhoAmISection from "@/sections/Intro/WhoAmI";
 import { Fragment } from "react";
 
-import AboutIntroSection from "../Coaching/Intro";
+import AboutIntroSection from "../Services/Intro";
 
 const IntroSections = () => {
   return (

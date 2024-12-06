@@ -14,7 +14,7 @@ import { animateScroll, Link } from "react-scroll";
 
 export const links = [
   { title: "عني", link: "about" },
-  { title: "خدماتنا", link: "coaching" },
+  { title: "خدماتنا", link: "services" },
   { title: "برامج التغذية", link: "programs" },
   { title: "الموسوعة الغذائية", link: "info" },
   { title: "شهادات العملاء", link: "testimonials" },

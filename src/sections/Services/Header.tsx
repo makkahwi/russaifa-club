@@ -1,7 +1,7 @@
 import ImageComp from "@/components/Image";
 import PageSection from "@/components/PageSection";
 
-const CoachingHeaderSection = () => {
+const HeaderSection = () => {
   const list = [
     "تصميم خطط غذائية مخصصة: لتحسين الصحة العامة أو دعم حالات صحية مثل السكري والضغط.",
     "استشارات غذائية شخصية: جلسات فردية لتحليل احتياجاتك وتقديم التوجيه الغذائي.",
@@ -11,7 +11,7 @@ const CoachingHeaderSection = () => {
   ];
 
   return (
-    <PageSection title="خدماتنا المصممة لك" color="secondary" id="coaching">
+    <PageSection title="خدماتنا المصممة لك" color="secondary" id="services">
       <div className="col-xl-6">
         <ul>
           {list.map((item, i) => (
@@ -24,7 +24,7 @@ const CoachingHeaderSection = () => {
 
       <div className="col-xl-6 px-3">
         <ImageComp
-          alt="coaching-photo"
+          alt="photo"
           src="/images/gallery/Food.jpg"
           className="rounded-5 soft-edges"
         />
@@ -34,4 +34,4 @@ const CoachingHeaderSection = () => {
   );
 };
 
-export default CoachingHeaderSection;
+export default HeaderSection;
