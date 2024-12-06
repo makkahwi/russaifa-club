@@ -10,9 +10,9 @@ const HeaderSection = () => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="row justify-content-center bg-warning"
+      className="row justify-content-center bg-warning py-5"
     >
-      <div className="col-md-6 col-lg-5 my-auto px-5">
+      <div className="col-md-6 col-lg-5 my-auto p-5">
         <h5 className="mb-5 text-black">
           الصحة تبدأ من التغذية السليمة - اكتشف حياتك الصحية الآن! مع
         </h5>
@@ -37,12 +37,8 @@ const HeaderSection = () => {
       <div className="col-md-6 col-lg-4 position-relative mt-5">
         <Image
           src="/images/Profile.png"
-          className="position-absolute bottom-0 mx-5 mt-5 d-block d-md-none"
+          className="mx-5 mt-5 d-block d-md-none"
           alt="Noor Photo"
-          style={{
-            left: "50%",
-            transform: "translate(-50%, 0%)",
-          }}
           width={646 * 0.45}
           height={934 * 0.45}
           priority
@@ -50,12 +46,8 @@ const HeaderSection = () => {
 
         <Image
           src="/images/Profile.png"
-          className="position-absolute bottom-0 mt-5 d-none d-md-block"
+          className="mt-5 d-none d-md-block"
           alt="Noor Photo"
-          style={{
-            left: "50%",
-            transform: "translate(-50%, 0%)",
-          }}
           width={646 * 0.65}
           height={934 * 0.65}
           priority
