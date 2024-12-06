@@ -50,22 +50,20 @@ const ContactForm = () => {
       <div className="row">
         {inputs.map(({ name, title, required, type, fullWidth }, i) => (
           <div className={`col-lg-${fullWidth ? 12 : 6} mb-2`} key={i}>
-            <div className="input-group">
-              <div className="form-label text-dark">
-                {title}
-                {required ? <span className="text-dark">{" *"}</span> : ""}
-              </div>
-
-              <input
-                id={name}
-                name={name}
-                placeholder={title}
-                className="form-control py-3"
-                // as={type === "textarea" ? type : undefined}
-                type={type}
-                required={required}
-              />
+            <div className="form-label text-dark">
+              {title}
+              {required ? <span className="text-danger">{" *"}</span> : ""}
             </div>
+
+            <input
+              id={name}
+              name={name}
+              placeholder={title}
+              className="form-control py-3"
+              // as={type === "textarea" ? type : undefined}
+              type={type}
+              required={required}
+            />
           </div>
         ))}
 
