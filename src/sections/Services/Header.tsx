@@ -32,11 +32,11 @@ const HeaderSection = () => {
 
   return (
     <PageSection title="خدماتي المصممة لكم" id="services">
-      <div className="col-xl-6">
+      <div className="col-xl-6 order-2 order-xl-1">
         <ul>
           {list.map(({ title, content }, i) => (
             <li key={i}>
-              <h5 className="text-justify text-dark lh-lg">
+              <h5 className="text-justify lh-lg text-dark lh-lg">
                 <b>{title}:</b> {content}
               </h5>
             </li>
@@ -44,11 +44,11 @@ const HeaderSection = () => {
         </ul>
       </div>
 
-      <div className="col-xl-6 px-3">
+      <div className="col-xl-6 px-3 order-1 order-xl-2">
         <img
           alt="photo"
           src="/images/gallery/Food.jpg"
-          className="rounded-5 soft-edges w-100"
+          className="rounded-5 soft-edges w-100 mb-5"
         />
       </div>
       {/* <Col lg={12} className="my-auto"></Col> */}

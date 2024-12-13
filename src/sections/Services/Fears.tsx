@@ -53,7 +53,7 @@ const FearSection = async () => {
                     <b>{title}</b>
                   </h4>
 
-                  <h5 className="lh-lg text-justify">{content}</h5>
+                  <h6 className="lh-lg text-justify lh-lg">{content}</h6>
                 </div>
               </div>
             </div>

@@ -10,7 +10,7 @@ const HeaderSection = () => {
       }}
       className="row justify-content-center bg-warning py-5"
     >
-      <div className="col-md-6 col-lg-5 my-auto py-5 px-2">
+      <div className="col-md-6 col-lg-5 my-auto py-5 px-5 px-md-2">
         <h5 className="mb-5 text-white">
           الصحة تبدأ من التغذية السليمة - اكتشف حياتك الصحية الآن! مع
         </h5>

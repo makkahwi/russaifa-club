@@ -39,9 +39,9 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .text-justify {
+  /* .text-justify {
     text-align: start;
-  }
+  } */
 
   .text-block {
     text-align: start;
