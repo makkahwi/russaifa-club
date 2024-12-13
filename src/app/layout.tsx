@@ -22,7 +22,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html dir="rtl" lang="ar">
       <head>
-        <link rel="icon" href="/FavIcon.jpg" sizes="any" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
 
       <body className={inter.className}>
