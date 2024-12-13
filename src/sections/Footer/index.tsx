@@ -8,26 +8,26 @@ import FooterNav from "./Nav";
 const FooterSection = () => {
   return (
     <Fragment>
-      <div className="row bg-dark py-5">
-        <div className="col-xs-12 text-center pb-5">
+      <div className="row bg-dark py-2">
+        <div className="col-xs-12 text-center pb-2">
           <Image
-            src="/images/logo/logo-white.png"
+            src="/images/logo/logo-w.png"
             alt="Logo"
-            width={543 * 0.25}
-            height={771 * 0.25}
+            width={771 * 0.35}
+            height={771 * 0.35}
             priority
             role="button"
           />
         </div>
 
-        <div className="col-xs-12 text-center">
+        {/* <div className="col-xs-12 text-center">
           <FooterNav />
-        </div>
+        </div> */}
 
         <div className="col-xs-12 text-center">
           <div className="btn-group">
             {socialLinksList.map(({ name, icon, link, label, color }, i) => (
-              <div className="btn btn-link p-3 my-3 text-white" key={i}>
+              <div className="btn btn-link p-3 my-2" key={i}>
                 <a href={link} target="_blank" className="text-white">
                   <FontAwesomeIcon icon={icon} />
                 </a>
@@ -38,15 +38,15 @@ const FooterSection = () => {
       </div>
 
       <div className="row py-5 bg-white">
-        <h6 className="text-center text-white">
-          جميع الحقوق محفوظة لـ <span className="text-white">فاطمة محمد</span> ©{" "}
+        <h6 className="text-center text-dark">
+          جميع الحقوق محفوظة لـ <span className="text-dark">فاطمة محمد</span> ©{" "}
           {new Date().getFullYear()}
         </h6>
 
         <a
           href="https://www.alembicsoft.com/"
           target="_blank"
-          className="text-center text-white"
+          className="text-center text-dark"
         >
           <small>تصميم وتنفيذ الانبيق للبرمجيات</small>
         </a>
