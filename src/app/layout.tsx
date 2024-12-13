@@ -1,3 +1,4 @@
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import type { Metadata } from "next";

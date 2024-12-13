@@ -16,7 +16,7 @@ const TailSections = () => {
 
       {/* <TestimonialsSection /> */}
 
-      <BlogSection />
+      {/* <BlogSection /> */}
 
       <ContactSection />
     </Fragment>
