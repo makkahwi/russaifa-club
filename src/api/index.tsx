@@ -1,5 +1,5 @@
-import { cache } from "react";
 import axios from "axios";
+import { cache } from "react";
 
 const writeApi = axios.create({
   baseURL:
@@ -20,54 +20,54 @@ const readApi = axios.create({
 export const sendContacts = (data: object) =>
   writeApi.post("contact-form.json", data);
 
-const getCertsApi = () => readApi.get("certificates.json");
-const getBlogPostsApi = () => readApi.get("blog.json");
-const getAchievementsApi = () => readApi.get("achievements.json");
-const getPartnersApi = () => readApi.get("partners.json");
-const getTestimonialsApi = () => readApi.get("testimonials.json");
-const getProgramsApi = () => readApi.get("uniquePrograms.json");
-const getVlogApi = () => readApi.get("vlog.json");
+const getCertsApi = () => [{}];
+const getBlogPostsApi = () => [{}];
+const getAchievementsApi = () => [{}];
+const getPartnersApi = () => [{}];
+const getTestimonialsApi = () => [{}];
+const getProgramsApi = () => [{}];
+const getVlogApi = () => [{}];
 
 export const apiCallRevalidate = 60 * 60 * 24 * 7; // seconds * mins * hours * days
 
 export const getCerts = cache(async () => {
-  const { data } = await getCertsApi();
+  const data = await getCertsApi();
 
   return data;
 });
 
 export const getBlogPosts = cache(async () => {
-  const { data } = await getBlogPostsApi();
+  const data = await getBlogPostsApi();
 
   return data;
 });
 
 export const getAchievements = cache(async () => {
-  const { data } = await getAchievementsApi();
+  const data = await getAchievementsApi();
 
   return data;
 });
 
 export const getPartners = cache(async () => {
-  const { data } = await getPartnersApi();
+  const data = await getPartnersApi();
 
   return data;
 });
 
 export const getTestimonials = cache(async () => {
-  const { data } = await getTestimonialsApi();
+  const data = await getTestimonialsApi();
 
   return data;
 });
 
 export const getPrograms = cache(async () => {
-  const { data } = await getProgramsApi();
+  const data = await getProgramsApi();
 
   return data;
 });
 
 export const getVlog = cache(async () => {
-  const { data } = await getVlogApi();
+  const data = await getVlogApi();
 
   return data;
 });

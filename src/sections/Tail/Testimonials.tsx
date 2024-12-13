@@ -9,7 +9,7 @@ interface TestimonialProps {
 }
 
 const TestimonialsSection = async () => {
-  const testimonials: TestimonialProps[] = await getTestimonials();
+  const testimonials: TestimonialProps[] = [];
 
   const TestimonialComp = ({ content = "", author = "" }) => (
     <div className="p-4 border border-dark rounded-5 mx-1 mb-4">

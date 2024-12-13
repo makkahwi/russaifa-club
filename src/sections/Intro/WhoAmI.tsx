@@ -7,33 +7,36 @@ const WhoAmISection = async () => {
   const certs = ["الجمعية الأردنية لأخصائيي التغذية"];
 
   return (
-    <PageSection color="light" title="عني" id="about">
+    <PageSection title="عني" id="about">
       <div className="col-md-12">
         <NumberCounters />
 
-        <h5 className="text-block text-dark">
-          فاطمة محمد هي أخصائية تغذية معتمدة بخبرة تمتد لأكثر من 8 سنوات. متخصصة
-          في تصميم أنظمة غذائية فردية لمساعدتك على الوصول إلى أهدافك الصحية
-          والتمتع بحياة أفضل.
+        <h5 className="text-justify lh-lg text-dark">
+          أخصائية تغذية سريرية وحميات، احمل درجة البكالوريوس في التغذية السريرية
+          والحميات من الجامعة الهاشمية، معتمدة من وزارة الصحة الأردنية. طوال
+          رحلتي المهنية، كان شغفي دائمًا تقديم الدعم والإرشاد الغذائي للأفراد
+          لمساعدتهم على تحقيق أهدافهم الصحية وتحسين جودة حياتهم.
         </h5>
-      </div>
 
-      <div className="col-md-12 border border-dark border-2 rounded-5 mt-5">
-        <div className="row justify-content-center">
-          <div className="col-md-12 my-4">
-            <h3 className="text-center text-dark">عضويات</h3>
-          </div>
+        <h5 className="text-justify lh-lg text-dark">
+          أفتخر بعضويتي في الجمعية الأردنية للغذاء والتغذية وجمعية أخصائي
+          التغذية العلاجية الأردنية، حيث أعمل مع زملاء مهنيين لتعزيز الوعي
+          الغذائي في مجتمعنا.
+        </h5>
 
-          <div className="col-md-12 text-justify my-4 text-dark p-3">
-            <h5 className="lh-lg">
-              <ul>
-                {certs?.map((text, i) => (
-                  <li key={i}>{text}</li>
-                ))}
-              </ul>
-            </h5>
-          </div>
-        </div>
+        <h5 className="text-justify lh-lg text-dark">
+          على مدار أكثر من 5 سنوات، قدمت استشارات التغذية الشخصية وساعدت المئات
+          من العملاء في التغلب على التحديات الصحية والغذائية، سواء كان هدفهم
+          خسارة الوزن، اكتساب الوزن الصحي، علاج الكثير من الأمراض والمشاكل
+          الصحية، أو تحسين الأداء البدني والعقلي. رسالتي هي أن أساعد عملائي على
+          تبني نظام غذائي صحي مستدام يناسب احتياجاتهم وأسلوب حياتهم، بدون الشعور
+          بالحرمان أو الإجهاد.
+        </h5>
+
+        <h5 className="text-justify lh-lg text-dark fw-bold mt-4">
+          أؤمن أن رحلة التغيير تبدأ بخطوة صغيرة، وأنا هنا لاساعدك في إطلاق هذه
+          الرحلة.
+        </h5>
       </div>
     </PageSection>
   );

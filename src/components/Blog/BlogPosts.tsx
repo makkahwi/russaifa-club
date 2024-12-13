@@ -38,7 +38,7 @@ const BlogPosts = ({ posts }: { posts: BlogPostProps[] }) => {
 
           <div className="col-md-8 py-5 px-3">
             <p>{date}</p>
-            <h4>{capitalizeSentenceFirstLetters(title.toLowerCase())}</h4>
+            {/* <h4>{capitalizeSentenceFirstLetters(title?.toLowerCase())}</h4> */}
           </div>
 
           <div className="col-md-12 my-3">

@@ -14,11 +14,11 @@ import { animateScroll, Link } from "react-scroll";
 
 export const links = [
   { title: "عني", link: "about" },
-  { title: "خدماتنا", link: "services" },
-  { title: "برامج التغذية", link: "programs" },
-  { title: "الموسوعة الغذائية", link: "info" },
-  { title: "شهادات العملاء", link: "testimonials" },
-  { title: "المدونة", link: "blog" },
+  { title: "خدماتي", link: "services" },
+  // { title: "برامج التغذية", link: "programs" },
+  // { title: "الموسوعة الغذائية", link: "info" },
+  // { title: "شهادات العملاء", link: "testimonials" },
+  // { title: "المدونة", link: "blog" },
 ];
 
 const NavbarComp = () => {
@@ -33,9 +33,9 @@ const NavbarComp = () => {
       <Container>
         <NavbarBrand onClick={() => animateScroll.scrollToTop()} role="button">
           <Image
-            src="/images/logo/logo-white.png"
+            src="/images/logo/logo-w.png"
             alt="Logo"
-            width={543 * 0.075}
+            width={771 * 0.075}
             height={771 * 0.075}
             priority
           />

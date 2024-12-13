@@ -3,15 +3,18 @@ import { Fragment } from "react";
 import HeaderSection from "./Header";
 import PediaSection from "./Pedia";
 import ProgramsSection from "./Programs";
+import FearSection from "./Fears";
 
 const ServiceSections = () => {
   return (
     <Fragment>
       <HeaderSection />
 
-      <ProgramsSection />
+      <FearSection />
 
-      <PediaSection />
+      {/* <ProgramsSection /> */}
+
+      {/* <PediaSection /> */}
 
       {/* <TextSection /> */}
 

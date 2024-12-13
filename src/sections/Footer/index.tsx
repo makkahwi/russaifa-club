@@ -8,35 +8,27 @@ import FooterNav from "./Nav";
 const FooterSection = () => {
   return (
     <Fragment>
-      <div
-        className="row bg-warning py-5"
-        style={{
-          backgroundImage: `url('/images/Pattern.png')`,
-          backgroundPosition: "center center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-      >
-        <div className="col-xs-12 text-center pb-5">
+      <div className="row bg-dark py-2">
+        <div className="col-xs-12 text-center pb-2">
           <Image
-            src="/images/logo/logo-white.png"
+            src="/images/logo/logo-w.png"
             alt="Logo"
-            width={543 * 0.25}
-            height={771 * 0.25}
+            width={771 * 0.35}
+            height={771 * 0.35}
             priority
             role="button"
           />
         </div>
 
-        <div className="col-xs-12 text-center">
+        {/* <div className="col-xs-12 text-center">
           <FooterNav />
-        </div>
+        </div> */}
 
         <div className="col-xs-12 text-center">
           <div className="btn-group">
             {socialLinksList.map(({ name, icon, link, label, color }, i) => (
-              <div className="btn btn-link p-3 my-3 text-dark" key={i}>
-                <a href={link} target="_blank" className="text-black">
+              <div className="btn btn-link p-3 my-2" key={i}>
+                <a href={link} target="_blank" className="text-white">
                   <FontAwesomeIcon icon={icon} />
                 </a>
               </div>

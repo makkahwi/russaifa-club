@@ -9,7 +9,7 @@ interface PartnerProps {
 }
 
 const TrustedBySection = async () => {
-  const partners: PartnerProps[] = await getPartners();
+  const partners: PartnerProps[] = [];
 
   return (
     <PageSection title="Trusted By" noMinHeight color="light">

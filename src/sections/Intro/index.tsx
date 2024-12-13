@@ -6,8 +6,6 @@ import AboutIntroSection from "../Services/Intro";
 const IntroSections = () => {
   return (
     <Fragment>
-      <AboutIntroSection />
-
       <WhoAmISection />
 
       {/* <GallerySection /> */}
