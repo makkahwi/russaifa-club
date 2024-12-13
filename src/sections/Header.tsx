@@ -1,12 +1,10 @@
-import Image from "next/image";
-
 const HeaderSection = () => {
   return (
     <div
       style={{
         minHeight: "100vh",
-        backgroundImage: `url('/images/Pattern.png')`,
-        backgroundPosition: "center center",
+        backgroundImage: `url('/images/BG.jpg')`,
+        backgroundPosition: "top center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
@@ -25,30 +23,12 @@ const HeaderSection = () => {
 
         <div className="btn-group my-4">
           <a className="btn btn-dark p-2 px-3" href="#contact">
-            اجعل صحتك أولوية، تواصل معي الآن!
+            اجعل صحتك أولوية وتواصل معي الآن!
           </a>
         </div>
       </div>
 
-      <div className="col-md-6 col-lg-4 position-relative mt-5">
-        <Image
-          src="/images/Profile.png"
-          className="mx-5 mt-5 d-block d-md-none"
-          alt="Fatima Photo"
-          width={646 * 0.45}
-          height={934 * 0.45}
-          priority
-        />
-
-        <Image
-          src="/images/Profile.png"
-          className="mt-5 d-none d-md-block"
-          alt="Fatima Photo"
-          width={646 * 0.65}
-          height={934 * 0.65}
-          priority
-        />
-      </div>
+      <div className="col-md-6 col-lg-4 position-relative mt-5"></div>
     </div>
   );
 };
