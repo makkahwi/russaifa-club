@@ -23,13 +23,9 @@ const HeaderSection = () => {
           احصل على خطة غذائية مخصصة تناسب احتياجاتك الصحية وأهدافك الشخصية
         </h4>
 
-        <div className="btn-group my-4" style={{ direction: "ltr" }}>
+        <div className="btn-group my-4">
           <a className="btn btn-dark p-2 px-3" href="#contact">
-            ابدأ رحلتك الصحية
-          </a>
-
-          <a className="btn btn-dark p-2 px-3" href="#contact">
-            احجز استشارتك الآن
+            اجعل صحتك أولوية، تواصل معي الآن!
           </a>
         </div>
       </div>

@@ -14,7 +14,7 @@ const TailSections = () => {
 
       {/* <TrustedBySection /> */}
 
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
 
       <BlogSection />
 

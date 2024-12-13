@@ -12,28 +12,12 @@ const WhoAmISection = async () => {
         <NumberCounters />
 
         <h5 className="text-block text-dark">
-          فاطمة محمد هي أخصائية تغذية معتمدة بخبرة تمتد لأكثر من 8 سنوات. متخصصة
-          في تصميم أنظمة غذائية فردية لمساعدتك على الوصول إلى أهدافك الصحية
-          والتمتع بحياة أفضل.
+          <b>فاطمة محمد</b> حاصلة على درجة البكالوريوس في التغذية السريرية
+          والحميات من الجامعة الهاشمية معتمدة من قبل وزارة الصحة الأردنية. كما
+          أنها عضو لدى الجمعية الأردنية للغذاء والتغذية وجمعية أخصائي التغذية
+          العلاجية الأردنية. على مدار أكثر من ٥ سنوات، ساهمت في تقديم استشارات
+          التغذية ومساعدة المئات من العملاء على تحقيق أهدافهم الصحية.
         </h5>
-      </div>
-
-      <div className="col-md-12 border border-dark border-2 rounded-5 mt-5">
-        <div className="row justify-content-center">
-          <div className="col-md-12 my-4">
-            <h3 className="text-center text-dark">عضويات</h3>
-          </div>
-
-          <div className="col-md-12 text-justify my-4 text-dark p-3">
-            <h5 className="lh-lg">
-              <ul>
-                {certs?.map((text, i) => (
-                  <li key={i}>{text}</li>
-                ))}
-              </ul>
-            </h5>
-          </div>
-        </div>
       </div>
     </PageSection>
   );

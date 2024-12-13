@@ -9,9 +9,9 @@ const ServiceSections = () => {
     <Fragment>
       <HeaderSection />
 
-      <ProgramsSection />
+      {/* <ProgramsSection /> */}
 
-      <PediaSection />
+      {/* <PediaSection /> */}
 
       {/* <TextSection /> */}
 

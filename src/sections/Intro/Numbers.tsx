@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 
 const NumberCounters = () => {
   const stats = [
-    { title: "سنوات خبرة", count: 8 },
+    { title: "سنوات خبرة", count: 5 },
     { title: "مراجع", count: 2000 },
   ];
 
