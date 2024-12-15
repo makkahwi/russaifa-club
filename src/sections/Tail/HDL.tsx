@@ -13,7 +13,7 @@ const HdlSection = () => {
         <ul>
           {list.map((element, i) => (
             <li key={i}>
-              <h5 className="text-justify lh-lg text-black lh-lg">
+              <h5 className="text-justify text-black lh-lg">
                 <b>{element}</b>
               </h5>
             </li>
