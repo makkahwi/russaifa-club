@@ -18,7 +18,7 @@ const readApi = axios.create({
 });
 
 export const sendContacts = (data: object) =>
-  writeApi.post("contact-form.json", data);
+  writeApi.post("fatima-contact-form.json", data);
 
 const getCertsApi = () => [{}];
 const getBlogPostsApi = () => [{}];
