@@ -4,6 +4,7 @@ import HeaderSection from "./Header";
 import PediaSection from "./Pedia";
 import ProgramsSection from "./Programs";
 import FearSection from "./Fears";
+import HolisticSection from "./Holistic ";
 
 const ServiceSections = () => {
   return (
@@ -11,6 +12,8 @@ const ServiceSections = () => {
       <HeaderSection />
 
       <FearSection />
+
+      <HolisticSection />
 
       {/* <ProgramsSection /> */}
 
