@@ -1,11 +1,6 @@
 import PageSection from "@/components/PageSection";
-import {
-  faFacebook,
-  faInstagram,
-  faWhatsapp,
-  faXTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import dynamic from "next/dynamic";
 
@@ -15,47 +10,18 @@ export const socialLinksList = [
   {
     name: "WhatsApp",
     icon: faWhatsapp,
-    link: "https://wasap.my/962797571084",
+    link: "https://wasap.my/962797035869",
     label: "عبر الواتس اب في أي وقت",
     color: "#1fb355",
     common: true,
   },
   {
-    name: "Phone",
-    icon: faPhone,
-    link: "tel:+962797571084",
-    label: "اتصل بي مباشرة",
-    color: "#81c784",
-    common: true,
-  },
-  {
     name: "Email",
     icon: faEnvelope,
-    link: "mailto:ask@noorkayyali.com",
+    link: "mailto:fatemamohammad2008@gmail.com",
     label: "راسلني على البريد الإلكتروني",
     color: "#388e3c",
     common: true,
-  },
-  {
-    name: "Facebook",
-    icon: faFacebook,
-    link: "https://facebook.com/Noorcoach",
-    label: "Let's Chat Forever",
-    color: "#1877F2",
-  },
-  {
-    name: "Instagram",
-    icon: faInstagram,
-    link: "https://www.instagram.com/noorkayyali303/",
-    label: "Capture Life Together",
-    color: "#E4405F",
-  },
-  {
-    name: "X",
-    icon: faXTwitter,
-    link: "https://twitter.com/Noorkayyali303",
-    label: "Join My Conversations",
-    color: "#181717",
   },
 ];
 

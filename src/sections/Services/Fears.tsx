@@ -1,10 +1,8 @@
 import PageSection from "@/components/PageSection";
 import {
-  faBreadSlice,
   faCow,
   faFaceGrinBeamSweat,
   faHeartCrack,
-  faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
