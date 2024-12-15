@@ -4,6 +4,7 @@ import TestimonialsSection from "@/sections/Tail/Testimonials";
 import TrustedBySection from "@/sections/Tail/TrustedBy";
 import dynamic from "next/dynamic";
 import { Fragment } from "react";
+import HdlSection from "./HDL";
 
 const VlogSection = dynamic(() => import("@/sections/Tail/Vlog"));
 
@@ -17,6 +18,8 @@ const TailSections = () => {
       {/* <TestimonialsSection /> */}
 
       {/* <BlogSection /> */}
+
+      <HdlSection />
 
       <ContactSection />
     </Fragment>
