@@ -55,15 +55,24 @@ const ContactForm = () => {
               {required ? <span className="text-danger">{" *"}</span> : ""}
             </div>
 
-            <input
-              id={name}
-              name={name}
-              placeholder={title}
-              className="form-control py-3"
-              // as={type === "textarea" ? type : undefined}
-              type={type}
-              required={required}
-            />
+            {type === "textarea" ? (
+              <textarea
+                id={name}
+                name={name}
+                placeholder={title}
+                className="form-control py-3"
+                required={required}
+              />
+            ) : (
+              <input
+                id={name}
+                name={name}
+                placeholder={title}
+                className="form-control py-3"
+                type={type}
+                required={required}
+              />
+            )}
           </div>
         ))}
 
