@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title:
     "فاطمة محمد - الصحة تبدأ من التغذية السليمة - اكتشف حياتك الصحية الآن!",
-  description: "الموقع الخاص بأخصائية التغذية فاطمة محمد",
+  description: "الموقع الخاص بأخصائية التغذية فاطمة محمد - الأردن",
 };
 
 export const revalidate = 60 * 60 * 24 * 7; // seconds * minutes * hours * days
