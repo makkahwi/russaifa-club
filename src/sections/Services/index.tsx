@@ -17,7 +17,7 @@ const ServiceSections = () => {
 
       {/* <ProgramsSection /> */}
 
-      {/* <PediaSection /> */}
+      <PediaSection />
 
       {/* <TextSection /> */}
 

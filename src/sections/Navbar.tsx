@@ -17,6 +17,7 @@ export const links = [
   { title: "خدماتي", link: "services" },
   { title: "الرجيم", link: "fears" },
   { title: "نظام شامل", link: "comprehensive" },
+  { title: "الموسوعة", link: "pedia" },
   // { title: "برامج التغذية", link: "programs" },
   // { title: "الموسوعة الغذائية", link: "info" },
   // { title: "شهادات العملاء", link: "testimonials" },
