@@ -22,13 +22,13 @@ const WhoAmISection = async () => {
           <LinkComp
             link="https://hu.edu.jo"
             text="الجامعة الهاشمية"
-            image="https://hu.edu.jo/images/logo-wide.png"
+            image="/images/logos/hu.png"
           />
           ، ومعتمدة كأخصائية تغدية من{" "}
           <LinkComp
             link="https://moh.gov.jo"
             text="وزارة الصحة الأردنية"
-            image="https://moh.gov.jo/ebv4.0/root_storage/ar/eb_homepage/logo.png"
+            image="/images/logos/moh.png"
           />
           . طوال رحلتي المهنية، كان شغفي دائمًا تقديم الدعم والإرشاد الغذائي
           للأفراد لمساعدتهم على تحقيق أهدافهم الصحية وتحسين جودة حياتهم. أفتخر
@@ -36,13 +36,13 @@ const WhoAmISection = async () => {
           <LinkComp
             link="https://www.facebook.com/jmylgdhwltgdhy/"
             text="جمعية الغذاء والتغذية الأردنية"
-            image="https://scontent.famm12-1.fna.fbcdn.net/v/t1.6435-9/85236037_2800812050017441_4769914881354760192_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGtQ7tlqqxn6MSbqz7jzmDYmadpQCb2_piZp2lAJvb-mD-hWNq2vzUvvlGW1TpWSmOgr-cFkTGtSd8ac-4uUan8&_nc_ohc=On6BUy215asQ7kNvgGDCr5L&_nc_zt=23&_nc_ht=scontent.famm12-1.fna&_nc_gid=AYGzAeBSpYvAqHcSrW-4x-2&oh=00_AYBRuBNLwUjaeFlHOyAl4R7117sM3YNSlk1rFTDQuggctA&oe=679F3C28"
+            image="/images/logos/soc1.jpg"
           />{" "}
           و
           <LinkComp
             link="https://www.facebook.com/JordanianDietitiansAssociation"
-            text="جمعية أخصائي التغذية العلاجية الأردنية"
-            // image="https://scontent.famm12-1.fna.fbcdn.net/v/t39.30808-6/326388023_869560057830511_2436070686495291862_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHTPtFfs1FRgiFZseYMn4bMzEIW17rc41zMQhbXutzjXIHzaru51lGKQjOlS46SvzDxq_i7O0EW6uMBhbbrtiv2&_nc_ohc=tM19_h_qlbAQ7kNvgE15Sgo&_nc_zt=23&_nc_ht=scontent.famm12-1.fna&_nc_gid=A9L6zOx_L2WPbDtjMlXjMNw&oh=00_AYBmW3EXZdZVtU24CvyPM_soQg0G_ZEQQIMbFi6xULH05g&oe=677DB236"
+            text="جمعية أخصائيي التغذية العلاجية الأردنية"
+            image="/images/logos/soc2.jpg"
           />
           ، حيث أعمل مع زملاء مهنيين لتعزيز الوعي الغذائي في مجتمعنا.
         </h5>
