@@ -17,7 +17,7 @@ const TrustedBySection = async () => {
         <div
           className={`col-xl-${
             bigger ? 3 : 2
-          } col-lg-4 col-md-3 col-xs-6 p-3 p-lg-5`}
+          } col-lg-4 col-md-3 col-6 p-3 p-lg-5`}
           key={i}
         >
           <a href={link} target="_blank">

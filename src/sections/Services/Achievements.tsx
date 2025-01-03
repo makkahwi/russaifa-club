@@ -33,7 +33,7 @@ const AchievementsSection = async () => {
         </div>
       ))}
 
-      <div className="col-xs-12 mt-5">
+      <div className="col-12 mt-5">
         <div className="list-group rounded-5 border-dark">
           {achievements.map(({ content, fullWidth }, i) => (
             <div

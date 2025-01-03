@@ -39,7 +39,7 @@ const ProgramsSection = async () => {
 
   return (
     <PageSection title="برامج التغذية" id="programs">
-      <div className="col-xs-12">
+      <div className="col-12">
         <div className="card border border-dark border-2 rounded-5 py-4 my-3 w-100">
           <div className="card-body">
             <div className="row justify-content-center">

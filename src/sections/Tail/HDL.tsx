@@ -27,7 +27,7 @@ const HdlSection = () => {
         />
       </div>
 
-      <div className="col-xl-12 px-3 order-1 order-xl-2 text-center">
+      <div className="col-xl-12 px-3 order-3 text-center">
         <a
           href="https://health-empowerment-lifestyle.vercel.app/"
           target="_blank"
