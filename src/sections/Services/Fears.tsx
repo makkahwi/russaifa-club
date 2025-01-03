@@ -47,9 +47,7 @@ const FearSection = async () => {
                     <FontAwesomeIcon icon={icon} />
                   </h1>
 
-                  <h4 className="text-dark mb-4">
-                    <b>{title}</b>
-                  </h4>
+                  <h4 className="text-dark mb-4">{title}</h4>
 
                   <h6 className="text-justify lh-lg">{content}</h6>
                 </div>

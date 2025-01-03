@@ -77,7 +77,7 @@ const ContactForm = () => {
         ))}
 
         <div className="col-lg-2 col-md-3 float-end">
-          <button className="btn btn-dark p-3" type="submit">
+          <button className="btn btn-dark p-3 text-white" type="submit">
             <h6 className="text-center p-0 m-0">تواصل الآن</h6>
           </button>
         </div>
