@@ -43,13 +43,11 @@ const FearSection = async () => {
             <div className="card h-100">
               <div className="card-body p-5">
                 <div className="card-text">
-                  <h1 className="text-center display-1 text-dark mb-4">
+                  <h1 className="text-center display-1 text-success mb-4">
                     <FontAwesomeIcon icon={icon} />
                   </h1>
 
-                  <h4 className="text-dark mb-4">
-                    <b>{title}</b>
-                  </h4>
+                  <h4 className="text-success mb-4">{title}</h4>
 
                   <h6 className="text-justify lh-lg">{content}</h6>
                 </div>

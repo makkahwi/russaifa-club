@@ -16,7 +16,7 @@ const AboutIntroSection = () => {
   return (
     <PageSection>
       <div className="col-lg-12 my-auto">
-        <h4 className="text-justify lh-lg text-dark">
+        <h4 className="text-justify lh-lg text-success">
           بتعاني من مشاكل زيادة الوزن؟ حاولت أكثر من برنامج تغذية مثل الكيتو وما
           نزل وزنك؟ الحل عند الأخصائية فاطمة محمد. برامج غذائية...
         </h4>

@@ -33,14 +33,14 @@ const AchievementsSection = async () => {
         </div>
       ))}
 
-      <div className="col-xs-12 mt-5">
-        <div className="list-group rounded-5 border-dark">
+      <div className="col-12 mt-5">
+        <div className="list-group rounded-5 border-success">
           {achievements.map(({ content, fullWidth }, i) => (
             <div
-              className="list-group-item bg-transparent border-dark p-4"
+              className="list-group-item bg-transparent border-success p-4"
               key={i}
             >
-              <h5 className="text-dark text-block">{content}</h5>
+              <h5 className="text-success text-block">{content}</h5>
             </div>
           ))}
         </div>

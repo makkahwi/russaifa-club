@@ -2,7 +2,7 @@ import PageSection from "@/components/PageSection";
 
 const HdlSection = () => {
   const list = [
-    "لجعل رحلتك الصحية أكثر سهولة وفعالية، أوصي باستخدام أداة HDL المجانية, التي تتيح لك تتبع جميع عاداتك الصحية.",
+    "لجعل رحلتك الصحية أكثر سهولة وفعالية، أوصي باستخدام أداة HEAL المجانية, التي تتيح لك تتبع جميع عاداتك الصحية.",
     "الأداة متوفرة حاليًا باللغة الإنجليزية، وستطلق قريبًا نسخة باللغة العربية لتلبية احتياجات جميع عملائنا.",
     "هذا الأداة تم تطويرها من قِبل نفس مطور هذا الموقع الإلكتروني, لضمان توافقها مع أعلى معايير الجودة.",
   ];
@@ -13,9 +13,7 @@ const HdlSection = () => {
         <ul>
           {list.map((element, i) => (
             <li key={i}>
-              <h5 className="text-justify text-black lh-lg">
-                <b>{element}</b>
-              </h5>
+              <h5 className="text-justify text-black lh-lg">{element}</h5>
             </li>
           ))}
         </ul>
@@ -29,10 +27,13 @@ const HdlSection = () => {
         />
       </div>
 
-      <div className="col-xl-12 px-3 order-1 order-xl-2 text-center">
-        <a href="https://health-daily-link.vercel.app/" target="_blank">
+      <div className="col-xl-12 px-3 order-3 text-center">
+        <a
+          href="https://health-empowerment-lifestyle.vercel.app/"
+          target="_blank"
+        >
           {" "}
-          <button className="btn btn-dark text-white">استخدمها الآن</button>
+          <button className="btn btn-success text-white">استخدمها الآن</button>
         </a>
       </div>
     </PageSection>

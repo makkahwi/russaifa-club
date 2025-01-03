@@ -37,13 +37,13 @@ const ContactSection = () => {
   return (
     <PageSection title="تواصل معي الآن" id="contact">
       <div className="col-md-12 text-center p-0 m-0">
-        <h5 className="mb-5 text-dark">في أول تواصل بيننا...</h5>
+        <h5 className="mb-5 text-success">في أول تواصل بيننا...</h5>
 
         <div className="row justify-content-center">
           {whatYouWillGet.map((point, i) => (
-            <div className="col-xs-12 col-lg-3 col-xl-2 my-3" key={i}>
-              <div className="d-flex border rounded-5 border-dark w-100 h-100 p-3">
-                <h6 className="text-dark m-auto">{point}</h6>
+            <div className="col-6 col-lg-3 col-xl-2 my-3" key={i}>
+              <div className="d-flex border rounded-5 border-success w-100 h-100 p-3">
+                <h6 className="text-success m-auto">{point}</h6>
               </div>
             </div>
           ))}
@@ -55,7 +55,7 @@ const ContactSection = () => {
           {socialLinksList
             .filter(({ common }) => common)
             .map(({ name, icon, link, label, color }, i) => (
-              <div className="col-xs-6 col-md-4 col-lg-3" key={i}>
+              <div className="col-6 col-md-4 col-lg-3" key={i}>
                 <a href={link} target="_blank">
                   <button
                     style={{ backgroundColor: color }}

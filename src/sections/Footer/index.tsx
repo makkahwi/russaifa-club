@@ -8,8 +8,8 @@ import FooterNav from "./Nav";
 const FooterSection = () => {
   return (
     <Fragment>
-      <div className="row bg-dark py-2">
-        <div className="col-xs-12 text-center pb-2">
+      <div className="row bg-success py-2">
+        <div className="col-12 text-center pb-2">
           <Image
             src="/images/logo/logo-w.png"
             alt="Logo"
@@ -20,11 +20,11 @@ const FooterSection = () => {
           />
         </div>
 
-        {/* <div className="col-xs-12 text-center">
+        {/* <div className="col-12 text-center">
           <FooterNav />
         </div> */}
 
-        <div className="col-xs-12 text-center">
+        <div className="col-12 text-center">
           <div className="btn-group">
             {socialLinksList.map(({ name, icon, link, label, color }, i) => (
               <div className="btn btn-link p-3 my-2" key={i}>
@@ -38,15 +38,15 @@ const FooterSection = () => {
       </div>
 
       <div className="row py-5 bg-white">
-        <h6 className="text-center text-dark">
-          جميع الحقوق محفوظة لـ <span className="text-dark">فاطمة محمد</span> ©{" "}
-          {new Date().getFullYear()}
+        <h6 className="text-center text-success">
+          جميع الحقوق محفوظة لـ <span className="text-success">فاطمة محمد</span>{" "}
+          © {new Date().getFullYear()}
         </h6>
 
         <a
           href="https://www.alembicsoft.com/"
           target="_blank"
-          className="text-center text-dark"
+          className="text-center text-success"
         >
           <small>تصميم وتنفيذ الانبيق للبرمجيات</small>
         </a>

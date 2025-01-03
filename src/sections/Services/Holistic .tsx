@@ -4,8 +4,8 @@ const HolisticSection = () => {
   const list = [
     "اختيار أنشطة رياضية تناسب نمط الحياة.",
     "الإقلاع عن التدخين لتحقيق حياة أكثر صحة.",
-    "تنظيم دورات النوم للحصول على نوم كاف ومريح.",
     "مساعدتك على تنظيم استخدام الأدوية عند الحاجة.",
+    "تنظيم دورات النوم للحصول على نوم كاف ومريح.",
     "التعامل مع المشاكل النفسية التي تؤثر على التفاعلات البدنية.",
   ];
 
@@ -29,7 +29,7 @@ const HolisticSection = () => {
         <ul>
           {list.map((item, i) => (
             <li key={i}>
-              <h5 className="text-justify text-dark lh-lg fw-bold">{item}</h5>
+              <h5 className="text-justify text-success lh-lg">{item}</h5>
             </li>
           ))}
         </ul>

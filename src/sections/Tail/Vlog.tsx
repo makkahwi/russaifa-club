@@ -24,7 +24,7 @@ const VlogSection = async () => {
         </div>
       ))}
 
-      <div className="col-xs-12 text-center">
+      <div className="col-12 text-center">
         <a
           href="https://www.youtube.com/channel/UCdCODCOiHkQXfCGHGDQel4Q"
           target="_blank"
