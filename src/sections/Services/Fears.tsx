@@ -29,7 +29,7 @@ const FearSection = async () => {
   ];
 
   return (
-    <PageSection title="وداعًا لمخاوف الرجيم!" id="blog" color="light">
+    <PageSection title="وداعًا لمخاوف الرجيم!" id="fears" color="light">
       <div className="row lh-lg justify-content-center">
         <h5 className="col-md-12 text-center lh-lg">
           هل تفكر في البدء بنظام غذائي، ولكن{" "}

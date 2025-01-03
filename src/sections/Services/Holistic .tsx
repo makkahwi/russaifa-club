@@ -10,7 +10,7 @@ const HolisticSection = () => {
   ];
 
   return (
-    <PageSection title="صحة شاملة.. حياة متوازنة.." id="services">
+    <PageSection title="صحة شاملة.. حياة متوازنة.." id="comprehensive">
       <div className="col-xl-6 px-3">
         <img
           alt="photo"
