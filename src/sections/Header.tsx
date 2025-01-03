@@ -24,7 +24,7 @@ const HeaderSection = () => {
 
         <div className="btn-group my-4">
           <a
-            className="btn btn-white text-dark fw-bold p-2 px-3"
+            className="btn btn-white text-success fw-bold p-2 px-3"
             href="#contact"
           >
             اجعل صحتك أولوية وتواصل معي الآن!

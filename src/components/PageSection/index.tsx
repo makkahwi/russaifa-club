@@ -34,7 +34,7 @@ const PageSection = ({
 
       {title && (
         <div className="col-12">
-          <h1 className="mb-5 pb-5 text-center text-dark">{title}</h1>
+          <h1 className="mb-5 pb-5 text-center text-success">{title}</h1>
         </div>
       )}
 

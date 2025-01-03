@@ -33,7 +33,7 @@ const HdlSection = () => {
           target="_blank"
         >
           {" "}
-          <button className="btn btn-dark text-white">استخدمها الآن</button>
+          <button className="btn btn-success text-white">استخدمها الآن</button>
         </a>
       </div>
     </PageSection>

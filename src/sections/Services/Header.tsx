@@ -48,8 +48,8 @@ const HeaderSection = () => {
         <ul className="list-group">
           {list.map(({ title, content, icon }, i) => (
             <li className="list-group-item list-group-item-action" key={i}>
-              <h4 className="text-dark lh-lg d-flex">
-                <h1 className="text-dark mx-2">
+              <h4 className="text-success lh-lg d-flex">
+                <h1 className="text-success mx-2">
                   <FontAwesomeIcon icon={icon} />
                 </h1>
                 {title}

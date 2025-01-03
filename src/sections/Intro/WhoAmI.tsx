@@ -16,7 +16,7 @@ const WhoAmISection = async () => {
       <div className="col-md-12">
         <NumberCounters />
 
-        <h5 className="text-justify lh-lg text-dark">
+        <h5 className="text-justify lh-lg text-success">
           أخصائية تغذية سريرية وحميات، حاصلة على درجة البكالوريوس في التغذية
           السريرية والحميات من{" "}
           <LinkComp
@@ -47,7 +47,7 @@ const WhoAmISection = async () => {
           ، حيث أعمل مع زملاء مهنيين لتعزيز الوعي الغذائي في مجتمعنا.
         </h5>
 
-        <h5 className="text-justify lh-lg text-dark my-5">
+        <h5 className="text-justify lh-lg text-success my-5">
           على مدار أكثر من 5 سنوات، قدمت استشارات التغذية الشخصية وساعدت المئات
           من العملاء في التغلب على التحديات الصحية والغذائية، سواء كان هدفهم
           خسارة الوزن، اكتساب الوزن الصحي، علاج الكثير من الأمراض والمشاكل
@@ -56,7 +56,7 @@ const WhoAmISection = async () => {
           بالحرمان أو الإجهاد.
         </h5>
 
-        <h5 className="text-justify lh-lg text-dark fw-bold mt-4">
+        <h5 className="text-justify lh-lg text-success fw-bold mt-4">
           أؤمن أن رحلة التغيير تبدأ بخطوة صغيرة، وأنا هنا لاساعدك في إطلاق هذه
           الرحلة.
         </h5>

@@ -25,7 +25,7 @@ const NavbarComp = () => {
   return (
     <Navbar
       style={{ minHeight: "10vh" }}
-      className="px-5 m-0 w-100 bg-dark"
+      className="px-5 m-0 w-100 bg-success"
       fixed="top"
       expand="lg"
       collapseOnSelect

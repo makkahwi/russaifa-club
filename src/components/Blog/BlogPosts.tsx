@@ -26,7 +26,7 @@ const BlogPosts = ({ posts }: { posts: BlogPostProps[] }) => {
         <div className="row">
           <div className="col-md-12">
             <CustomToggle eventKey={String(i)} className="m-0 float-end">
-              <div className="btn btn-dark">
+              <div className="btn btn-success">
                 <FontAwesomeIcon icon={faX} />
               </div>
             </CustomToggle>
@@ -77,7 +77,7 @@ const BlogPosts = ({ posts }: { posts: BlogPostProps[] }) => {
 
           <div className="col-md-12">
             <CustomToggle eventKey={String(i)} className="m-0 float-end">
-              <div className="btn btn-dark">Close</div>
+              <div className="btn btn-success">Close</div>
             </CustomToggle>
           </div>
         </div>

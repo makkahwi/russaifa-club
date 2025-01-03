@@ -29,7 +29,7 @@ const HolisticSection = () => {
         <ul>
           {list.map((item, i) => (
             <li key={i}>
-              <h5 className="text-justify text-dark lh-lg">{item}</h5>
+              <h5 className="text-justify text-success lh-lg">{item}</h5>
             </li>
           ))}
         </ul>
