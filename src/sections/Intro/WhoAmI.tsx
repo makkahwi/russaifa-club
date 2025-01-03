@@ -5,7 +5,7 @@ const NumberCounters = dynamic(() => import("./Numbers"));
 
 const WhoAmISection = async () => {
   const LinkComp = ({ link = "", text = "", image = "" }) => (
-    <a href={link} target="_blank">
+    <a href={link} target="_blank" className="text-success">
       <img src={image} style={{ height: 44 }} />{" "}
       <span className="text-decoration-underline">{text}</span>
     </a>
