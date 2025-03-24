@@ -49,7 +49,7 @@ const WhoAmISection = async () => {
         </h5>
 
         <h5 className="text-justify lh-lg text-primary fw-bold mt-4">
-          نحن هنا من الشباب والمستقبل الواعد.
+          نحن هنا من أجل الشباب والمستقبل الواعد.
         </h5>
       </div>
     </PageSection>

@@ -3,7 +3,7 @@ import PageSection from "@/components/PageSection";
 const HqSection = () => {
   return (
     <PageSection title="مقرنا وتجهيزاتنا" color="light" id="hq">
-      <div className="col-md-6 mb-4">
+      <div className="col-md-6 mb-4 order-2 order-md-1">
         <h5 className="text-block text-justify">
           يضم المقر الدائم للمركز مساحات مخصصة لممارسة الرياضات الخارجية، وساحات
           متعددة الاستخدامات. كما يمتلك المركز حافلة نقل مخصصة للأعضاء، ويجري
@@ -12,7 +12,7 @@ const HqSection = () => {
         </h5>
       </div>
 
-      <div className="col-md-6 mb-4">
+      <div className="col-md-6 mb-4 order-1 order-md-2">
         <img src="/images/gallery/1.jpeg" className="w-100" />
       </div>
 

@@ -9,7 +9,7 @@ const FooterSection = () => {
   return (
     <Fragment>
       <div className="row bg-primary py-2 align-items-center justify-content-center">
-        <div className="col-4 text-center pb-2">
+        <div className="col-md-4 text-center pb-2">
           <div className="col">
             <Image
               src="/images/logo/logo-w.png"
@@ -34,7 +34,7 @@ const FooterSection = () => {
           </div>
         </div>
 
-        <div className="col-6 text-center pb-2">
+        <div className="col-md-6 text-center pb-2">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1366.7033650484082!2d36.03849265562313!3d32.02257825777501!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151b670050f3c9cd%3A0x8d28219d3b6b8070!2z2YbYp9iv2Yog2LTYqNin2Kgg2KfZhNix2LXZitmB2Kk!5e1!3m2!1sen!2sjo!4v1742818060351!5m2!1sen!2sjo"
             width="100%"
