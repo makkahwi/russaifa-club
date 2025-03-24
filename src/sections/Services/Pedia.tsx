@@ -35,7 +35,7 @@ const JoinMeSection = () => {
         </h5>
       </div>
 
-      <div className="col-md-12 text-success">
+      <div className="col-md-12 text-primary">
         <ul className="list-group">
           {resources.map(({ link, text }, i) => (
             <li className="list-group-item" key={i}>

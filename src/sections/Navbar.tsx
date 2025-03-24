@@ -18,17 +18,13 @@ export const links = [
   { title: "الرجيم", link: "fears" },
   { title: "نظام شامل", link: "comprehensive" },
   { title: "الموسوعة", link: "pedia" },
-  // { title: "برامج التغذية", link: "programs" },
-  // { title: "الموسوعة الغذائية", link: "info" },
-  // { title: "شهادات العملاء", link: "testimonials" },
-  // { title: "المدونة", link: "blog" },
 ];
 
 const NavbarComp = () => {
   return (
     <Navbar
       style={{ minHeight: "10vh" }}
-      className="px-5 m-0 w-100 bg-success"
+      className="px-5 m-0 w-100 bg-primary"
       fixed="top"
       expand="lg"
       collapseOnSelect

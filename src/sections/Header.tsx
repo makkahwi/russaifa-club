@@ -11,23 +11,18 @@ const HeaderSection = () => {
       className="row justify-content-center bg-warning py-5"
     >
       <div className="col-md-6 col-lg-5 my-auto py-5 px-5 px-md-2">
-        <h5 className="mb-5 text-white">
-          الصحة تبدأ من التغذية السليمة - اكتشف حياتك الصحية الآن! مع
-        </h5>
+        <h5 className="mb-5 text-white">الشباب ثروتنا</h5>
 
-        <h4 className="text-white">أخصائية التغذية</h4>
-        <h3 className="mt-4 display-4 fw-bold text-white">فاطمة محمد</h3>
+        <h3 className="mt-4 display-4 fw-bold text-white">نادي شباب الرصيفة</h3>
 
-        <h4 className="text-white mt-5">
-          احصل على خطة غذائية مخصصة تناسب احتياجاتك الصحية وأهدافك الشخصية
-        </h4>
+        <h4 className="text-white mt-5">النادي الأمثل للشباب الأفضل</h4>
 
         <div className="btn-group my-4">
           <a
-            className="btn btn-white text-success fw-bold p-2 px-3"
+            className="btn btn-white text-primary fw-bold p-2 px-3"
             href="#contact"
           >
-            اجعل صحتك أولوية وتواصل معي الآن!
+            تواصل معنا الآن
           </a>
         </div>
       </div>

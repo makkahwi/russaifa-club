@@ -38,14 +38,14 @@ const BlogSlider = ({ posts }: { posts: BlogPostProps[] }) => {
                 }}
                 className="w-100 p-0 m-0"
               >
-                <div className="btn btn-success m-3 p-2 float-end">
+                <div className="btn btn-primary m-3 p-2 float-end">
                   {category}
                 </div>
               </div>
 
               <div className="card-body">
-                <small className="text-start text-success">{date}</small>
-                <h5 className="text-justify text-success">
+                <small className="text-start text-primary">{date}</small>
+                <h5 className="text-justify text-primary">
                   {/* {capitalizeSentenceFirstLetters(title?.toLowerCase())} */}
                 </h5>
               </div>

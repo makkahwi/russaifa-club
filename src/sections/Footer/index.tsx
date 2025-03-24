@@ -8,7 +8,7 @@ import FooterNav from "./Nav";
 const FooterSection = () => {
   return (
     <Fragment>
-      <div className="row bg-success py-2">
+      <div className="row bg-primary py-2">
         <div className="col-12 text-center pb-2">
           <Image
             src="/images/logo/logo-w.png"
@@ -38,17 +38,18 @@ const FooterSection = () => {
       </div>
 
       <div className="row py-5 bg-white">
-        <h6 className="text-center text-success">
-          جميع الحقوق محفوظة لـ <span className="text-success">فاطمة محمد</span>{" "}
-          © {new Date().getFullYear()}
+        <h6 className="text-center text-primary">
+          جميع الحقوق محفوظة لـ{" "}
+          <span className="text-primary">نادي شباب الرصيفة</span> ©{" "}
+          {new Date().getFullYear()}
         </h6>
 
         <a
           href="https://www.alembicsoft.com/"
           target="_blank"
-          className="text-center text-success"
+          className="text-center text-primary"
         >
-          <small>تصميم وتنفيذ الانبيق للبرمجيات</small>
+          <small>تصميم وتنفيذ AlembicSoft</small>
         </a>
       </div>
     </Fragment>
