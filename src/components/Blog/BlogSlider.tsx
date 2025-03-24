@@ -1,16 +1,8 @@
 "use client";
 
 import Slider from "@/components/Slider";
-import { capitalizeSentenceFirstLetters } from "@/functions/utils";
+import { BlogPostProps } from "@/sections/Tail/Blog";
 import CustomToggle from "./Toggle";
-
-interface BlogPostProps {
-  date: string;
-  title: string;
-  category: string;
-  img: string;
-  contents: { type: string; content: string; contents?: string[] }[];
-}
 
 const BlogSlider = ({ posts }: { posts: BlogPostProps[] }) => {
   return (
@@ -38,15 +30,18 @@ const BlogSlider = ({ posts }: { posts: BlogPostProps[] }) => {
                 }}
                 className="w-100 p-0 m-0"
               >
-                <div className="btn btn-success m-3 p-2 float-end">
+                <div className="btn btn-primary m-3 p-2 float-end">
                   {category}
                 </div>
               </div>
 
               <div className="card-body">
-                <small className="text-start text-success">{date}</small>
-                <h5 className="text-justify text-success">
-                  {/* {capitalizeSentenceFirstLetters(title?.toLowerCase())} */}
+                <small className="text-start text-primary">{date}</small>
+                <h5 className="text-justify text-primary">
+                  {title
+                    .split("")
+                    .filter((_, i) => i < 35)
+                    .join("") + (title.length > 35 ? "..." : "")}
                 </h5>
               </div>
             </div>

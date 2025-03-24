@@ -14,7 +14,7 @@ const HolisticSection = () => {
       <div className="col-xl-6 px-3">
         <img
           alt="photo"
-          src="/images/gallery/Holistic.jpg"
+          src="/images/gallery/3.jpg"
           className="rounded-5 soft-edges w-100 mb-5"
         />
       </div>
@@ -29,7 +29,7 @@ const HolisticSection = () => {
         <ul>
           {list.map((item, i) => (
             <li key={i}>
-              <h5 className="text-justify text-success lh-lg">{item}</h5>
+              <h5 className="text-justify text-primary lh-lg">{item}</h5>
             </li>
           ))}
         </ul>

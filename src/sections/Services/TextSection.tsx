@@ -4,7 +4,7 @@ const TextSection = () => {
   return (
     <PageSection>
       <div className="col-lg-12 my-auto">
-        <h5 className="text-block text-success">
+        <h5 className="text-block text-primary">
           {
             "My coaching expertise spans a wide range of areas, including organizational leadership, performance development, communication, high-impact presentations, team building, pitching, entrepreneurship, strategic leadership, and more."
           }
