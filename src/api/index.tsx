@@ -1,7 +1,7 @@
 import axios from "axios";
 import { cache } from "react";
 
-const writeApi = axios.create({
+const api = axios.create({
   baseURL:
     "https://myresume-6ab68-default-rtdb.europe-west1.firebasedatabase.app/",
   headers: {
@@ -9,16 +9,8 @@ const writeApi = axios.create({
   },
 });
 
-const readApi = axios.create({
-  baseURL:
-    "https://noor-kayyali-default-rtdb.europe-west1.firebasedatabase.app/",
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
-
 export const sendContacts = (data: object) =>
-  writeApi.post("fatima-contact-form.json", data);
+  api.post("contact-form.json", data);
 
 const getCertsApi = () => [{}];
 const getBlogPostsApi = () => [{}];

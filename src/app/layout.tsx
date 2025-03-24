@@ -11,9 +11,8 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title:
-    "فاطمة محمد - الصحة تبدأ من التغذية السليمة - اكتشف حياتك الصحية الآن!",
-  description: "الموقع الخاص بأخصائية التغذية فاطمة محمد - الأردن",
+  title: "نادي شباب الرصيفة",
+  description: "الموقع الخاص بنادي شباب الرصيفة (الرصيفة - الأردن)",
 };
 
 export const revalidate = 60 * 60 * 24 * 7; // seconds * minutes * hours * days

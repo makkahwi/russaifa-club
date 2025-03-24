@@ -1,3 +1,3 @@
-# Nutritionist Fatima Mohammad Personal Website
+# Russaifa Club Landing Page
 
 Next.js & Typescript Based Landing Page
