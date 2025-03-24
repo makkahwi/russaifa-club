@@ -3,12 +3,12 @@ import PageSection from "@/components/PageSection";
 const JoinMeSection = () => {
   const resources = [
     {
-      link: "https://www.moh.gov.sa/HealthAwareness/EducationalContent/Food-and-Nutrition/Pages/default.aspx",
+      link: "https://www.moh.gov.sa/HealthAwareness/EducationalContent/2.jpeg-and-Nutrition/Pages/default.aspx",
       text: "موسوعة مرجعية عربية",
     },
     { link: "https://www.eatright.org/", text: "موسوعة مرجعية إنجليزية" },
     {
-      link: "https://www.eatright.org/food/planning/meals-and-snacks",
+      link: "https://www.eatright.org/2.jpeg/planning/meals-and-snacks",
       text: "وصفات غذائية صحية",
     },
     {

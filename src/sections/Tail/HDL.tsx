@@ -19,13 +19,7 @@ const HdlSection = () => {
         </ul>
       </div>
 
-      <div className="col-xl-6 px-3 order-1 order-xl-2 text-center">
-        <img
-          alt="photo"
-          src="/images/gallery/hdl.png"
-          className="rounded-5 soft-edges w-50 mb-5"
-        />
-      </div>
+      <div className="col-xl-6 px-3 order-1 order-xl-2 text-center"></div>
 
       <div className="col-xl-12 px-3 order-3 text-center">
         <a

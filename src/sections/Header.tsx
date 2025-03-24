@@ -4,7 +4,7 @@ const HeaderSection = () => {
       style={{
         minHeight: "100vh",
         backgroundImage: `url('/images/BG.jpg')`,
-        backgroundPosition: "top center",
+        backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}

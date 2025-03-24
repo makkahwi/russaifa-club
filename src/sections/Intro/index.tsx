@@ -13,7 +13,7 @@ const IntroSections = () => {
       <div
         style={{
           height: "75vh",
-          backgroundImage: `url('/images/gallery/BG.jpeg')`,
+          backgroundImage: `url('/images/gallery/1.jpeg')`,
           backgroundPositionX: "center",
           backgroundPositionY: "center",
           backgroundRepeat: "no-repeat",

@@ -8,9 +8,9 @@ interface AchievementsProps {
 
 const AchievementsSection = async () => {
   const photos = [
-    { width: 3, photo: "Food.jpg" },
-    { width: 5, photo: "Food.jpg" },
-    { width: 4, photo: "Food.jpg" },
+    { width: 3, photo: "2.jpeg.jpg" },
+    { width: 5, photo: "2.jpeg.jpg" },
+    { width: 4, photo: "2.jpeg.jpg" },
   ];
 
   const achievements: AchievementsProps[] = [];

@@ -14,7 +14,7 @@ const HolisticSection = () => {
       <div className="col-xl-6 px-3">
         <img
           alt="photo"
-          src="/images/gallery/Holistic.jpg"
+          src="/images/gallery/3.jpg"
           className="rounded-5 soft-edges w-100 mb-5"
         />
       </div>

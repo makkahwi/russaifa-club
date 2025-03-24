@@ -3,31 +3,31 @@ import Slider from "@/components/Slider";
 const GallerySection = () => {
   const images = [
     {
-      src: "Food.jpg",
+      src: "2.jpeg.jpg",
       width: 9,
     },
     {
-      src: "Food.jpg",
+      src: "2.jpeg.jpg",
       width: 3,
     },
     {
-      src: "Food.jpg",
+      src: "2.jpeg.jpg",
       width: 6,
     },
     {
-      src: "Food.jpg",
+      src: "2.jpeg.jpg",
       width: 6,
     },
     {
-      src: "Food.jpg",
+      src: "2.jpeg.jpg",
       width: 6,
     },
     {
-      src: "Food.jpg",
+      src: "2.jpeg.jpg",
       width: 6,
     },
     {
-      src: "Food.jpg",
+      src: "2.jpeg.jpg",
       width: 6,
     },
   ];
