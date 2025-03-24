@@ -7,31 +7,13 @@ const JoinMeSection = () => {
       text: "موسوعة مرجعية عربية",
     },
     { link: "https://www.eatright.org/", text: "موسوعة مرجعية إنجليزية" },
-    {
-      link: "https://www.eatright.org/2.jpeg/planning/meals-and-snacks",
-      text: "وصفات غذائية صحية",
-    },
-    {
-      link: "https://www.eatright.org/recipes/breakfast",
-      text: "وصفات غذائية صحية",
-    },
-    {
-      link: "https://www.myplate.gov/myplate-kitchen/recipes",
-      text: "وصفات غذائية صحية",
-    },
-    { link: "https://fdc.nal.usda.gov/", text: "الحقائق الغذائية للأغذية" },
-    {
-      link: "https://www.moh.gov.sa/HealthAwareness/MedicalTools/Pages/CalorieCalculate.aspx",
-      text: "حساب السعرات الغذائية التي يحتاجها الجسم",
-    },
   ];
 
   return (
-    <PageSection title="الموسوعة الغذائية" color="light" id="pedia">
+    <PageSection title="الموسوعة الشبابية" color="light" id="pedia">
       <div className="col-md-12 mb-4">
         <h5 className="text-block text-justify">
-          قريباً ستتوفر موسوعة غذائية شاملة ومفيدة لكم. لكن في الوقت الراهن,
-          يمكنكم تصفح المصادر الخاصة بي...
+          قريباً ستتوفر موسوعة شبابية ورياضية كاملة ومخصصة لكم
         </h5>
       </div>
 

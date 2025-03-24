@@ -11,9 +11,9 @@ const ServiceSections = () => {
     <Fragment>
       <HeaderSection />
 
-      <FearSection />
+      {/* <FearSection /> */}
 
-      <HolisticSection />
+      {/* <HolisticSection /> */}
 
       {/* <ProgramsSection /> */}
 
