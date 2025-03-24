@@ -1,9 +1,6 @@
 import ContactSection from "@/sections/Tail/Contact";
-import dynamic from "next/dynamic";
 import { Fragment } from "react";
-import PortalSection from "./Portal";
-
-const VlogSection = dynamic(() => import("@/sections/Tail/Vlog"));
+import BlogSection from "./Blog";
 
 const TailSections = () => {
   return (
@@ -14,9 +11,7 @@ const TailSections = () => {
 
       {/* <TestimonialsSection /> */}
 
-      {/* <BlogSection /> */}
-
-      <PortalSection />
+      <BlogSection />
 
       <ContactSection />
     </Fragment>

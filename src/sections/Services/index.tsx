@@ -1,10 +1,11 @@
 import { Fragment } from "react";
 
 import HeaderSection from "./Header";
-import PediaSection from "./Pedia";
-import ProgramsSection from "./Programs";
+import HqSection from "./Hq";
+import BoardSection from "./Board";
 import FearSection from "./Fears";
 import HolisticSection from "./Holistic ";
+import GallerySection from "./Gallery";
 
 const ServiceSections = () => {
   return (
@@ -15,9 +16,11 @@ const ServiceSections = () => {
 
       {/* <HolisticSection /> */}
 
-      {/* <ProgramsSection /> */}
+      <HqSection />
 
-      <PediaSection />
+      <BoardSection />
+
+      <GallerySection />
 
       {/* <TextSection /> */}
 

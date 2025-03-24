@@ -1,9 +1,15 @@
 import PageSection from "@/components/PageSection";
 import {
+  faBasketball,
+  faFootball,
   faHourglassHalf,
   faMagnifyingGlassChart,
   faPeopleArrows,
+  faPeopleCarry,
   faPersonArrowUpFromLine,
+  faPingPongPaddleBall,
+  faTheaterMasks,
+  faVolleyball,
   faWeightScale,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,19 +17,44 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const HeaderSection = () => {
   const list = [
     {
-      icon: faPersonArrowUpFromLine,
-      title: "الخدمة 1",
+      icon: faFootball,
+      title: "كرة القدم",
       content: "شرح الخدمة الأولى كذا وكذا وكذا",
     },
     {
+      icon: faPingPongPaddleBall,
+      title: "تنس الطاولة",
+      content: "شرح الخدمة كذا وكذا وكذا",
+    },
+    {
+      icon: faBasketball,
+      title: "كرة السلة",
+      content: "شرح الخدمة كذا وكذا وكذا",
+    },
+    {
+      icon: faVolleyball,
+      title: "الكرة الطائرة",
+      content: "شرح الخدمة كذا وكذا وكذا",
+    },
+    {
       icon: faPeopleArrows,
-      title: "الخدمة 2",
-      content: "شرح الخدمة الثانية كذا وكذا وكذا",
+      title: "أنشطة رياضية متنوعة",
+      content: "شرح الخدمة كذا وكذا وكذا",
+    },
+    {
+      icon: faTheaterMasks,
+      title: "فعاليات ثقافية وتوعوية",
+      content: "شرح الخدمة كذا وكذا وكذا",
+    },
+    {
+      icon: faPeopleCarry,
+      title: "مشاركات مجتمعية",
+      content: "شرح الخدمة كذا وكذا وكذا",
     },
   ];
 
   return (
-    <PageSection title="خدمات النادي" id="services">
+    <PageSection title="خدمات وانشطة النادي" id="services">
       <div className="col-xl-12">
         <ul className="list-group">
           {list.map(({ title, content, icon }, i) => (

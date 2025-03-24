@@ -2,7 +2,7 @@ import PageSection from "@/components/PageSection";
 
 const PortalSection = () => {
   const list = [
-    "لجعل التجربة الشبابية أكثر عصرية وحداثة, قريباً سنوفر بوابة رقمية للنادي للأعضاء تتعلق بجميع أنشطتهم وبياناتهم.",
+    "لجعل التجربة الشبابية أكثر عصرية وحداثة, نعمل على تطوير بوابة إلكترونية تتيح للأعضاء تسجيل العضوية، متابعة الفعاليات، والمشاركة في أنشطة المركز بسهولة.",
   ];
 
   return (
@@ -25,7 +25,9 @@ const PortalSection = () => {
           target="_blank"
         >
           {" "}
-          <button className="btn btn-primary text-white">قريباً</button>
+          <button className="btn btn-primary text-white">
+            انضم إلينا – سجل اهتمامك الآن
+          </button>
         </a>
       </div>
     </PageSection>
