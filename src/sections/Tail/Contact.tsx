@@ -20,7 +20,7 @@ export const socialLinksList = [
     icon: faEnvelope,
     link: "mailto:fatemamohammad2008@gmail.com",
     label: "راسلني على البريد الإلكتروني",
-    color: "#388e3c",
+    color: "#04235a",
     common: true,
   },
 ];
