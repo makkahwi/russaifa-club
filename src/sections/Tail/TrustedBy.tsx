@@ -9,10 +9,17 @@ interface PartnerProps {
 }
 
 const TrustedBySection = async () => {
-  const partners: PartnerProps[] = [];
+  const partners: PartnerProps[] = [
+    { logo: "/images/logo/logo-c.png", link: "" },
+    { logo: "/images/logo/logo-c.png", link: "" },
+    { logo: "/images/logo/logo-c.png", link: "" },
+    { logo: "/images/logo/logo-c.png", link: "" },
+    { logo: "/images/logo/logo-c.png", link: "" },
+    { logo: "/images/logo/logo-c.png", link: "" },
+  ];
 
   return (
-    <PageSection title="Trusted By" noMinHeight color="light">
+    <PageSection title="الداعمين وشركاء النجاح" noMinHeight color="light">
       {partners.map(({ logo, link, bigger }, i) => (
         <div
           className={`col-xl-${

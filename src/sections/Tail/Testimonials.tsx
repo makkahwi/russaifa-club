@@ -9,7 +9,51 @@ interface TestimonialProps {
 }
 
 const TestimonialsSection = async () => {
-  const testimonials: TestimonialProps[] = [];
+  const testimonials: TestimonialProps[] = [
+    {
+      author: "فلان",
+      content: "والله أرتب نادي فيكي يا رصيفة",
+    },
+    {
+      author: "علان",
+      content:
+        "بصراحة البطولة اللي عملناها من شهرين مش بطالة, يا ريت تكرروها أكثر من مرة خلال السنة, وتعملوا مثلا بطولة للأطفال وبطولة للمراهقين وبطولة للجامعيين.",
+    },
+    {
+      author: "علاك لبان",
+      content:
+        "انا رأيي تسكروا النادي لأنه كله طوش ومشاكل وفش فيه شغل ولا فيه مردود ولا فوائد",
+    },
+    {
+      author: "علان",
+      content:
+        "بصراحة البطولة اللي عملناها من شهرين مش بطالة, يا ريت تكرروها أكثر من مرة خلال السنة, وتعملوا مثلا بطولة للأطفال وبطولة للمراهقين وبطولة للجامعيين.",
+    },
+    {
+      author: "فلان",
+      content: "والله أرتب نادي فيكي يا رصيفة",
+    },
+    {
+      author: "علاك لبان",
+      content:
+        "انا رأيي تسكروا النادي لأنه كله طوش ومشاكل وفش فيه شغل ولا فيه مردود ولا فوائد",
+    },
+    {
+      author: "علان",
+      content:
+        "بصراحة البطولة اللي عملناها من شهرين مش بطالة, يا ريت تكرروها أكثر من مرة خلال السنة, وتعملوا مثلا بطولة للأطفال وبطولة للمراهقين وبطولة للجامعيين.",
+    },
+    {
+      author: "علان",
+      content:
+        "بصراحة البطولة اللي عملناها من شهرين مش بطالة, يا ريت تكرروها أكثر من مرة خلال السنة, وتعملوا مثلا بطولة للأطفال وبطولة للمراهقين وبطولة للجامعيين.",
+    },
+    {
+      author: "علاك لبان",
+      content:
+        "انا رأيي تسكروا النادي لأنه كله طوش ومشاكل وفش فيه شغل ولا فيه مردود ولا فوائد",
+    },
+  ];
 
   const TestimonialComp = ({ content = "", author = "" }) => (
     <div className="p-4 border border-primary rounded-5 mx-1 mb-4">
@@ -23,7 +67,7 @@ const TestimonialsSection = async () => {
   );
 
   return (
-    <PageSection title="شهادات العملاء" id="testimonials">
+    <PageSection title="شهادات الاعضاء والمتعاملين" id="testimonials">
       <div className="col-md-12 mb-5 scrollable-testimonials">
         <div className="row">
           <div className="col-lg-4">

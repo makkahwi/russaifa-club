@@ -8,7 +8,7 @@ const BoardSection = async () => {
   ];
 
   return (
-    <PageSection title="مجلس الإدارة" id="programs">
+    <PageSection title="مجلس الإدارة" id="board">
       <div className="col-12">
         <div className="card border border-primary border-2 rounded-5 py-4 w-100">
           <div className="card-body">

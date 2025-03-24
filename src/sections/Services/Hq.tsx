@@ -2,7 +2,7 @@ import PageSection from "@/components/PageSection";
 
 const HqSection = () => {
   return (
-    <PageSection title="مقرنا وتجهيزاتنا" color="light" id="pedia">
+    <PageSection title="مقرنا وتجهيزاتنا" color="light" id="hq">
       <div className="col-md-6 mb-4">
         <h5 className="text-block text-justify">
           يضم المقر الدائم للمركز مساحات مخصصة لممارسة الرياضات الخارجية، وساحات

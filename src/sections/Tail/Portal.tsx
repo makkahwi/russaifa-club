@@ -6,7 +6,7 @@ const PortalSection = () => {
   ];
 
   return (
-    <PageSection title="بوابة النادي الإلكترونية" id="hdl" color="light">
+    <PageSection title="بوابة النادي الإلكترونية" id="portal" color="light">
       <div className="col-xl-12 order-2 order-xl-1">
         <ul>
           {list.map((element, i) => (
